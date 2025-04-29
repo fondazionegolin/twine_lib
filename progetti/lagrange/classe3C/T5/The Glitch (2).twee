@@ -1,0 +1,253 @@
+:: StoryTitle
+The Glitch
+
+
+:: StoryData
+{
+  "ifid": "FBC8EBBA-32E9-48A1-BC85-B3F5B40A5193",
+  "format": "Chapbook",
+  "format-version": "2.3.0",
+  "start": "inizio",
+  "zoom": 1
+}
+
+
+:: P1 {"position":"1075,175","size":"100,100"}
+*Sei un 25enne di nome Cirryn, vivi vicino ai Navigli di Milano, vivi in un monolocale e vieni svegliato improvvisamente da un forte suono.
+Al risveglio ti ritrovi in un posto totalmente diverso, ti sembra familiare ma non riesci a riconoscerlo, però noti subito quanto sembri un sogno perchè surreale.
+Eppure è davanti ai tuoi occhi*. <br>
+
+Cosa decidi di fare?
+
+[[Esplori la zona per capire cosa sta succedendo->P2]]
+<br>
+[[Non esplori e rimani dove sei->P3]]
+
+
+:: P2 {"position":"1075,300","size":"100,100"}
+Esplori la zona in cerca di qualcuno per chiedere aiuto, ma non c'è nessuno. Nel momento in cui ti guardi attorno lo vedi; ~~le memorie del passato ti tornano in mente e torni indietro di 10 anni, quel posto lo conosci molto bene è l'ospedale dove è morta tua madre.~~
+
+***
+
+Sebbene dopo quell'accaduto non sei più passato qua vicino,  sai lo stesso che questo posto è poco distante da casa tua.
+<br>
+<br>
+[[Continua~->P2_1]]
+
+
+:: P2_1 {"position":"1075,425","size":"100,100"}
+Tutto ad un tratto nell'aria riecheggia uno strano suono che rompe l'atmosfera nostalgica, il suono è vago e fai fatica a capire, comprendi solo un paio di parole:
+*applicazione*, *test*, *outbreak*.
+Sei confuso e frastornato, cosa decidi di fare?
+<br>
+<br>
+[[Segui il suono->P2_2]]
+<br>
+[[Non segui il suono->P5]]
+
+
+
+:: P2_2 {"position":"1075,575","size":"100,100"}
+Ora lo senti chiaramente, scopri che è un annunncio lanciato dalla Proler Ansaka, li ad ascoltare trovi anche un altro grosso gruppo di persone.
+<br>
+~~L'annuncio spiega che il motivo per il cambiamento della città è stato un fallimento nei test  e l'outbreak di un programma sperimentale che modifica la realtà.
+Il progetto originario era basato sul fatto che questa applicazione rendesse la modifica di edifici o strade diventasse un qualcosa di immediato, ma che in seguito alla corruzione del codice l'applicazione ha intrapreso una strada diversa.~~
+
+***
+ Decidi che devi fare qualche cosa  e devi dirigerti all'HQ della Ansaka, però magari in gruppo e non da solo. Cosa fai?
+
+<br>
+<br>
+[[Ti allei con le persone->P2_3]]
+<br>
+[[Per come sei stato trattato in tutti questi anni non ti fidi delle persone e decidi di andare da solo->P5]]
+
+
+:: P2_3 {"position":"1075,725","size":"100,100"}
+*Sul tragitto guardando qua e là ti ritrovi spaesato, la vista di una città in queste condizioni ti fa riflettere. 
+<br>
+Da un lato sei felice  per tutte le persone che ti hanno aiutato ad avere una vita di questo tipo e ora si trovano nelle tue stesse situazioni, ma da un'altra prospettiva senti pietà e tristezza per tutti gli innocenti che improvvisamente si sono ritrovati catapultati in qualcosa che sembra frutto di una mente ubriaca e errante...*
+
+<br>
+<br>
+{link to: 'P2_4', label: 'Continua~'}
+
+
+
+
+:: P2_4 {"position":"1075,875","size":"100,100"}
+
+Arrivi a pochi passi dall'HQ quando ad un tratto noti un uomo, non un qualsiasi uomo però, veste un camice da scienziato, è chiaramente della Proler Ansaka.
+Sembra visibilmente disperato, in una mano tiene una pila di fogli molto stretti a se mentre nell'altra una specie di dispositivo simile ad un orologio da taschino ma con un display e degli strani parametri sopra.
+
+Cosa decidi di fare?
+<br>
+<br>
+[[Decidi di assalirlo in quanto fa parte della società che ha distrutto la città.->P6]]
+<br>
+[[Decidi di essere cortese e gli chiedi spiegazioni più chiare.->P2_5]]
+
+
+:: P2_5 {"position":"1075,1025","size":"100,100"}
+Vieni a conoscenza della verità e come sia nata l'intenzione della creazione di questa app.
+*La gente di questa città è sempre stata frettolosa e alla rincorsa del progresso teconologico e ciò si è sempre applicato anche sul lavoro e soprattuto nel settore edile. Questa continua rincorsa molto spesso porta alla morte delle persone. <br>
+Il suo scopo era semplicemente quello di rendere quella frenesia effettivamente più sicura.
+Nel momento in cui l'applicazione ha mostrato una propria intelligenza e adattabilità Harley ha imposto di non fermare il progetto ed è arrivato a licenziare tutti quelli che hanno osato contestarlo.*
+<br>
+<br>
+[[Continua~->P2_6]]
+
+
+
+
+
+:: P2_6 {"position":"1075,1175","size":"100,100"}
+Lo scienziato ti fornisce in seguito i codici di accesso, il camice, e ti spiega inoltre, che il funzionamento del dispositivo chiamato *Warper*, contiene una versione più vecchia dell'applicazione che funziona solo su un raggio di 2 metri.
+Ti confida poi che il motivo per cui ti sta aiutando è che ritiene che il progetto si è spinto troppo oltre uscendo da ciò che si era inzialmente deciso. Quindi, grazie allo scienziato riesci ad entrare all'interno del palazzo senza essere bloccato dalla sicurezza.
+<br>
+<br>
+[[Continua~->P2_7]]
+
+
+:: P2_7 {"position":"1075,1425","size":"100,100"}
+L'intera piantina del palazzo è come un gigantesco labirinto ma, dopo aver girato per 20 minuti riesci a raggiungere la zona dei laboratori e dei database.
+<br>
+Come da piano spiegato dallo scenziato, colleghi il *Warper* alla rete centrale e inizi a riformare il codice originario, quando però ti viene un momento di dubbio.
+<br>
+Ripensando al passato sei indeciso su come procedere.
+<br>
+<br>
+[[Riporti l'applicazione allo stato originario->P2_9]]
+<br>
+[[Decidi di lasciare tutto com'è->P9]]
+
+
+:: P2_9 {"position":"1075,1550","size":"100,100"}
+Nel momento in cui il codice viene ripristinato un'assordante suono riecheggia nell'aria, e cosi la città è tornata alla forma originale.
+Però per risolvere decidi di andare direttamente da colui che ha creato tutto questo casino, esatto proprio Harley.
+<br>
+Giunto davanti al suo ufficio utilizzi il *Warper* per modificare la porta ed accedere all'ufficio.
+Nel momento in cui metti piede lo trovi lì in piedi come se sapesse già del tuo arrivo,
+"Guarda un po', curioso come sia un misero cittadino ad aver distrutto l'intero progetto e ad essere arrivato fin quassù per uccidermi...
+Va bene che sia fatto, ma sappi che ci sarà prima o poi qualcuno determinato a finire ciò che ho iniziato".
+Sei stufo del suo blaterare e senza esitazione usi il *Warper* su di lui uccidendolo.
+<br>
+<br>
+*fine...*
+
+
+:: P3 {"position":"1375,175","size":"100,100"}
+*Decidi che restare dove ti trovi sia la scelta più sicura.*
+
+<br>
+<br>
+[[Continua~->P3_1]]
+
+
+:: P3_1 {"position":"1575,175","size":"100,100"}
+Passa il tempo e avvengono continui cambiamenti nella città, questi cambiamenti si rivelano però pericolosi, è ormai comune che la gente rimanga glitchata assieme alla città stessa o i cambiamenti finiscono per rivelarsi instabili e collassare, le persone che si ritrovano coinvolte finiscono per perdere la vita nella maggior parte dei casi<br>
+Cosa fai?
+<br>
+<br>
+[[Continui a non fare nulla.->P3_2]]
+<br>
+[[Decidi di fare qualcosa.->P4]]
+
+
+:: P3_2 {"position":"1750,175","size":"100,100"}
+*Passano gli anni e la città si adatta a questa situazione, la gente continua a morire, i glitch sugli umani si sono evoluti e sono diventati brutali, le persone diventanto mostri senza mente e vagano per la città in cerca di vittime.
+La trasformazione inoltre non è prevedibile può avvenire da un momento all'altro, simile a come accade alla città, prima o poi toccherà anche a te o forse no chi lo sa...*
+<br>
+<br>
+*fine~*
+
+
+:: P4 {"position":"1375,300","size":"100,100"}
+Decidi di provare a capire cosa sta succedendo.
+<br>
+<br>
+[[Continua~->P2]]
+
+
+:: P5 {"position":"1375,725","size":"100,100"}
+Nella speranza di trovare una via di scampo, trovi una persona in fin di vita è vestita con uno strano camice, con sè ha una specie di dispositivo simile ad un orologio da taschino ma con un display e degli strani parametri sopra. non avendo altre opzioni scegli di impossessarti di quell'oggetto.
+<br>
+<br>
+[[Continua~->P5_1]]
+
+
+:: P5_1 {"position":"1375,875","size":"100,100"}
+*Dopo aver capito le funzionalità dell'oggetto perdi il controllo, inizi ad abusarne delle sue funzioni fino a distruggere la città di Milano.*
+<br>
+<br>
+*fine~*
+
+
+:: P6 {"position":"500,925","size":"100,100"}
+*Hai un comportamento aggressivo e lo scienziato scappa impaurito.*
+<br>
+<br>
+[[Continua~->P6_1]]
+
+
+:: P6_1 {"position":"500,1050","size":"100,100"}
+Decidi di investigare e trovi un buco nella recinzione dell'HQ.
+<br>
+<br>
+[[Non ci entri->P6_2]]
+<br>
+[[Ci entri->P7]]
+
+
+:: P6_2 {"position":"500,1175","size":"100,100"}
+*Decidi di non entrare per paura e cadi in depressione per aver realizzato la tua impotenza.
+Decidi di andare a visitare la tomba di tua madre dove ti togli poi la vita.*
+<br>
+<br>
+*fine~*
+
+
+:: P7 {"position":"775,1050","size":"100,100"}
+
+Tenti l'entrata nell'edificio ma ovviamente essendo completamente protetto vieni bloccato dalla sicurezza e portato dal CEO *Harley Sawyer*.
+<br>
+<br>
+[[Continua~->P7_2]]
+
+
+
+:: P7_2 {"position":"775,1175","size":"100,100"}
+Vieni a conoscenza della verità e come sia nata l'intenzione della creazione di questa app.
+*La gente di questa città è sempre stata frettolosa e alla rincorsa del progresso teconologico e ciò si è sempre applicato anche sul lavoro e soprattuto in quello edile, solo che questa frettolosità molto spesso porta alla morte delle persone. <br>
+Il suo scopo era semplicemente quello di rendere quella frenesia effettivamente sicura.
+Nel momento in cui l'applicazione ha mostrato una propria intelligenza e adattabilità Harley impose di non fermare il progetto e arrivò a licenziare tutti quelli che osavano contestarlo.*
+<br>
+<br>
+
+[[Continua~->P8]]
+
+
+:: P8 {"position":"775,1300","size":"100,100"}
+*Harley dopo averti rivelato la verità decide di ucciderti in quanto oppositore al progresso.*
+
+<br>
+
+*fine~*
+
+
+:: P9 {"position":"1750,1425","size":"100,100"}
+Decidi di lasciare tutto quanto com'è, sei convinto che questo sia il meglio per la città nella speranza di un cambiamento positivo.
+Se è davvero in grado di evolversi è il caso di dargli fiducia.
+<br>
+<br>
+[[Continua~->P3_2]]
+
+
+:: inizio {"position":"1075,0","size":"100,100"}
+È l'anno 2077, sei a Milano e il progresso tecnologico è in continuo sviluppo.
+
+La settimana scorsa, la Proler Ansaka (guidata da Harley Sawyer) ha annunciato la creazione di una nuova applicazione sperimentale in grado di mutare la realtà direttamente da parte dell'utente. Queste applicazioni aiutano le aziende a guadagnare quote di mercato e aumentare i profitti ma non considerano l'impatto sociale.`
+<br>
+<br>
+<br>
+[[Continua~->P1]]

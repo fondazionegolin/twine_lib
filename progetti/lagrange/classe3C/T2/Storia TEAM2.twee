@@ -1,0 +1,686 @@
+:: StoryTitle
+Storia TEAM2
+
+
+:: StoryData
+{
+  "ifid": "24AE381D-FE38-402C-A96D-BB79FF201401",
+  "format": "Chapbook",
+  "format-version": "2.3.0",
+  "start": "p1",
+  "zoom": 1
+}
+
+
+:: 4.accetta {"position":"1650,950","size":"100,100"}
+**`> Hai accettato`**
+***
+*Fabrizio ci riflette un po'.. e poi fa la sua scelta:*<br>
+[after 2 second]
+"Cinzio.. ho davvero bisogno di aiuto.." <br>
+"E non so come hai fatto a saperlo.. però ti ringrazio.." <br><br>
+*Il suo respiro trema e si asciuga le lacrime dal viso;*<br>
+*Si alza dal letto lentamente e mi abbraccia.*<br>
+<br>
+"Mi dispiace Fabri.. che è dovuta andare così." *Lo rassicuro a bassa voce.* <br>
+"Sappi che sono lieto di averti ritrovato."
+
+{link to: 'FINALE.2', label: ' Finale >>>'}<br>
+<br>
+[continue]
+<br><br>{link to: 'p4.4', label: '<<Indietro'}
+
+
+:: 4.rifiuta {"position":"1500,950","size":"100,100"}
+**`> Hai rifiutato`**
+***
+*Fabrizio ci riflette un po'.. e poi fa la sua scelta:*<br>
+[after 2 second]
+"Senti, Cinzio... io.. non posso" <br>
+"Ti ringrazio.. però non posso.." *Fabrizio risponde ansimando in mezzo ai singhiozzi.*<br><br>
+"Non sono all'altezza.. non riesco nemmeno più a guardare la mia chitarra.." <br>
+[after 3 second]
+"..Mi dispiace.." *Mentre continua a singhiozzare, colgo l'attimo per dargli una carezza lungo la schiena, nel tentativo di rassicurarlo.*<br>
+
+{link to: 'FINALE.1', label: ' Finale >>>'}<br>
+<br>
+[continue]
+<br><br>{link to: 'p4.4', label: '<<Indietro'}
+
+
+:: Bugia {"position":"1500,700","size":"100,100"}
+**`> Decidi di mentire`**
+***
+[after 1 second]
+"Sono un musicista eccellente, ovviamente!"<br>
+*Esclama orgogliosamente, quasi troppo.*
+
+"Infatti ho smesso di venire al pub perché sono fin troppo bravo per quello squallido buco. Io mi merito un palco!" <br>
+[after 3 second]
+*Sembra elevare sempre di più il suo ego, le sue menzogne stanno diventando sempre più evidenti.*
+
+"Fabri.." *Bisbiglio tra me, l'imbarazzo cresce sempre di più.*<br>
+"Senti, quelli del pub dicono altro.." <br>
+[after 5 second]
+*Fabrizio alza finalmente lo sguardo da terra e mi da un'occhiataccia infastidita; poi caccia un sospiro pesante.*
+
+{link to: 'Verità', label: 'Fabrizio: dì la verità >>>'}<br>
+<br>
+[continue]
+<br><br>{link to: 'p4.3', label: '<<Indietro'}
+
+
+:: FINALE.1 {"position":"1525,1075","size":"100,100"}
+*E con questa scelta, si conclude la prima parte della storia.<br>
+Il resto te lo posso dire solo io:*
+***
+*`Fabrizio rimane depresso, ma nel tentativo di riprendere in mano la sua vita decide di proporsi in svariati lavori.
+Dopo qualche tentativo viene assunto nella bottega Luini, e si sposa felicemente con la figlia del proprietario.`*
+
+
+:: FINALE.2 {"position":"1625,1075","size":"100,100"}
+*E con questa scelta, si conclude la prima parte della storia.<br>
+Il resto te lo posso dire solo io:*
+***
+*`Fabrizio entra nella band di Cinzio e il gruppo diventa particolarmente acclamato. Le cose sembrano migliorare per Fabrizio ma presto scoprirà che la popolarità non è tutto rose e fiori.`*<br><br>
+<br>
+[**~~TO BE CONTINUED~~**]
+
+
+:: Verità {"position":"1650,700","size":"100,100"}
+**`> Decidi di dire la verità`**
+***
+"..Sta andando male, okay?" *Alza la voce infastidito;*<br>
+"Cosa ti aspetti da me? che suonare alla cazzo in un pub mi porti da qualche parte?"<br>
+"Quando non sei nessuno, è impossibile arrivare in cima." 
+[after 3 second]
+*Nella stanza cala un silenzio tombale.* <br><br>
+"Non sto ottenendo visibilità e i guadagni sono minimi."<br>
+"Non ho fatto altro che sognare, e sognare non porta a nulla!" <br>
+[after 5 second]
+"Fabri.. sai perché sono venuto a cercarti..?" <br>
+*Mentre provo ad alleviare un po' la tensione, vedo Fabrizio nascondersi il viso tra le mani, le sue dita attraversano i suoi capelli e lo sento quasi.. singhiozzare.*
+
+{link to: 'p4.4', label: '> Fai una proposta'}
+[continue]
+<br><br>{link to: 'p4.3', label: '<<Indietro'}
+
+
+:: lire {"position":"800,675","size":"100,100"}
+`>7000 lire` <br>
+<br>
+[after 1 second]
+Ah, meglio del solito.
+
+
+[continued]
+{link to: 'p1.4', label: 'Torna a casa >>>'}
+<br><br><br><br><br>{link to: 'p1.3', label: '<<Indietro'}
+
+
+:: p1 {"position":"700,300","size":"100,100"}
+**`Aprile 1988, Milano`**
+
+***
+
+
+*Eccomi qua, di nuovo a lanciare giornali a tutte le porte per una paga miserabile. Ma come sono finito qua? Vabbè, mi tocca tirare avanti che non vedo l'ora arrivi la sera così vado a suonare.*
+<br>
+<br>
+<br>
+[*~~Tu che puoi, prendi la scorciatoia va~~*]
+{link to: 'p1.2', label: 'salta alle 18 >>>'}
+
+
+:: p1.2 {"position":"800,425","size":"100,100"}
+**`ore 18:00`**
+***
+Entro nel locale e faccio un cenno con la mano al proprietario, lui ricambia; questa è la mia seconda casa, se si può descrivere così .....credo.<br>
+<br>
+Allora: <br>
+<br>{reveal link: 'Custodia per terra?', text: 'Check.'}
+<br>{reveal link: 'Amplificatore?', text: 'Check.'}
+<br>{reveal link: 'Chitarra?', text: 'Check.'}
+
+{reveal link: 'Pronto?', text: 'Si parte.'}
+{link to: 'p1.3', label: '>>>'}
+<br><br><br><br><br>{link to: 'p1', label: '<<Indietro'}
+
+
+:: p1.3 {"position":"800,550","size":"100,100"}
+***
+
+Come al solito, una performance poco convincente. Qualche applauso qua e la, bah, guardiamo un po' la custodia.
+
+
+{link to: 'lire', label: '[guarda dentro]'}
+<br><br><br><br><br>{link to: 'p1.2', label: '<<Indietro'}
+
+
+:: p1.4 {"position":"800,800","size":"100,100"}
+**`A casa`**
+***
+*E tra un tintinnio di chiavi di qua e una girata di maniglia di là, "sono a casa", annuncio ad alta voce. <br>
+Comincio a farmi strada verso il suono più evidente, la televisione in sala; lì mi accoglie mia mamma con uno sguardo stanco, sembra che si sia addormentata nel frattampo, dato l'orario. <br>*
+***
+"Di nuovo a casa tardi, Fabri?" *disse; <br> io rispondo con un lieve sorriso da stupido.* <br>
+"Com'è andata?" *continuò lei, e qui comincia la crisi interna:* <br><br>
+*~~che cazzo le dico??~~* <br>
+
+{link to: 'p1.5.1', label: '>Menti a tua mamma'} <br>
+{link to: 'p1.5.2', label: '>Sì onesto'}
+<br><br><br><br><br>{link to: 'p1.3', label: '<<Indietro'}
+
+
+:: p1.5 {"position":"800,925","size":"100,100"}
+**`>Rifletti`**
+***
+*Mah, alla faccia di credere in tuo figlio.*
+
+[after 1 second]
+*...*
+[after 2 second]
+*Okay, forse ha un po' ragione: non guadagno molto, però non è quello che conta! io lo faccio per me stesso, ed è quello l'importante. <br>
+Un giorno sarò qualcuno, e glielo dimostrerò - alla faccia sua!*
+<br>
+
+[after 6 second]
+{link to: 'p1.6', label: '>>>'}
+[continued]
+ <br><br><br><br><br>{link to: 'p1.5.2', label: '<<Indietro'}
+
+
+:: p1.5.1 {"position":"600,800","size":"100,100"}
+**`Decidi di mentire a tua mamma`**
+***
+"E' andata alla grande ma'!" esclamo entusiasta.  <br>
+[after 2 second]
+"...Fabri." *mi guarda storto.*
+[after 4 second]
+*Ha capito subito che sto mentendo, cazzo!* <br>
+
+
+{link to: 'p1.5.2', label: 'Dille la verità, su'}
+[continued]
+<br><br><br><br><br>{link to: 'p1.4', label: '<<Indietro'}
+
+
+:: p1.5.2 {"position":"600,900","size":"100,100"}
+**`Decidi di dire la verità`**
+***
+"..E' andata come al solito" *dico sbuffando e alzando le spalle.* "Ho fatto 7000 lire, meglio di niente suppongo." <br>
+
+[after 1 second]
+"..Come al solito questo tuo 'lavoretto' non ti porta a nulla di concreto" *disse lei; ma con che faccia?!* <br>
+
+[after 4 second]
+"Ma'.. non ricominciare." *evito di rispondere va sennò mi incazzo, tanto con i genitori è sempre la stessa storia.* <br>
+*Mentre lei comincia a farmi una lavata di capo infinita come sottofondo, io alzo gli occhi al cielo e me ne vado in camera.*
+
+
+
+{link to: 'p1.5', label: 'Mettiti a letto e pensa >>>'}
+[continued]
+ <br><br><br><br><br>{link to: 'p1.4', label: '<<Indietro'}
+
+
+:: p1.6 {"position":"800,1050","size":"100,100"}
+***
+
+*~~Dopo il tuo sfogo da tipico teenager frustrato, ti addormenti.<br>
+Le tue giornate sempre più o meno uguali, e siccome (fortunatamente) questa storia è interattiva, tu, il giocatore (o lettore?) hai un superpotere imbattibile:~~* <br>
+<br> {reveal link: '>Scopri il tuo superpotere assurdo', text: '*Scorrere le pagine e fare salti temporali durante la storia! Pazzesco, lo so.*'}
+
+[after 5 second]
+{link to: 'p2', label: '[Salta al prossimo capitolo] >>>'}
+[continued]
+ <br><br><br><br><br>{link to: 'p1.5.2', label: '<<Indietro'}
+
+
+:: p10 {"position":"2500,300","size":"100,100"}
+Il duo diventa popolare e le cose sembrano migliorare
+<br>
+<br>
+{link to: 'p11', label: '>'}
+
+
+:: p11 {"position":"2700,300","size":"100,100"}
+I loro fan/paparazzi cominciano ad invadere la loro privacy ossessivamente
+<br>
+<br>
+{link to: 'p12', label: '>'}
+
+
+:: p12 {"position":"2900,300","size":"100,100"}
+Il chitarrista, non abituato al ciò, rimane traumatizzato e paranoico
+<br>
+<br>
+{link to: 'p13', label: 'Non aiuti Fabrizio'}
+<br>
+{link to: 'p16', label: 'Aiuti Fabrizio'}
+
+
+:: p13 {"position":"3100,300","size":"100,100"}
+I due discutono e si separano.
+<br>
+<br>
+{link to: 'p24', label: '>'}
+<br>
+{link to: 'p17', label: '>'}
+
+
+:: p14 {"position":"2100,500","size":"100,100"}
+Chitarrista: non apre la porta
+<br>
+<br>
+{link to: 'p18', label: '>'}
+
+
+:: p15 {"position":"2300,500","size":"100,100"}
+Chitarrista: non accetta
+<br>
+<br>
+{link to: 'p19', label: '>'}
+
+
+:: p16 {"position":"2900,500","size":"100,100"}
+Amico: aiuta il chitarrista
+<br>
+<br>
+{link to: 'p20', label: '>'}
+
+
+:: p17 {"position":"3100,500","size":"100,100"}
+Amico: ferma il suicidio
+<br>
+<br>
+{link to: 'p23', label: '>'}
+<br>
+
+
+:: p18 {"position":"2100,700","size":"100,100"}
+Chitarrista: continua a vivere in depressione
+<br>
+<br>
+{link to: 'p13', label: '>'}
+
+
+:: p19 {"position":"2300,700","size":"100,100"}
+Chitarrista: riconnette con un amico, esce dalla depressione ma non trova un lavoro
+<br>
+<br>
+{link to: 'p21', label: '>'}
+
+
+:: p2 {"position":"900,300","size":"100,100"}
+**`2 settimane dopo`**
+***
+*Come puoi già immaginare, in questo periodo di tempo ho continuato la mia routine miserabile di lavoro e performance.* <br>
+*..Mentre mi incammino verso il pub comincio a riflettere:*
+<br>
+
+[after 4 second]
+*Insomma, forse mia mamma aveva ragione dopo tutto - magari suonare non fa per me, magari è l'universo che sta cercando di darmi un messaggio e sono troppo testardo per ammetterlo.*<br>
+[after 6 second]
+*Vabbè, magari è giunto il momento di provare qualcos'altro e se funziona mi toccherà abbandonare la musica una volta per tutte.*
+<br>
+[after 9 second]
+*(~~STRETTA AL CUORE DRAMMATICA~~)*
+<br>
+<br>
+
+
+
+{link to: 'p2.1', label: 'Vai al pub>>>'}
+[continued]
+ <br><br><br><br><br>{link to: 'p1.6', label: '<<Indietro'}
+
+
+:: p2.1 {"position":"1000,425","size":"100,100"}
+**`Fine esibizione - 23:00`**<br>
+***
+{reveal link: '[Non starò a ripeterlo]', text: '*Si, il risultato è sempre lo stesso. Shocker.*'}
+<br>
+*A sto punto è una vergogna anche solo presentarmi qui.*
+<br>
+<br>
+[after 2 second]
+
+**`Torno a casa - 02:37`**<br>
+<br>
+*Entro senza dire nulla - tanto mamma stava già dormendo, meglio così.* <br>
+*Mi tolgo il peso dalle spalle e mi metto a letto.*
+
+[after 4 second]
+
+{link to: 'p2.2', label: 'Dormi >>>'} <br>
+[continue]
+<br><br><br><br><br>{link to: 'p2', label: '<<Indietro'}
+
+
+:: p2.2 {"position":"1000,550","size":"100,100"}
+**`Oggi è un altro giorno`**
+***
+*Riapro gli occhi per un attimo - e poi mi rimetto a dormire.*
+*Oggi non mi sento di fare nulla.*
+[after 2 second]
+*L'unica cosa che feci quel giorno fu accantonare lo strumento in un angolo della stanza - se fosse stato lì ad accumulare polvere, non mi avrebbe più tentato così tanto.*
+<br>
+
+{link to: 'p2.3', label: '>>>'} <br>
+[continue]
+<br><br><br><br><br>{link to: 'p2.2', label: '<<Indietro'}
+
+
+:: p2.3 {"position":"1000,675","size":"100,100"}
+`> Naturalmente mia mamma, abituata alla mia routine impegnata, cominciò a preoccuparsi della mia improvvisa inattività.`
+***
+{link to: 'p3', label: '>>>'} <br>
+[continue]
+<br><br><br><br><br>{link to: 'p2.3', label: '<<Indietro'}
+
+
+:: p20 {"position":"3000,700","size":"100,100"}
+Amico: ferma il suicidio
+<br>
+<br>
+{link to: 'p22', label: '>'}
+
+
+:: p21 {"position":"2300,900","size":"100,100"}
+Chitarrista: cambia carriera e accetta che è dura essere artista
+
+
+:: p22 {"position":"3000,900","size":"100,100"}
+Chitarrista: vivi felicemente (good ending)
+<br>
+<br>
+{link to: 'p22', label: '>'}
+
+
+:: p23 {"position":"3150,650","size":"100,100"}
+Lo perdona e lo aiuta a superare le sue paure
+
+
+:: p24 {"position":"3300,300","size":"100,100"}
+Si suicida per scappare dalla sua vita
+<br>
+<br>
+
+
+:: p3 {"position":"1100,300","size":"100,100"}
+**`Un giorno di Giugno, 1988`**
+***
+Un giovane musicista passa per il quartiere - nota un'allettante locandina attaccata all'entrata di un pub chiamato "The OldFox".
+<br><br>
+{reveal link: 'Cosa sarà mai?', text: '**~~..Fabrizio, giovane chitarrista si esibisce LIVE ogni sera alle 18:30~~**'}
+
+[after 5 second]
+
+[*~~!!~~*]
+
+*Hmm..* <br>
+*Un nuovo chitarrista?*
+
+<br>
+{link to: 'p3.1', label: 'Entra nel pub >>>'}
+[continue]
+<br><br><br><br><br>{link to: 'p2.3', label: '<<Indietro'}
+
+
+:: p3.1 {"position":"1200,425","size":"100,100"}
+**`> 18:00`**
+***
+Nulla...<br>
+[after 3 seconds]
+**`18:15`**<br>
+Ancora nulla...
+[after 5 seconds]
+**`18:30`**<br>
+di nuovo nulla...
+
+[after 7 seconds]
+**`19:00`**<br>
+Ancora nulla...<br>
+
+[after 9 seconds]
+*Non è arrivato nessuno..*<br>
+
+{link to: 'p3.2', label: 'Riprova >>>'} <br>
+[continue]
+<br><br><br><br><br>{link to: 'p3', label: '<<Indietro'}
+
+
+:: p3.2 {"position":"1200,550","size":"100,100"}
+**`> Decidi di ritornare`**
+***
+*Nel corso di un paio di settimane passi spesso per il pub - e ti fermi a guardare incuriosito se la fortuna è dalla tua parte.*
+[after 3 second]
+*..Ma sfortunatamente, non sembra ancora così.*
+
+{reveal link: '>Entra nel pub', text: '*~~Di nuovo nessuno!~~*'}<br>
+[after 5 second]
+*Com'è possibile?*
+
+
+{link to: 'p3.3', label: 'Chiedi informazioni >>>'} <br>
+[continue]
+<br><br><br><br><br>{link to: 'p3.1', label: '<<Indietro'}
+
+
+:: p3.3 {"position":"1200,675","size":"100,100"}
+**`> Chiedi informazioni`**
+***
+"Mi scusi..." *chiede al bancone un ragazzo timido;*<br>
+"Per caso saprebbe darmi qualche informazione riguardo al chitarrista 'Fabrizio'..?" <br>
+[after 3 second]
+*Il signore è intento a sciacquare dei bicchieri di vetro - gli da un'occhiata e alza le spalle;*<br> <br>
+"Mah, quel ragazzino.. ha smesso di venire da qualche settimana." <br>
+"Così, senza preavviso; che strano." 
+[after 5 second]
+"Hmm.. per caso ha lasciato qualche recapito?" *alla domanda del ragazzo il signore sospirò e gli passò frettolosamente un bigliettino.*
+
+{link to: 'p3.4', label: 'Prendi il bigliettino >>>'} <br>
+[continue]
+<br><br><br><br><br>{link to: 'p3.2', label: '<<Indietro'}
+
+
+:: p3.4 {"position":"1200,800","size":"100,100"}
+**`> Prendi il bigliettino`**
+***
+*Ringrazi il barista e ti incammini fuori dal pub.*<br>
+{reveal link: '[Leggi il biglietto]', text: '~~..Per informazioni chiamare xxx..~~'}<br>
+<br>
+*Alzi lo sguardo e analizzi le circostanze in cerca di una cabina telefonica.*
+[after 5 second]
+{link to: 'p3.5.1', label: 'Guarda a destra >>>'} <br>
+{link to: 'p3.5.2', label: 'Guarda a sinistra >>>'}<br>
+[continue]
+<br><br><br><br><br>{link to: 'p3.2', label: '<<Indietro'}
+
+
+:: p3.5.1 {"position":"1075,900","size":"100,100"}
+**`> Guarda a destra`**
+***
+*Hmm.. niente da fare.*
+
+{link to: 'p3.5.2', label: 'Prova a sinistra >>>'}<br>
+<br>
+[continue]
+<br><br><br><br><br>{link to: 'p3.4', label: '<<Indietro'}
+
+
+:: p3.5.2 {"position":"1075,1000","size":"100,100"}
+**`> Guarda a sinistra`**
+***
+*Eccone una!* <br>
+
+
+{link to: 'p3.6', label: 'Entra dentro >>>'}<br>
+<br>
+[continue]
+<br><br><br><br><br>{link to: 'p3.4', label: '<<Indietro'}
+
+
+:: p3.6 {"position":"1200,1075","size":"100,100"}
+**`> Dentro la cabina`**
+***
+"Vediamo.." <br>
+*Inserisco le monete e poi digito il numero attentamente.*
+
+[~~bip.. bip.. bip..~~]
+[after 4 second]
+"Pronto..?" <br>
+[after 8 second]
+*Mi accoglie la voce di.. una donna?*<br>
+*Rimango perplesso per un attimo, poi mi ricompongo e rispondo - il mio battito accelera leggermente;*<br>
+<br>
+"..Salve, mi scusi.. sto cercando un certo 'Fabrizio'.. potrei aver sbagliato numero?" <br>
+"No no, è corretto - è mio figlio!" *La donna al telefono risponde sogghignando.* <br>
+
+{link to: 'p3.7', label: ' >>>'}<br>
+<br>
+[continue]
+<br><br><br><br><br>{link to: 'p3.5.2', label: '<<Indietro'}
+
+
+:: p3.7 {"position":"1200,1200","size":"100,100"}
+***
+"Ah! okay, perfetto.. ecco, mi chiamo Cinzio, e ho trovato questo numero tramite la locandina del pub 'OldFox' e...." <br>
+[after 3 second]
+"Cinzio? ..Cinzio Fumagalli?" *Mi interruppe a metà discorso e.. indovinò il mio cognome?* <br>
+"Si..? scusi.. come fa a.." <br>
+"Cinzio! sono la mamma di Fabrizio Cattaneo! Da quanto tempo!" *Il suo tono cambiò in uno.. a dir poco entusiasta;* <br>
+<br>
+*Io invece.. beh, rimasi scioccato.* <br>
+<br>
+"Perché non vieni a farci visita oggi? guarda, siamo in via ..." <br>
+*Mentre parlava mi affrettavo a cercare per tutte le tasche della mia giacca un qualcosa con cui scrivermi l'indirizzo.* <br>
+<br>
+[after 5 second]
+~~Vabbè, ti risparmio tutti i dettagli, andiamo direttamente a casa loro.~~ <br>
+{link to: 'p4', label: '>>>'}
+[continue]
+<br><br><br>{link to: 'p3.6', label: '<<Indietro'}
+
+
+:: p4 {"position":"1300,300","size":"100,100"}
+**`A casa di Fabrizio`**
+***
+*Eccomi davanti alla loro porta - onestamente non ero sicuro se effettivamente entrare o no; C'è, avrei rivisto il mio amico di una vita per la prima volta dopo.. qualche mese?* <br><br>
+*Certo che è stato proprio uno stupido, a lasciare la scuola dopo quello che è successo..* <br>
+[after 3 second]
+*Dietro la porta sento due persone quasi.. discutere?*<br>
+
+{reveal link: '[Prova a origliare..]', text: '*~~LA PORTA SI APRE!!~~*'}<br>
+~~*(!!)*~~ <br>
+[after 6 second]
+*La signora Cattaneo mi invitò dentro, e mi feci strada ansiosamente.*<br>
+*Non visitavo casa loro da molti anni, e devo dire che la situazione sembra essere migliorata dopo l'assenza del papà..*
+
+
+{link to: 'p4.1', label: '>>>'}<br>
+[continue]
+<br><br><br>{link to: 'p3.7', label: '<<Indietro'}
+
+
+:: p4.1 {"position":"1400,425","size":"100,100"}
+***
+*Mi offre gentilmente da bere, e restiamo in sala per un po' a chiacchierare.* <br>
+*Dopo un quarto d'ora mi invita ad andare in camera di Fabrizio;*<br><br>
+"Senti Cinzio.. Fabri non vuole uscire da camera sua.. non è che riusciresti a convincerlo tu..?"
+
+{link to: 'p4.2', label: '>Bussa alla sua porta'}<br>
+<br>
+[continue]
+<br><br><br>{link to: 'p4', label: '<<Indietro'}
+
+
+:: p4.2 {"position":"1400,550","size":"100,100"}
+**`> Decidi di bussare alla porta`**
+***
+"Fabri..?" <br>
+[after 1 second]
+"Vattene."<br>
+*Mi risponde istantaneamente - sembra che si farà dura convincerlo ad aprire.*<br>
+*La mamma interviene, alzando la voce e gridandogli di non essere maleducato.*<br>
+[after 3 second]
+*~~Il mio imbarazzo cresce.~~*
+
+{link to: 'p4.3', label: ' Fabrizio: apri la porta>>>'}<br>
+<br>
+[continue]
+<br><br>{link to: 'p4.1', label: '<<Indietro'}
+
+
+:: p4.3 {"position":"1550,550","size":"100,100"}
+**`> Entri la stanza`**
+***
+*Fabrizio apre la porta aggressivamente e poi si risiede sul letto, incrociando le braccia.*<br>
+[after 2 second]
+"Con permesso.." *Entro lentamente e tengo lo sguardo giù;*<br>
+*Aspetto qualche minuto prima di dire qualcosa.*<br>
+<br>
+"..Senti.. come va con il pub?" *Chiedo ansiosamente;*<br>
+*Fabrizio mi squadra imbronciato.*
+
+{link to: 'Bugia', label: 'Fabrizio: menti >>>'}<br>
+{link to: 'Verità', label: ' Fabrizio: dì la verità >>>'}<br>
+<br>
+[continue]
+<br>{link to: 'p4.2', label: '<<Indietro'}
+
+
+:: p4.4 {"position":"1575,825","size":"100,100"}
+**`> Proponi a Fabrizio`**
+***
+"Ecco.. vorrei averti come chitarrista della mia band.."
+<br> *Attendo la sua risposta pazientemente.*
+[after 2 second]
+
+{link to: '4.accetta', label: '>Fabrizio: accetta'}
+<br>
+{link to: '4.rifiuta', label: '>Fabrizio: rifiuta'}
+[continue]
+<br><br>{link to: 'p4.3', label: '<<Indietro'}
+
+
+:: p5 {"position":"1500,300","size":"100,100"}
+L'amico chiede al proprietario informazioni sul chitarrista
+<br>
+<br>
+{link to: 'p6', label: '>'}
+
+
+:: p6 {"position":"1700,300","size":"100,100"}
+Il proprietario risponde che performava e ormai non viene più
+<br>
+<br>
+{link to: 'p7', label: '>'}
+
+
+:: p7 {"position":"1900,300","size":"100,100"}
+L'amico si preoccupa e decide di andare a trovarlo
+<br>
+<br>
+{link to: 'p8', label: 'Apri la porta'}
+<br>
+<br>
+<br>
+{link to: 'p14', label: 'non apri la porta'}
+
+
+:: p8 {"position":"2100,300","size":"100,100"}
+il chitarrista apre la porta
+<br>
+<br>
+{link to: 'p9', label: '>'}
+
+
+:: p9 {"position":"2300,300","size":"100,100"}
+I due parlano dell'interesse in comune e l'amico gli offre di suonare con lui
+<br>
+<br>
+{link to: 'p10', label: 'Accetta la proposta'}
+<br>
+{link to: 'p15', label: 'Non accetta la proposta'}

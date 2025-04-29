@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  twinelibrary:
+    build: .
+    container_name: twinelibrary
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./progetti:/app/progetti
+      - ./server:/app/server
+      - ./immagini_imgur:/app/immagini_imgur
+    restart: unless-stopped

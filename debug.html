@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Popups</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        .popup.active {
+            display: block;
+        }
+        .rating-stars i {
+            cursor: pointer;
+            color: #ccc;
+        }
+        .rating-stars i.active {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Popups</h1>
+    
+    <div class="button-container">
+        <h2>User Popup</h2>
+        <button id="user-btn">User Button</button>
+        <div id="user-popup" class="popup">
+            <p>User Popup Content</p>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <h2>Rating Popup</h2>
+        <button id="rating-btn">Rating Button</button>
+        <div id="rating-popup" class="popup">
+            <div class="rating-stars">
+                <i data-rating="1">★</i>
+                <i data-rating="2">★</i>
+                <i data-rating="3">★</i>
+                <i data-rating="4">★</i>
+                <i data-rating="5">★</i>
+            </div>
+            <div class="rating-text">Click to rate</div>
+        </div>
+    </div>
+
+    <script>
+        // User popup functionality
+        const userBtn = document.getElementById('user-btn');
+        const userPopup = document.getElementById('user-popup');
+        
+        userBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('User button clicked');
+            
+            if (userPopup.classList.contains('active')) {
+                userPopup.classList.remove('active');
+                userPopup.style.display = 'none';
+            } else {
+                userPopup.classList.add('active');
+                userPopup.style.display = 'block';
+            }
+        });
+        
+        // Rating popup functionality
+        const ratingBtn = document.getElementById('rating-btn');
+        const ratingPopup = document.getElementById('rating-popup');
+        const ratingStars = document.querySelectorAll('.rating-stars i');
+        
+        ratingBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Rating button clicked');
+            
+            if (ratingPopup.classList.contains('active')) {
+                ratingPopup.classList.remove('active');
+                ratingPopup.style.display = 'none';
+            } else {
+                ratingPopup.classList.add('active');
+                ratingPopup.style.display = 'block';
+            }
+        });
+        
+        // Rating stars functionality
+        ratingStars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                console.log('Rating selected:', rating);
+                
+                // Clear all active stars
+                ratingStars.forEach(s => s.classList.remove('active'));
+                
+                // Set active stars up to the selected rating
+                for (let i = 0; i < rating; i++) {
+                    ratingStars[i].classList.add('active');
+                }
+                
+                // Update text
+                document.querySelector('.rating-text').textContent = `You rated: ${rating}`;
+            });
+        });
+        
+        // Close popups when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!userPopup.contains(event.target) && event.target !== userBtn) {
+                userPopup.classList.remove('active');
+                userPopup.style.display = 'none';
+            }
+            
+            if (!ratingPopup.contains(event.target) && event.target !== ratingBtn) {
+                ratingPopup.classList.remove('active');
+                ratingPopup.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

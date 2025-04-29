@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner Progetti Twine (Python)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4 {
+            color: #3498db;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .json-container {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .json-output {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .class-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .instructions {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scanner Progetti Twine (Python)</h1>
+        <p>Questo strumento scansiona automaticamente i progetti Twine nella directory "progetti" ed estrae i metadati dai file HTML utilizzando il server Python.</p>
+        
+        <div class="instructions">
+            <h3>Istruzioni</h3>
+            <p>Per utilizzare lo scanner, segui questi passaggi:</p>
+            <ol>
+                <li>Assicurati che i tuoi progetti Twine siano organizzati in cartelle per classe (es. "progetti/classe1A/")</li>
+                <li>I file HTML dei progetti devono contenere metadati nei commenti HTML o nei meta tag:
+                    <ul>
+                        <li>Titolo: tag &lt;title&gt;</li>
+                        <li>Descrizione: meta tag "description" o primo paragrafo</li>
+                        <li>Autori: commento HTML &lt;!-- authors: Nome1, Nome2 --&gt;</li>
+                        <li>Tag: commento HTML &lt;!-- tags: tag1, tag2 --&gt;</li>
+                    </ul>
+                </li>
+                <li>Clicca sul pulsante "Avvia scansione" per generare automaticamente il file projects.json</li>
+            </ol>
+        </div>
+        
+        <button id="scan-button">Avvia scansione</button>
+        
+        <div id="scan-results">
+            <!-- I risultati della scansione verranno visualizzati qui -->
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('scan-button').addEventListener('click', async function() {
+            this.disabled = true;
+            this.textContent = 'Scansione in corso...';
+            
+            try {
+                // Chiama l'endpoint Python per la scansione dei progetti
+                const response = await fetch('/server/scan_projects.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    displayResults(data.projects);
+                    this.textContent = 'Scansione completata';
+                } else {
+                    throw new Error('Errore nella scansione dei progetti');
+                }
+            } catch (error) {
+                console.error('Errore durante la scansione:', error);
+                this.textContent = 'Errore durante la scansione';
+                document.getElementById('scan-results').innerHTML = `
+                    <div style="color: red; padding: 15px; background-color: #ffeeee; border-radius: 5px;">
+                        <h3>Errore</h3>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            } finally {
+                this.disabled = false;
+            }
+        });
+        
+        function displayResults(projects) {
+            const resultsContainer = document.getElementById('scan-results');
+            resultsContainer.innerHTML = '';
+            
+            const totalProjects = Object.keys(projects).reduce((total, key) => total + projects[key].length, 0);
+            const totalClasses = Object.keys(projects).length;
+            
+            const summary = document.createElement('div');
+            summary.innerHTML = `
+                <h3>Riepilogo della scansione</h3>
+                <p>Classi trovate: ${totalClasses}</p>
+                <p>Progetti totali: ${totalProjects}</p>
+            `;
+            resultsContainer.appendChild(summary);
+            
+            // Visualizza i dettagli dei progetti
+            for (const className in projects) {
+                const classProjects = projects[className];
+                
+                const classSection = document.createElement('div');
+                classSection.className = 'class-section';
+                classSection.innerHTML = `<h4>Classe ${className.substring(6)}</h4>`;
+                
+                const projectsList = document.createElement('ul');
+                for (const project of classProjects) {
+                    const projectItem = document.createElement('li');
+                    projectItem.innerHTML = `
+                        <strong>${project.name}</strong>
+                        <p>${project.description}</p>
+                        <p><small>File: ${project.file}</small></p>
+                        ${project.authors.length > 0 ? `<p><small>Autori: ${project.authors.join(', ')}</small></p>` : ''}
+                        ${project.tags.length > 0 ? `<p><small>Tag: ${project.tags.join(', ')}</small></p>` : ''}
+                    `;
+                    projectsList.appendChild(projectItem);
+                }
+                
+                classSection.appendChild(projectsList);
+                resultsContainer.appendChild(classSection);
+            }
+            
+            // Visualizza il JSON generato
+            const jsonOutput = document.createElement('pre');
+            jsonOutput.className = 'json-output';
+            jsonOutput.textContent = JSON.stringify(projects, null, 2);
+            
+            const jsonContainer = document.createElement('div');
+            jsonContainer.className = 'json-container';
+            jsonContainer.innerHTML = '<h3>JSON Generato</h3>';
+            jsonContainer.appendChild(jsonOutput);
+            
+            resultsContainer.appendChild(jsonContainer);
+        }
+    </script>
+</body>
+</html>

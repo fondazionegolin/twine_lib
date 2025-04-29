@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiche Voti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .stats-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .stats-card {
+            background: var(--card-background);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px var(--shadow-color);
+        }
+        
+        .stats-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .stats-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .stats-table th,
+        .stats-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--shadow-color);
+        }
+        
+        .stats-table th {
+            background-color: var(--background-color);
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .vote-value {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .timestamp {
+            color: var(--text-color);
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">Twine Library</a>
+            </div>
+            <div class="navbar-breadcrumb" id="breadcrumb">
+                <span class="breadcrumb-item">Home</span>
+                <span class="breadcrumb-item active">Statistiche</span>
+            </div>
+            <div class="navbar-actions">
+                <button id="dark-mode-toggle" class="navbar-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-container">
+        <div class="stats-card">
+            <div class="stats-header">
+                <h2 class="stats-title">Statistiche Voti</h2>
+            </div>
+            <div id="stats-content">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Scuola</th>
+                            <th>Classe</th>
+                            <th>Progetto</th>
+                            <th>Utente</th>
+                            <th>Voto</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stats-body">
+                        <!-- I dati verranno inseriti qui dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funzione per caricare i voti
+        async function loadVotes() {
+            try {
+                const response = await fetch('/server/votes.json');
+                const votes = await response.json();
+                
+                const statsBody = document.getElementById('stats-body');
+                statsBody.innerHTML = '';
+                
+                // Converti l'oggetto voti in un array e ordinalo per timestamp decrescente
+                const votesArray = Object.values(votes).sort((a, b) => b.timestamp - a.timestamp);
+                
+                votesArray.forEach(vote => {
+                    const row = document.createElement('tr');
+                    const date = new Date(vote.timestamp * 1000);
+                    
+                    row.innerHTML = `
+                        <td>${vote.scuola}</td>
+                        <td>${vote.classe}</td>
+                        <td>${vote.nome_progetto}</td>
+                        <td>${vote.nome_utente}</td>
+                        <td class="vote-value">${vote.voto}</td>
+                        <td class="timestamp">${date.toLocaleString()}</td>
+                    `;
+                    
+                    statsBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error loading votes:', error);
+                document.getElementById('stats-content').innerHTML = 
+                    '<p>Errore nel caricamento delle statistiche. Riprova più tardi.</p>';
+            }
+        }
+
+        // Gestione dark mode
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+        if (isDarkMode) {
+            document.documentElement.classList.remove('light-mode');
+            document.documentElement.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark-mode');
+            document.documentElement.classList.toggle('light-mode', !isDark);
+            darkModeToggle.innerHTML = isDark ? 
+                '<i class="fas fa-sun"></i>' : 
+                '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', isDark);
+        });
+
+        // Carica i voti all'avvio
+        loadVotes();
+    </script>
+</body>
+</html> 

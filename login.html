@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Twine - Accesso</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Biblioteca Twine</h1>
+                <p>Esplora storie interattive</p>
+            </div>
+            
+            <div class="login-tabs">
+                <button class="tab-btn active" data-tab="login">Accedi</button>
+                <button class="tab-btn" data-tab="register">Registrati</button>
+            </div>
+            
+            <div class="login-content">
+                <div class="tab-content active" id="login-tab">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-username">Nome utente</label>
+                            <input type="text" id="login-username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <div class="form-error" id="login-error"></div>
+                        <button type="submit" class="login-btn">Accedi</button>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="register-tab">
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-username">Nome utente</label>
+                            <input type="text" id="register-username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm-password">Conferma password</label>
+                            <input type="password" id="register-confirm-password" name="confirm-password" required>
+                        </div>
+                        <div class="form-error" id="register-error"></div>
+                        <button type="submit" class="login-btn">Registrati</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="login-footer">
+                <button id="dark-mode-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <span>Tema scuro</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/login.js"></script>
+</body>
+</html>

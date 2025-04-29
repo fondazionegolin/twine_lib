@@ -1,0 +1,1612 @@
+:: StoryTitle
+Il salvataggio di Milano
+
+
+:: StoryData
+{
+  "ifid": "50D8CCDE-E280-4174-9FB0-55773EF0993C",
+  "format": "Chapbook",
+  "format-version": "2.3.0",
+  "start": "1",
+  "zoom": 0.6
+}
+
+
+:: 000001.1 {"position":"2175,450","size":"100,100"}
+~~Sei giunto di fronte ai comunisti e inizi un dialogo con loro.~~<br><br>
+
+~~"Sono qui per discutere della situazione attuale di Milano. La città è divisa e frammentata, e credo che sia necessario un cambiamento radicale per riportare l'ordine e l'unità."~~<br><br>
+
+[after 1 second]
+~~Il rappresentante del governo comunista ti guarda con uno sguardo freddo, e dopo varie discussioni arrivate a una conclusione.~~<br>
+
+_Rappresentante del governo:_<br>
+_"Hahahaha! Sei davvero divertente {nome}, quindi possiamo lasciarti andare. Lo ammetto, mi hai convinto, anche perché non possiamo permettere che qualcuno come te stia qui a farci perdere tempo. Ma attento a cosa potrebbe succederti."_ <br><br>
+
+[after 3 second]
+~~Ti allontani tirando un sospiro di sollievo, consapevole che un passo importante è stato fatto.~~<br>
+
+{link to: '000002.1', label: 'Comincia a riunificare il paese'}
+
+
+:: 000001.2 {"position":"2175,925","size":"100,100"}
+{embed image: '../immagini_imgur/6uesQxq.jpeg'}
+~~Sei giunta di fronte ai comunisti e inizi un dialogo con loro.~~<br><br>
+
+~~"Sono qui per discutere della situazione attuale di Milano. La città è divisa e frammentata, e credo che sia necessario un cambiamento radicale per riportare l'ordine e l'unità."~~<br><br>
+
+[after 1 second]
+~~Il rappresentante del governo comunista ti guarda con uno sguardo freddo, e dopo varie discussioni arrivate a una conclusione.~~<br>
+
+_Rappresentante del governo:_<br>
+_"Hahahaha! Sei davvero divertente {nome}, quindi possiamo lasciarti andare. Lo ammetto, mi hai convinto, anche perché non possiamo permettere che qualcuno come te stia qui a farci perdere tempo. Ma attento a cosa potrebbe succederti."_ <br><br>
+
+[after 3 second]
+~~Ti allontani tirando un sospiro di sollievo, consapevole che un passo importante è stato fatto.~~<br>
+
+{link to: '000002.2', label: 'Comincia a riunificare il paese'}
+
+
+:: 000001_en {"position":"2150,1450","size":"100,100"}
+{embed image: '../immagini_imgur/6uesQxq.jpeg'}
+~~You arrive in front of the communists and start a dialogue with them.~~<br><br>
+
+~~"I am here to discuss the current situation in Milan. The city is divided and fragmented, and I believe that a radical change is needed to restore order and unity."~~<br><br>
+
+[after 1 second]
+~~The representative of the communist government looks at you with a cold gaze, and after several discussions you come to a conclusion.~~<br>
+
+_Representative of the government:_<br>
+_"Hahahaha! You are really funny {nome}, so we can let you go. I admit, you convinced me, also because we cannot allow someone like you to be here wasting our time. But be careful what could happen to you."_ <br><br>
+
+[after 3 seconds]
+~~You walk away breathing a sigh of relief, knowing that an important step has been taken.~~<br>
+
+{link to: '000002_en', label: 'Begin to reunite the country'}
+
+
+:: 000002.1 {"position":"2325,450","size":"100,100"}
+~~Dopo un po' di tempo, il paese è stato finalmente riunificato sotto la tua guida, ma i problemi iniziano a manifestarsi. I ribelli, contrari al tuo governo, cominciano a minacciarti di morte.~~<br>
+~~La tua autorità è messa in discussione e la città sembra dividersi nuovamente. Le strade sono attraversate da tensioni sempre più forti, e le tue decisioni diventano sempre più difficili da prendere.~~<br>
+~~I ribelli sono disposti a tutto pur di rovesciarti, e la situazione sembra sfuggire al tuo controllo.~~<br><br>
+
+**Devi prendere una decisione cruciale:**<br><br>
+
+{link to: 'fine5.1', label: 'Abbandona il paese'}<br>   
+{link to: 'fine6.1', label: 'Resisti ai ribelli'}
+
+
+:: 000002.2 {"position":"2375,900","size":"100,100"}
+~~Dopo un po' di tempo, il paese è stato finalmente riunificato sotto la tua guida, ma i problemi iniziano a manifestarsi. I ribelli, contrari al tuo governo, cominciano a minacciarti di morte.~~<br>
+~~La tua autorità è messa in discussione e la città sembra dividersi nuovamente. Le strade sono attraversate da tensioni sempre più forti, e le tue decisioni diventano sempre più difficili da prendere.~~<br>
+~~I ribelli sono disposti a tutto pur di rovesciarti, e la situazione sembra sfuggire al tuo controllo.~~<br><br>
+
+**Devi prendere una decisione cruciale:**<br><br>
+
+{link to: 'fine5.2', label: 'Abbandona il paese'}<br>   
+{link to: 'fine6.2', label: 'Resisti ai ribelli'}
+
+
+:: 000002_en {"position":"2350,1375","size":"100,100"}
+~~After some time, the country has finally been reunified under your leadership, but trouble is starting to appear. Rebels, opposed to your rule, are starting to threaten you with death.~~<br>
+~~Your authority is being questioned, and the city seems to be divided once again. Tensions are rising in the streets, and your decisions are becoming increasingly difficult to make.~~<br>
+~~The rebels are willing to do anything to overthrow you, and the situation seems to be spiraling out of your control.~~<br><br>
+
+**You have a crucial decision to make:**<br><br>
+
+{link to: 'end5', label: 'Leave the country'}<br>
+{link to: 'end6', label: 'Resist the rebels'}
+
+
+:: 0001.1 {"position":"1825,375","size":"100,100"}
+~~Hai scelto la via della pace, una decisione che metterà alla prova la tua pazienza e la tua capacità di negoziazione.~~<br>
+
+[after 1 second]
+~~La diplomazia non è un cammino facile, specialmente quando la città è divisa e ogni fazione è legata da ideologie contrastanti.~~ <br>
+
+[after 3 second]
+~~Decidere di agire pacificamente significa affrontare sfide che vanno oltre la semplice persuasione.~~ <br>
+~~Significa entrare in territori pericolosi, dove le parole hanno il potere di distruggere o ricostruire.~~ <br>
+
+[after 5 second]
+~~Preparati, perché ogni incontro con i comunisti, ogni parola che dirai, potrà segnare il futuro di Milano.~~ <br>
+~~Sei consapevole che il dialogo richiederà compromessi, sacrifici e una determinazione che dovrà essere più forte di qualsiasi conflitto armato.~~ <br>
+
+[after 7 second]
+~~La via della pace è lunga e tortuosa, e le resistenze potrebbero essere molte.~~ <br>
+~~Ma tu sei pronto a dare il meglio di te stesso per cercare una soluzione che possa unire la città, riportando la speranza laddove regna la divisione.~~ <br>
+
+[after 8 second]
+~~La tua convinzione che il dialogo possa davvero cambiare le cose ti spinge ad agire, nonostante tutto.~~ <br>
+~~Ogni passo che farai sarà una sfida, ma tu non sei disposto a rinunciare alla possibilità di un futuro migliore per Milano.~~ <br>
+
+[after 9 second]
+~~La tua preparazione sarà fondamentale, poiché la negoziazione richiederà una mente lucida, empatia e una strategia che possa attraversare le barriere ideologiche.~~ <br>
+
+[after 10 second]
+~~Sei pronto a mettere la tua vita in gioco, a rischiare tutto per ottenere ciò che credi sia giusto: la pace.~~ <br>
+~~Ma ora, la vera battaglia sta per cominciare, e tu sei pronto a lottare con le parole per ciò che speri di ottenere per la tua città.~~<br>
+<br>
+[after 25 second]
+
+[if hasArmi]
+{link to: '0002.1', label: 'Avanti'}
+
+[else]
+{link to: '000001.1', label: 'Avanti'}
+
+[continued]
+[continued]
+
+
+:: 0001.1_en {"position":"1700,1650","size":"100,100"}
+~~You have chosen the path of peace, a decision that will test your patience and your ability to negotiate.~~<br>
+
+[after 1 second]
+~~Diplomacy is not an easy path, especially when the city is divided and each faction is linked by contrasting ideologies.~~ <br>
+
+[after 3 seconds]
+~~Deciding to act peacefully means facing challenges that go beyond simple persuasion.~~ <br>
+~~It means entering dangerous territories, where words have the power to destroy or rebuild.~~ <br>
+
+[after 5 seconds]
+~~Prepare yourself, because every meeting with the communists, every word you say, could mark the future of Milan.~~ <br>
+~~You are aware that dialogue will require compromises, sacrifices and a determination that will have to be stronger than any armed conflict.~~ <br>
+
+[after 7 seconds]
+~~The path of peace is long and winding, and resistance could be many.~~ <br>
+~~But you are ready to give your best to find a solution that can unite the city, bringing hope where division reigns.~~ <br>
+
+[after 8 seconds]
+~~Your belief that dialogue can truly change things pushes you to act, despite everything.~~ <br>
+~~Every step you take will be a challenge, but you are not willing to give up the possibility of a better future for Milan.~~ <br>
+
+[after 9 seconds]
+~~Your preparation will be essential, as negotiation will require a clear mind, empathy and a strategy that can cross ideological barriers.~~ <br>
+
+[after 10 seconds]
+~~You are ready to put your life on the line, to risk everything to get what you believe is right: peace.~~ <br>
+~~But now, the real battle is about to begin, and you are ready to fight with words for what you hope to get for your city.~~<br>
+<br>
+[after 25 seconds]
+
+[if hasWeapons]
+{link to: '0002_en', label: 'Next'}
+
+[else]
+{link to: '000001_en', label: 'Next'}
+
+[continued]
+[continued]
+
+
+:: 0001.2 {"position":"1700,825","size":"100,100"}
+~~Hai scelto la via della pace, una decisione che metterà alla prova la tua pazienza e la tua capacità di negoziazione.~~<br>
+
+[after 1 second]
+~~La diplomazia non è un cammino facile, specialmente quando la città è divisa e ogni fazione è legata da ideologie contrastanti.~~ <br>
+
+[after 3 second]
+~~Decidere di agire pacificamente significa affrontare sfide che vanno oltre la semplice persuasione.~~ <br>
+~~Significa entrare in territori pericolosi, dove le parole hanno il potere di distruggere o ricostruire.~~ <br>
+
+[after 5 second]
+~~Preparati, perché ogni incontro con i comunisti, ogni parola che dirai, potrà segnare il futuro di Milano.~~ <br>
+~~Sei consapevole che il dialogo richiederà compromessi, sacrifici e una determinazione che dovrà essere più forte di qualsiasi conflitto armato.~~ <br>
+
+[after 7 second]
+~~La via della pace è lunga e tortuosa, e le resistenze potrebbero essere molte.~~ <br>
+~~Ma tu sei pronta a dare il meglio di te stessa per cercare una soluzione che possa unire la città, riportando la speranza laddove regna la divisione.~~ <br>
+
+[after 8 second]
+~~La tua convinzione che il dialogo possa davvero cambiare le cose ti spinge ad agire, nonostante tutto.~~ <br>
+~~Ogni passo che farai sarà una sfida, ma tu non sei disposta a rinunciare alla possibilità di un futuro migliore per Milano.~~ <br>
+
+[after 9 second]
+~~La tua preparazione sarà fondamentale, poiché la negoziazione richiederà una mente lucida, empatia e una strategia che possa attraversare le barriere ideologiche.~~ <br>
+
+[after 10 second]
+~~Sei pronta a mettere la tua vita in gioco, a rischiare tutto per ottenere ciò che credi sia giusto: la pace.~~ <br>
+~~Ma ora, la vera battaglia sta per cominciare, e tu sei pronta a lottare con le parole per ciò che speri di ottenere per la tua città.~~<br>
+<br>
+[after 25 second]
+
+[if hasArmi]
+{link to: '0002.2', label: 'Avanti'}
+
+[else]
+{link to: '000001.2', label: 'Avanti'}
+
+[continued]
+[continued]
+
+
+:: 0001.2_en {"position":"1700,1425","size":"100,100"}
+~~You have chosen the path of peace, a decision that will test your patience and your ability to negotiate.~~<br>
+
+[after 1 second]
+~~Diplomacy is not an easy path, especially when the city is divided and each faction is linked by contrasting ideologies.~~ <br>
+
+[after 3 seconds]
+~~Deciding to act peacefully means facing challenges that go beyond simple persuasion.~~ <br>
+~~It means entering dangerous territories, where words have the power to destroy or rebuild.~~ <br>
+
+[after 5 seconds]
+~~Prepare yourself, because every meeting with the communists, every word you say, could mark the future of Milan.~~ <br>
+~~You are aware that dialogue will require compromises, sacrifices and a determination that will have to be stronger than any armed conflict.~~ <br>
+
+[after 7 seconds]
+~~The path of peace is long and winding, and resistance could be many.~~ <br>
+~~But you are ready to give your best to find a solution that can unite the city, bringing hope where division reigns.~~ <br>
+
+[after 8 seconds]
+~~Your belief that dialogue can truly change things pushes you to act, despite everything.~~ <br>
+~~Every step you take will be a challenge, but you are not willing to give up the possibility of a better future for Milan.~~ <br>
+
+[after 9 seconds]
+~~Your preparation will be essential, as negotiation will require a clear mind, empathy and a strategy that can cross ideological barriers.~~ <br>
+
+[after 10 seconds]
+~~You are ready to put your life on the line, to risk everything to get what you believe is right: peace.~~ <br>
+~~But now, the real battle is about to begin, and you are ready to fight with words for what you hope to get for your city.~~<br>
+<br>
+[after 25 seconds]
+
+[if hasWeapons]
+{link to: '0002_en', label: 'Next'}
+
+[else]
+{link to: '000001_en', label: 'Next'}
+
+[continued]
+[continued]
+
+
+:: 0002.1 {"position":"2175,325","size":"100,100"}
+~~Sei giunto di fronte ai comunisti portando le armi per sicurezza e poi inizi a dialogare con uno di loro.~~<br><br>
+
+~~"Sono qui per discutere della situazione attuale di Milano. La città è divisa e frammentata, e credo che sia necessario un cambiamento radicale per riportare l'ordine e l'unità."~~<br><br>
+
+[after 1 second]
+~~Il rappresentante del governo comunista ti guarda con sospetto, notando l'arsenale di armi che hai deciso di portare con te.~~<br>
+
+_Rappresentante del governo:_<br>
+_"Giovanni, le tue intenzioni potrebbero sembrare nobili, ma ho notato che sei armato. Questo non è un segno di pace."_
+
+[after 3 second]
+~~Ti rendi conto che le armi agitano i comunisti, potrebbe risultare più complicato del previsto l'accordo.~~<br>
+
+~~"Le armi sono solo un mezzo per raggiungere un fine. Milano ha bisogno di un leader forte che possa guidarla attraverso questi tempi difficili."~~<br><br>
+
+[after 5 second]
+~~Il rappresentante del governo ride sarcasticamente.~~<br>
+
+_Rappresentante del governo:_<br>
+_"Hahahaha! Sei armato, quindi non ho la minima intenzione di avere a che fare con uno come te, immagino le guerre che potresti causare tra le varie culture di questa città. Non possiamo permettere che qualcuno come te minacci la nostra stabilità. Verrai esiliato immediatamente."_ <br><br>
+
+[after 7 second]
+~~Ti rendi conto che le tue parole non hanno avuto l'effetto desiderato e che dovrai inventare un altro modo per aiutare Milano.~~<br><br>
+{link to: 'fine4.1', label: 'Accetta il tuo destino'}
+
+
+:: 0002.2 {"position":"2175,800","size":"100,100"}
+{embed image: '../immagini_imgur/6uesQxq.jpeg'}
+~~Sei giunta di fronte ai comunisti portando le armi per sicurezza e poi inizi a dialogare con uno di loro.~~<br><br>
+
+~~"Sono qui per discutere della situazione attuale di Milano. La città è divisa e frammentata, e credo che sia necessario un cambiamento radicale per riportare l'ordine e l'unità."~~<br><br>
+
+[after 1 second]
+~~Il rappresentante del governo comunista ti guarda con sospetto, notando l'arsenale di armi che hai deciso di portare con te.~~<br>
+
+_Rappresentante del governo:_<br>
+_"{nome}i, le tue intenzioni potrebbero sembrare nobili, ma ho notato che sei armato. Questo non è un segno di pace."_
+
+[after 3 second]
+~~Ti rendi conto che le armi agitano i comunisti, potrebbe risultare più complicato del previsto l'accordo.~~<br>
+
+~~"Le armi sono solo un mezzo per raggiungere un fine. Milano ha bisogno di una leader forte che possa guidarla attraverso questi tempi difficili."~~<br><br>
+
+[after 5 second]
+~~Il rappresentante del governo ride sarcasticamente.~~<br>
+
+_Rappresentante del governo:_<br>
+_"Hahahaha! Sei armata, quindi non ho la minima intenzione di avere a che fare con uno come te, immagino le guerre che potresti causare tra le varie culture di questa città. Non possiamo permettere che qualcuno come te minacci la nostra stabilità. Verrai esiliata immediatamente."_ <br><br>
+
+[after 7 second]
+~~Ti rendi conto che le tue parole non hanno avuto l'effetto desiderato e che dovrai inventare un altro modo per aiutare Milano.~~<br>
+
+**FINE, LA TUA PROPOSTA È FALLITA**<br>
+{link to: 'fine4.2', label: 'Accetta il tuo destino'}
+
+
+:: 0002_en {"position":"2150,1350","size":"100,100"}
+{embed image: '../immagini_imgur/6uesQxq.jpeg'}
+~~You arrive in front of the communists carrying weapons for safety and then you start talking to one of them.~~<br><br>
+
+~~"I am here to discuss the current situation in Milan. The city is divided and fragmented, and I believe that a radical change is needed to restore order and unity."~~<br><br>
+
+[after 1 second]
+~~The representative of the communist government looks at you suspiciously, noting the arsenal of weapons you have decided to bring with you.~~<br>
+
+_Government Representative:_<br>
+_"{nome}, your intentions may seem noble, but I noticed that you are armed. This is not a sign of peace."_
+
+[after 3 seconds]
+~~You realize that weapons agitate the communists, it could be more complicated than expected to reach an agreement.~~<br>
+
+~~"Weapons are only a means to an end. Milan needs a strong leader who can guide it through these times difficult."~~<br><br>
+
+[after 5 seconds]
+~~The government representative laughs sarcastically.~~<br>
+
+_Government Representative:_<br>
+_"Hahahaha! You are armed, so I have no intention of dealing with someone like you, I can only imagine the wars you could cause between the various cultures of this city. We cannot allow someone like you to threaten our stability. You will be exiled immediately."_ <br><br>
+
+[after 7 seconds]
+~~You realize that your words have not had the desired effect and that you will have to come up with another way to help Milan.~~<br>
+
+**THE END, YOUR PROPOSAL HAS FAILED**<br>
+{link to: 'end4', label: 'Accept your fate'}
+
+
+:: 001.1 {"position":"1500,425","size":"100,100"}
+hasArmi: false
+--
+
+
+*Hai deciso di non armarti con le armi di tuo padre, ciò comporterà molte conseguenze sul tuo cammino...*<br>
+*Una rivoluzione armata potrebbe sembrare la via più veloce per risolvere il conflitto, ma a quale costo?*  
+*Ogni colpo sparato, ogni vita perduta, potrebbe essere una cicatrice indelebile sulla città che amiamo.*  
+*Le perdite sarebbero inevitabili, innocenti e colpevoli, giovani e anziani, tutti coinvolti in un conflitto che potrebbe sfuggire di mano.*
+
+*Mentre rifletti, ti rendi conto che una soluzione pacifica sarebbe forse l'ideale, ma le difficoltà sono enormi. Milano è divisa, ogni quartiere ha le sue credenze, la sua visione del mondo. Le fazioni si guardano con diffidenza, ognuna convinta della propria verità. Come convincere questi gruppi a mettere da parte le armi e le ideologie per un bene comune?*
+
+*La strada della pace potrebbe essere lunga e tortuosa, forse troppo lunga. Ma forse, se ci fosse un minimo spiraglio di speranza, il cambiamento pacifico potrebbe garantire una stabilità duratura. La riconciliazione, se mai fosse possibile, potrebbe portare a una Milano che vive in armonia, piuttosto che in un perpetuo stato di conflitto.*
+
+{link to: '06.1', label: 'Attua la rivoluzione'}  
+{link to: '0001.1', label: 'Agisci pacificamente'}
+
+
+:: 001.1_en {"position":"1450,1550","size":"100,100"}
+hasWeapons: false
+--
+
+*You have decided not to arm yourself with your father's weapons, this will have many consequences on your path...*<br>
+*An armed revolution might seem like the quickest way to resolve the conflict, but at what cost?*
+*Every shot fired, every life lost, could be an indelible scar on the city we love.*
+*The losses would be inevitable, innocent and guilty, young and old, all involved in a conflict that could get out of hand.*
+
+*As you reflect, you realize that a peaceful solution would perhaps be ideal, but the difficulties are enormous. Milan is divided, each neighborhood has its own beliefs, its own vision of the world. The factions look at each other with suspicion, each convinced of its own truth. How to convince these groups to put aside their weapons and ideologies for the common good?*
+
+*The road to peace could be long and winding, perhaps too long. But perhaps, if there were a glimmer of hope, peaceful change could ensure lasting stability. Reconciliation, if it were possible at all, could lead to a Milan that lives in harmony, rather than in a perpetual state of conflict.*
+
+{link to: '06.1_en', label: 'Make the Revolution a Reality'}
+{link to: '0001.1_en', label: 'Act peacefully'}
+
+
+:: 001.2 {"position":"1525,625","size":"100,100"}
+hasArmi: false
+--
+
+
+*Hai deciso di non armarti con le armi di tuo padre, ciò comporterà molte conseguenze sul tuo cammino...*<br>
+*Una rivoluzione armata potrebbe sembrare la via più veloce per risolvere il conflitto, ma a quale costo?*  
+*Ogni colpo sparato, ogni vita perduta, potrebbe essere una cicatrice indelebile sulla città che amiamo.*  
+*Le perdite sarebbero inevitabili, innocenti e colpevoli, giovani e anziani, tutti coinvolti in un conflitto che potrebbe sfuggire di mano.*
+
+*Mentre rifletti, ti rendi conto che una soluzione pacifica sarebbe forse l'ideale, ma le difficoltà sono enormi. Milano è divisa, ogni quartiere ha le sue credenze, la sua visione del mondo. Le fazioni si guardano con diffidenza, ognuna convinta della propria verità. Come convincere questi gruppi a mettere da parte le armi e le ideologie per un bene comune?*
+
+*La strada della pace potrebbe essere lunga e tortuosa, forse troppo lunga. Ma forse, se ci fosse un minimo spiraglio di speranza, il cambiamento pacifico potrebbe garantire una stabilità duratura. La riconciliazione, se mai fosse possibile, potrebbe portare a una Milano che vive in armonia, piuttosto che in un perpetuo stato di conflitto.*
+
+{link to: '06.2', label: 'Attua la rivoluzione'}  
+{link to: '0001.2', label: 'Agisci pacificamente'}
+
+
+:: 001.2_en {"position":"1450,1350","size":"100,100"}
+hasWeapons: false
+--
+
+*You have decided not to arm yourself with your father's weapons, this will have many consequences on your path...*<br>
+*An armed revolution might seem like the quickest way to resolve the conflict, but at what cost?*
+*Every shot fired, every life lost, could be an indelible scar on the city we love.*
+*The losses would be inevitable, innocent and guilty, young and old, all involved in a conflict that could get out of hand.*
+
+*As you reflect, you realize that a peaceful solution would perhaps be ideal, but the difficulties are enormous. Milan is divided, each neighborhood has its own beliefs, its own vision of the world. The factions look at each other with suspicion, each convinced of its own truth. How to convince these groups to put aside their weapons and ideologies for the common good?*
+
+*The road to peace could be long and winding, perhaps too long. But perhaps, if there were a glimmer of hope, peaceful change could ensure lasting stability. Reconciliation, if it were possible at all, could lead to a Milan that lives in harmony, rather than in a perpetual state of conflict.*
+
+{link to: '06.2_en', label: 'Make the Revolution a Reality'}
+{link to: '0001.2_en', label: 'Act peacefully'}
+
+
+:: 01.1 {"position":"825,575","size":"100,100"}
+_Caro {nome},_  
+
+_Spero che questa lettera ti trovi in buona salute. È passato molto tempo dall'ultima volta che ci siamo incontrati, e sento la tua mancanza più di quanto tu possa immaginare. Le giornate sembrano più vuote senza la tua presenza, e ci sono tante cose che vorrei dirti di persona._  
+
+_Vorrei invitarti a venire a Milano. Ho delle questioni importanti di cui dovremmo parlare, e credo che sia arrivato il momento di confrontarci faccia a faccia._  
+
+_Con tanto affetto,_  
+_Papà_  
+
+{embed image: '../immagini_imgur/g9EAdp6.jpeg'}
+
+{link to: '02.1', label: 'Vai da tuo padre'}
+
+
+:: 01.1_en {"position":"2025,1200","size":"100,100"}
+_Dear {nome},_
+
+_I hope this letter finds you in good health. It's been a long time since we last met, and I miss you more than you can imagine. The days seem emptier without you, and there are so many things I would like to tell you in person._
+
+_I would like to invite you to come to Milan. I have some important matters we need to discuss, and I think it's time we met face to face._
+
+_With much love,_
+_Dad_
+
+{embed image: '../immagini_imgur/g9EAdp6.jpeg'}
+
+{link to: '02.1_en', label: 'Go to your father'}
+
+
+:: 01.2 {"position":"825,725","size":"100,100"}
+_Cara {nome},_  
+
+_Spero che questa lettera ti trovi in buona salute. È passato molto tempo dall'ultima volta che ci siamo incontrati, e sento la tua mancanza più di quanto tu possa immaginare. Le giornate sembrano più vuote senza la tua presenza, e ci sono tante cose che vorrei dirti di persona._  
+
+_Vorrei invitarti a venire a Milano. Ho delle questioni importanti di cui dovremmo parlare, e credo che sia arrivato il momento di confrontarci faccia a faccia._  
+
+_Con tanto affetto,_  
+_Papà_  
+
+{embed image: '../immagini_imgur/g9EAdp6.jpeg'}
+
+{link to: '02.2', label: 'Vai da tuo padre'}
+
+
+:: 01.2_en {"position":"1975,1025","size":"100,100"}
+_Dear {nome},_
+
+_I hope this letter finds you in good health. It's been a long time since we last met, and I miss you more than you can imagine. The days seem emptier without you, and there are so many things I would like to tell you in person._
+
+_I would like to invite you to come to Milan. I have some important matters we need to discuss, and I think it's time we met face to face._
+
+_With much love,_
+_Dad_
+
+{embed image: '../immagini_imgur/g9EAdp6.jpeg'}
+
+{link to: '02.2_en', label: 'Go to your father'}
+
+
+:: 02.1 {"position":"1000,575","size":"100,100"}
+~~Dopo aver letto la lettera, ti senti in bilico. Le parole di tuo padre ti hanno toccato profondamente, evocando una miscela di emozioni che ti è difficile descrivere. La mancanza di un incontro e le sue parole ti fanno riflettere, ma la decisione è ancora tutta tua.~~  
+
+~~Vuoi davvero recarti da tuo padre? È stato tanto tempo, e chissà cosa ti aspetta a Milano…~~  
+
+{link to: '03.1', label: 'Sì'}  {link to: 'fine1', label: 'No'}
+
+
+:: 02.1_en {"position":"875,1550","size":"100,100"}
+~~After reading the letter, you feel unsteady. Your father's words have touched you deeply, evoking a mixture of emotions that are difficult for you to describe. The lack of a meeting and his words make you think, but the decision is still all yours.~~
+
+~~Do you really want to go to your father? It's been a long time, and who knows what awaits you in Milan…~~
+
+{link to: '03.1_en', label: 'Yes'} {link to: 'end1', label: 'No'}
+
+
+:: 02.2 {"position":"1000,725","size":"100,100"}
+~~Dopo aver letto la lettera, ti senti in bilico. Le parole di tuo padre ti hanno toccato profondamente, evocando una miscela di emozioni che ti è difficile descrivere. La mancanza di un incontro e le sue parole ti fanno riflettere, ma la decisione è ancora tutta tua.~~  
+
+~~Vuoi davvero recarti da tuo padre? È stato tanto tempo, e chissà cosa ti aspetta a Milano…~~  
+
+{link to: '03.2', label: 'Sì'}  {link to: 'fine1', label: 'No'}
+
+
+:: 02.2_en {"position":"900,1375","size":"100,100"}
+~~After reading the letter, you feel unsteady. Your father's words have touched you deeply, evoking a mixture of emotions that are difficult for you to describe. The lack of a meeting and his words make you think, but the decision is still all yours.~~
+
+~~Do you really want to go to your father? It's been a long time, and who knows what awaits you in Milan…~~
+
+{link to: '03.2_en', label: 'Yes'} {link to: 'end1', label: 'No'}
+
+
+:: 03.1 {"position":"1125,575","size":"100,100"}
+[after 1 second]
+*Entri nella stanza dove tuo padre è seduto, lo guardi con una mistura di rispetto e apprensione, le parole che stai per pronunciare pesano come macigni nella tua mente. Decidi di affrontarlo direttamente.*
+[after 4 second]
+_Ciao papà. È passato tanto tempo. Sono tornato a Milano e ho visto che la città è cambiata. Puoi dirmi cosa sta succedendo?_
+[after 7 second]
+*Noti subito il suo sguardo perso nel vuoto, il volto segnato dalle preoccupazioni e dalla fatica degli anni. Dopo un lungo silenzio, tuo padre sospira profondamente, poi si volta verso di te con un'espressione grave, come se stesse per rivelarti qualcosa di molto pesante.*
+[after 12 second]
+_{nome}, la nostra amata Milano è cambiata molto. Ormai la città è tutta divisa e frammentata. Ognuno vive nella propria realtà, parla una lingua diversa e segue ideologie che raramente si incrociano. La coesione che un tempo ci univa sembra ormai un lontano ricordo, e ogni giorno vedo questa separazione crescere._
+[after 16 second]
+*Ascolti attentamente, cercando di comprendere appieno la gravità della situazione, sentendo un nodo formarsi nella tua gola. Milano, la città che avevi conosciuto, la tua casa, non esiste più come un tempo.*
+[after 20 second]
+_E come siamo arrivati a questo punto, papà?_
+[after 21 second]
+*Il tuo sguardo si fa più intenso, ma tuo padre non risponde subito. Rimane fermo, come se stesse rievocando ogni passo che li ha portati a quel punto.*
+[after 25 second]
+_Sono stati anni difficili, figlio mio. La politica, le differenze ideologiche, tutto ha contribuito a creare queste profonde fratture. Ogni quartiere sembra essersi trasformato in un piccolo stato a sé stante, con le proprie leggi e credenze. La gente non parla più una lingua comune, e la Milano che amavamo è ormai irriconoscibile._
+[after 28 second]
+*Annuisci lentamente, riflettendo sul peso delle sue parole. La consapevolezza che ricostruire l'unità sarà un compito arduo ti colpisce come un pugno allo stomaco, ma senti anche una fiamma di determinazione crescere dentro di te. La tua città ha bisogno di te.*
+[after 32 second]
+_Grazie, papà. Farò del mio meglio per aiutare Milano a ritrovare sé stessa._
+[after 34 second]
+{link to: '04.1', label: 'Continua'}
+[continued]
+
+
+:: 03.1_en {"position":"1050,1550","size":"100,100"}
+[after 1 second]
+*You enter the room where your father is sitting, you look at him with a mixture of respect and apprehension, the words you are about to say weigh like boulders in your mind. You decide to face him directly.*
+[after 4 seconds]
+_Hi dad. It's been a long time. I returned to Milan and I saw that the city has changed. Can you tell me what's happening?_
+[after 7 seconds]
+*You immediately notice his gaze lost in the void, his face marked by the worries and fatigue of the years. After a long silence, your father sighs deeply, then turns to you with a serious expression, as if he were about to reveal something very heavy to you.*
+[after 12 seconds]
+_{nome}, our beloved Milan has changed a lot. By now the city is all divided and fragmented. Everyone lives in their own reality, speaks a different language and follows ideologies that rarely intersect. The cohesion that once united us now seems like a distant memory, and every day I see this separation grow._
+[after 16 seconds]
+*You listen carefully, trying to fully understand the gravity of the situation, feeling a lump forming in your throat. Milan, the city you once knew, your home, no longer exists as it once did.*
+[after 20 seconds]
+_And how did we get to this point, Dad?_
+[after 21 seconds]
+*Your gaze deepens, but your father doesn't respond immediately. He remains still, as if he were recalling every step that brought them to that point.*
+[after 25 seconds]
+_They have been difficult years, my son. Politics, ideological differences, everything has contributed to creating these deep fractures. Each neighborhood seems to have transformed into a small state in itself, with its own laws and beliefs. People no longer speak a common language, and the Milan we loved is now unrecognizable._
+[after 28 seconds]
+*You nod slowly, reflecting on the weight of his words. The knowledge that rebuilding unity will be an arduous task hits you like a punch in the stomach, but you also feel a flame of determination growing inside you. Your city needs you.*
+[after 32 seconds]
+_Thank you, Dad. I will do my best to help Milan find itself again._
+[after 34 seconds]
+{link to: '04.1_en', label: 'Continue'}
+[continued]
+
+
+:: 03.2 {"position":"1125,725","size":"100,100"}
+[after 1 second]
+Entri nella stanza dove tuo padre è seduto, lo guardi con una mistura di rispetto e apprensione, le parole che stai per pronunciare pesano come macigni nella tua mente. Decidi di affrontarlo direttamente.
+
+[after 4 second]
+Ciao papà. È passato tanto tempo. Sono tornata a Milano e ho visto che la città è cambiata. Puoi dirmi cosa sta succedendo?
+
+[after 7 second]
+Noti subito il suo sguardo perso nel vuoto, il volto segnato dalle preoccupazioni e dalla fatica degli anni. Dopo un lungo silenzio, tuo padre sospira profondamente, poi si volta verso di te con un'espressione grave, come se stesse per rivelarti qualcosa di molto pesante.
+
+[after 12 second]
+{nome}, figlia mia, la nostra amata Milano è cambiata molto. Ormai la città è tutta divisa e frammentata. Ognuno vive nella propria realtà, parla una lingua diversa e segue ideologie che raramente si incrociano. La coesione che un tempo ci univa sembra ormai un lontano ricordo, e ogni giorno vedo questa separazione crescere.
+
+[after 16 second]
+Ascolti attentamente, cercando di comprendere appieno la gravità della situazione, sentendo un nodo formarsi nella tua gola. Milano, la città che avevi conosciuto, la tua casa, non esiste più come un tempo.
+
+[after 20 second]
+E come siamo arrivati a questo punto, papà?
+
+[after 21 second]
+Il tuo sguardo si fa più intenso, ma tuo padre non risponde subito. Rimane fermo, come se stesse rievocando ogni passo che li ha portati a quel punto.
+
+[after 25 second]
+Sono stati anni difficili, figlia mia. La politica, le differenze ideologiche, tutto ha contribuito a creare queste profonde fratture. Ogni quartiere sembra essersi trasformato in un piccolo stato a sé stante, con le proprie leggi e credenze. La gente non parla più una lingua comune, e la Milano che amavamo è ormai irriconoscibile.
+
+[after 28 second]
+Annuisci lentamente, riflettendo sul peso delle sue parole. La consapevolezza che ricostruire l'unità sarà un compito arduo ti colpisce come un pugno allo stomaco, ma senti anche una fiamma di determinazione crescere dentro di te. La tua città ha bisogno di te.
+
+[after 32 second]
+Grazie, papà. Farò del mio meglio per aiutare Milano a ritrovare sé stessa.
+
+[after 34 second]
+{link to: '04.2', label: 'Continua'}
+[continued]
+
+
+:: 03.2_en {"position":"1050,1375","size":"100,100"}
+[after 1 second]
+You enter the room where your father is sitting, you look at him with a mixture of respect and apprehension, the words you are about to say weigh like boulders in your mind. You decide to confront him directly.
+
+[after 4 seconds]
+Hi dad. It's been a long time. I returned to Milan and I saw that the city has changed. Can you tell me what's happening?
+
+[after 7 seconds]
+You immediately notice his gaze lost in the void, his face marked by the worries and fatigue of the years. After a long silence, your father sighs deeply, then turns to you with a serious expression, as if he were about to reveal something very heavy.
+
+[after 12 seconds]
+{nome}, my daughter, our beloved Milan has changed a lot. By now the city is all divided and fragmented. Everyone lives in their own reality, speaks a different language and follows ideologies that rarely intersect. The cohesion that once united us now seems like a distant memory, and every day I see this separation grow.
+
+[after 16 seconds]
+You listen carefully, trying to fully understand the gravity of the situation, feeling a lump forming in your throat. Milan, the city you once knew, your home, no longer exists as it once did.
+
+[after 20 seconds]
+And how did we get to this point, Dad?
+
+[after 21 seconds]
+Your gaze deepens, but your father doesn't respond immediately. He remains still, as if he were recalling every step that brought them to this point.
+
+[after 25 seconds]
+These have been difficult years, my daughter. Politics, ideological differences, everything has contributed to creating these deep fractures. Each neighborhood seems to have transformed into a small state of its own, with its own laws and beliefs. People no longer speak a common language, and the Milan we loved is now unrecognizable.
+
+[after 28 seconds]
+You nod slowly, considering the weight of his words. The knowledge that rebuilding unity will be a daunting task hits you like a punch in the stomach, but you also feel a flame of determination growing inside you. Your city needs you.
+
+[after 32 seconds]
+Thank you, Dad. I will do my best to help Milan find itself again.
+
+[after 34 seconds]
+{link to: '04.2_en', label: 'Continue'}
+[continued]
+
+
+:: 04.1 {"position":"1250,575","size":"100,100"}
+[after 1 second]
+*Il padre si alza lentamente, il suo volto segnato dalla fatica di anni di lotte e sacrifici. Si avvicina a un vecchio armadio, lo apre con un rumore sordo, rivelando un arsenale di armi ben custodito all'interno. Il luccichio metallico sembra riflettere una realtà che non avresti mai voluto affrontare. Tuo padre si volta verso di te con uno sguardo deciso, che non lascia spazio a dubbi.*
+[after 8 second]
+_{nome}, so che non è una decisione facile, ma se vuoi davvero aiutare Milano, avrai bisogno di queste. Prendi le armi e combatti per la nostra città._
+[after 12 second]
+
+~~Il silenzio nella stanza è denso, come se ogni parola pronunciata fosse carica di un destino che ti coinvolge totalmente. Guardi le armi, ogni singolo pezzo sembra rappresentare una scelta che cambierà il corso della tua vita. Il peso di quella decisione ti schiaccia, mentre il tuo cuore batte forte nel petto. Sa che accettare questo invito significherebbe entrare in un mondo fatto di violenza, conflitto e un impegno che potrebbe cambiarti per sempre. Ma rifiutare significherebbe abbandonare Milano al suo destino.~~
+[after 20 second]
+
+{link to: '05.1', label: 'Accetta'}  
+{link to: '001.1', label: 'Rifiuta'}
+[continued]
+
+
+:: 04.1_en {"position":"1225,1550","size":"100,100"}
+[after 1 second]
+*The father slowly gets up, his face marked by the fatigue of years of struggle and sacrifice. He approaches an old wardrobe, opens it with a dull noise, revealing an arsenal of weapons well-guarded inside. The metallic glint seems to reflect a reality that {name} never wanted to face. Your father turns to you with a determined look, that leaves no room for doubt.*
+[after 8 second]
+_{name}, I know it's not an easy decision, but if you really want to help Milan, you'll need these. Take up arms and fight for our city._
+[after 12 second]
+
+~~The silence in the room is thick, as if every word spoken was charged with a destiny that involves you completely. You look at the weapons, each single piece seems to represent a choice that will change the course of your life. The weight of that decision crushes you, while your heart beats hard in your chest. He knows that accepting this invitation would mean entering a world made of violence, conflict and a commitment that could change you forever. But refusing would mean abandoning Milan to its fate, leaving it at the mercy of forces you don't know and that feared to complete what had begun to crumble the city.~~
+[after 20 seconds]
+
+{link to: '05.1_en', label: 'Accept'}
+{link to: '001.1_en', label: 'Refuse'}
+[continued]
+
+
+:: 04.2 {"position":"1250,725","size":"100,100"}
+[after 1 second]
+*Il padre si alza lentamente, il suo volto segnato dalla fatica di anni di lotte e sacrifici. Si avvicina a un vecchio armadio, lo apre con un rumore sordo, rivelando un arsenale di armi ben custodito all'interno. Il luccichio metallico sembra riflettere una realtà che non avresti mai voluto affrontare. Tuo padre si volta verso di te con uno sguardo deciso, che non lascia spazio a dubbi.*
+
+[after 8 second]
+_{nome}, so che non è una decisione facile, ma se vuoi davvero aiutare Milano, avrai bisogno di queste. Prendi le armi e combatti per la nostra città._
+
+[after 12 second]
+~~Il silenzio nella stanza è denso, come se ogni parola pronunciata fosse carica di un destino che ti coinvolge totalmente. Guardi le armi, ogni singolo pezzo sembra rappresentare una scelta che cambierà il corso della tua vita. Il peso di quella decisione ti schiaccia, mentre il tuo cuore batte forte nel petto. Sai che accettare questo invito significherebbe entrare in un mondo fatto di violenza, conflitto e un impegno che potrebbe cambiarti per sempre. Ma rifiutare significherebbe abbandonare Milano al suo destino.~~
+
+[after 20 second]
+
+{link to: '05.2', label: 'Accetta'}
+{link to: '001.2', label: 'Rifiuta'}
+[continued]
+
+
+:: 04.2_en {"position":"1225,1375","size":"100,100"}
+[after 1 second]
+*The father slowly gets up, his face marked by the fatigue of years of struggle and sacrifice. He approaches an old wardrobe, opens it with a dull noise, revealing an arsenal of weapons well-guarded inside. The metallic glint seems to reflect a reality that {nome} never wanted to face. Your father turns to you with a determined look, that leaves no room for doubt.*
+[after 8 second]
+_{nome}, I know it's not an easy decision, but if you really want to help Milan, you'll need these. Take up arms and fight for our city._
+[after 12 second]
+
+~~The silence in the room is thick, as if every word spoken was charged with a destiny that involves you completely. You look at the weapons, each single piece seems to represent a choice that will change the course of your life. The weight of that decision crushes you, while your heart beats hard in your chest. He knows that accepting this invitation would mean entering a world made of violence, conflict and a commitment that could change you forever. But refusing would mean abandoning Milan to its fate, leaving it at the mercy of forces you don't know and that feared to complete what had begun to crumble the city.~~
+[after 20 seconds]
+
+{link to: '05.2_en', label: 'Accept'}
+{link to: '001.2_en', label: 'Refuse'}
+[continued]
+
+
+:: 05.1 {"position":"1500,300","size":"100,100"}
+hasArmi: true
+--
+
+*Una rivoluzione armata potrebbe sembrare la via più veloce per risolvere il conflitto, ma a quale costo?*  
+*Ogni colpo sparato, ogni vita perduta, potrebbe essere una cicatrice indelebile sulla città che amiamo.*  
+*Le perdite sarebbero inevitabili, innocenti e colpevoli, giovani e anziani, tutti coinvolti in un conflitto che potrebbe sfuggire di mano.*
+
+*Mentre rifletti, ti rendi conto che una soluzione pacifica sarebbe forse l'ideale, ma le difficoltà sono enormi. Milano è divisa, ogni quartiere ha le sue credenze, la sua visione del mondo. Le fazioni si guardano con diffidenza, ognuna convinta della propria verità. Come convincere questi gruppi a mettere da parte le armi e le ideologie per un bene comune?*
+
+*La strada della pace potrebbe essere lunga e tortuosa, forse troppo lunga. Ma forse, se ci fosse un minimo spiraglio di speranza, il cambiamento pacifico potrebbe garantire una stabilità duratura. La riconciliazione, se mai fosse possibile, potrebbe portare a una Milano che vive in armonia, piuttosto che in un perpetuo stato di conflitto.*
+
+{link to: '06.1', label: 'Attua la rivoluzione'}  
+{link to: '0001.1', label: 'Agisci pacificamente'}
+
+
+:: 05.1_en {"position":"1450,1650","size":"100,100"}
+hasWeapons: true
+--
+
+*You have decided not to arm yourself with your father's weapons, this will have many consequences on your path...*<br>
+*An armed revolution might seem like the quickest way to resolve the conflict, but at what cost?*
+*Every shot fired, every life lost, could be an indelible scar on the city we love.*
+*The losses would be inevitable, innocent and guilty, young and old, all involved in a conflict that could get out of hand.*
+
+*As you reflect, you realize that a peaceful solution would perhaps be ideal, but the difficulties are enormous. Milan is divided, each neighborhood has its own beliefs, its own vision of the world. The factions look at each other with suspicion, each convinced of its own truth. How to convince these groups to put aside their weapons and ideologies for the common good?*
+
+*The road to peace could be long and winding, perhaps too long. But perhaps, if there were a glimmer of hope, peaceful change could ensure lasting stability. Reconciliation, if it were possible at all, could lead to a Milan that lives in harmony, rather than in a perpetual state of conflict.*
+
+{link to: '06.1_en', label: 'Make the Revolution a Reality'}
+{link to: '0001.1_en', label: 'Act peacefully'}
+
+
+:: 05.2 {"position":"1525,750","size":"100,100"}
+hasArmi: true
+--
+
+*Una rivoluzione armata potrebbe sembrare la via più veloce per risolvere il conflitto, ma a quale costo?*  
+*Ogni colpo sparato, ogni vita perduta, potrebbe essere una cicatrice indelebile sulla città che amiamo.*  
+*Le perdite sarebbero inevitabili, innocenti e colpevoli, giovani e anziani, tutti coinvolti in un conflitto che potrebbe sfuggire di mano.*
+
+*Mentre rifletti, ti rendi conto che una soluzione pacifica sarebbe forse l'ideale, ma le difficoltà sono enormi. Milano è divisa, ogni quartiere ha le sue credenze, la sua visione del mondo. Le fazioni si guardano con diffidenza, ognuna convinta della propria verità. Come convincere questi gruppi a mettere da parte le armi e le ideologie per un bene comune?*
+
+*La strada della pace potrebbe essere lunga e tortuosa, forse troppo lunga. Ma forse, se ci fosse un minimo spiraglio di speranza, il cambiamento pacifico potrebbe garantire una stabilità duratura. La riconciliazione, se mai fosse possibile, potrebbe portare a una Milano che vive in armonia, piuttosto che in un perpetuo stato di conflitto.*
+
+{link to: '06.2', label: 'Attua la rivoluzione'}  
+{link to: '0001.2', label: 'Agisci pacificamente'}
+
+
+:: 05.2_en {"position":"1450,1450","size":"100,100"}
+hasWeapons: true
+--
+
+*You have decided to arm yourself with your father's weapons, this will have many consequences on your path...*<br>
+*An armed revolution might seem like the quickest way to resolve the conflict, but at what cost?*
+*Every shot fired, every life lost, could be an indelible scar on the city we love.*
+*The losses would be inevitable, innocent and guilty, young and old, all involved in a conflict that could get out of hand.*
+
+*As you reflect, you realize that a peaceful solution would perhaps be ideal, but the difficulties are enormous. Milan is divided, each neighborhood has its own beliefs, its own vision of the world. The factions look at each other with suspicion, each convinced of its own truth. How to convince these groups to put aside their weapons and ideologies for the common good?*
+
+*The road to peace could be long and winding, perhaps too long. But perhaps, if there were a glimmer of hope, peaceful change could ensure lasting stability. Reconciliation, if it were possible at all, could lead to a Milan that lives in harmony, rather than in a perpetual state of conflict.*
+
+{link to: '06.2_en', label: 'Make the Revolution a Reality'}
+{link to: '0001.2_en', label: 'Act peacefully'}
+
+
+:: 06.1 {"position":"1825,225","size":"100,100"}
+~~Hai deciso di intraprendere il cammino della rivoluzione, una scelta che cambierà per sempre il corso della tua vita e di quella di Milano.~~<br>
+
+[after 1 second]
+~~Sei consapevole che questa strada è irta di pericoli, che ogni passo che farai potrebbe costarti qualcosa di irreparabile.~~ <br>
+[after 3 second]
+~~La rivoluzione non è solo un atto di ribellione, ma una decisione radicale di opporsi a un sistema che ha soffocato la città e le sue persone.~~ <br>
+[after 5 second]
+~~Preparati, perché la tua determinazione verrà messa alla prova ad ogni angolo. <br>
+La lotta che stai per affrontare non è solo fisica, ma anche emotiva e psicologica. <br>
+Ogni azione che intraprenderai avrà delle conseguenze, e dovrai essere pronto a fare sacrifici.~~ <br>
+[after 7 second]
+~~La tua vita, la tua famiglia, e persino la tua stessa umanità potrebbero essere messe alla prova in modi che non hai mai immaginato.~~ <br>
+[after 8 second]
+~~Tuttavia, in questo momento di caos, tu hai scelto di non arrenderti, di non permettere che la paura e la divisione prevalgano~~. <br>
+[after 9 second]
+~~Sei disposto a perdere tutto per il tuo paese, per la tua città, e per una causa che credi sia giusta.~~ <br>
+[after 10 second]
+~~La strada che hai scelto è lunga, tortuosa e piena di incertezze, ma sei pronto a combattere per ciò in cui credi.~~ <br>
+~~Preparati, perché il futuro che ti attende dipenderà dalla forza con cui affronterai la battaglia che sta per iniziare.~~<br>
+<br>
+[if hasArmi]
+{link to: 'fine2.1', label: 'Avanti'}
+
+[else]
+{link to: 'fine3.1', label: 'Avanti'}
+[continued]
+[continued]
+
+
+:: 06.1_en {"position":"1700,1550","size":"100,100"}
+~~You have decided to embark on the path of revolution, a choice that will change the course of your life and that of Milan forever.~~<br>
+
+[after 1 second]
+~~You are aware that this path is fraught with danger, that every step you take could cost you something irreparable.~~ <br>
+[after 3 second]
+~~The revolution is not just an act of rebellion, but a radical decision to oppose a system that has suffocated the city and its people.~~ <br>
+[after 5 second]
+~~Get ready, because your determination will be tested at every corner. <br>
+The fight you are about to face is not only physical, but also emotional and psychological. <br>
+Every action you take will have consequences, and you must be prepared to make sacrifices.~~ <br>
+[after 7 seconds]
+~~Your life, your family, and even your humanity may be tested in ways you have never imagined.~~ <br>
+[after 8 seconds]
+~~However, in this time of chaos, you have chosen not to give up, not to allow fear and division to prevail~~. <br>
+[after 9 seconds]
+~~You are willing to lose everything for your country, for your city, and for a cause that you believe is right.~~ <br>
+[after 10 seconds]
+~~The road you have chosen is long, winding and full of uncertainties, but you are ready to fight for what you believe in.~~ <br>
+~~Prepare yourself, because the future that awaits you will depend on the strength with which you face the battle that is about to begin.~~<br>
+<br>
+[if hasWeapons]
+{link to: 'end2', label: 'Next'}
+
+[else]
+{link to: 'end3', label: 'Next'}
+[continued]
+[continued]
+
+
+:: 06.2 {"position":"1700,650","size":"100,100"}
+~~Hai deciso di intraprendere il cammino della rivoluzione, una scelta che cambierà per sempre il corso della tua vita e di quella di Milano.~~<br>
+
+[after 1 second]
+~~Sei consapevole che questa strada è irta di pericoli, che ogni passo che farai potrebbe costarti qualcosa di irreparabile.~~ <br>
+[after 3 second]
+~~La rivoluzione non è solo un atto di ribellione, ma una decisione radicale di opporsi a un sistema che ha soffocato la città e le sue persone.~~ <br>
+[after 5 second]
+~~Preparati, perché la tua determinazione verrà messa alla prova ad ogni angolo. <br>
+La lotta che stai per affrontare non è solo fisica, ma anche emotiva e psicologica. <br>
+Ogni azione che intraprenderai avrà delle conseguenze, e dovrai essere pronto a fare sacrifici.~~ <br>
+[after 7 second]
+~~La tua vita, la tua famiglia, e persino la tua stessa umanità potrebbero essere messe alla prova in modi che non hai mai immaginato.~~ <br>
+[after 8 second]
+~~Tuttavia, in questo momento di caos, tu hai scelto di non arrenderti, di non permettere che la paura e la divisione prevalgano~~. <br>
+[after 9 second]
+~~Sei disposta a perdere tutto per il tuo paese, per la tua città, e per una causa che credi sia giusta.~~ <br>
+[after 10 second]
+~~La strada che hai scelto è lunga, tortuosa e piena di incertezze, ma sei pronto a combattere per ciò in cui credi.~~ <br>
+~~Preparati, perché il futuro che ti attende dipenderà dalla forza con cui affronterai la battaglia che sta per iniziare.~~<br>
+<br>
+[if hasArmi]
+{link to: 'fine2.2', label: 'Avanti'}
+
+[else]
+{link to: 'fine3.2', label: 'Avanti'}
+[continued]
+[continued]
+
+
+:: 06.2_en {"position":"1700,1325","size":"100,100"}
+~~You have decided to embark on the path of revolution, a choice that will change the course of your life and that of Milan forever.~~<br>
+
+[after 1 second]
+~~You are aware that this path is fraught with danger, that every step you take could cost you something irreparable.~~ <br>
+[after 3 second]
+~~The revolution is not just an act of rebellion, but a radical decision to oppose a system that has suffocated the city and its people.~~ <br>
+[after 5 second]
+~~Get ready, because your determination will be tested at every corner. <br>
+The fight you are about to face is not only physical, but also emotional and psychological. <br>
+Every action you take will have consequences, and you must be prepared to make sacrifices.~~ <br>
+[after 7 seconds]
+~~Your life, your family, and even your humanity may be tested in ways you have never imagined.~~ <br>
+[after 8 seconds]
+~~However, in this time of chaos, you have chosen not to give up, not to allow fear and division to prevail~~. <br>
+[after 9 seconds]
+~~You are willing to lose everything for your country, for your city, and for a cause that you believe is right.~~ <br>
+[after 10 seconds]
+~~The road you have chosen is long, winding and full of uncertainties, but you are ready to fight for what you believe in.~~ <br>
+~~Prepare yourself, because the future that awaits you will depend on the strength with which you face the battle that is about to begin.~~<br>
+<br>
+[if hasWeapons]
+{link to: 'end2', label: 'Next'}
+
+[else]
+{link to: 'end3', label: 'Next'}
+[continued]
+[continued]
+
+
+:: 1 {"position":"75,200","size":"100,100"}
+**IL SALVATAGGIO DI MILANO / THE RESCUE OF MILAN**
+
+~~Benvenuto in questa storia interattiva. Segui le scelte per scoprire il destino del protagonista.~~<br><br>
+~~Welcome to this interactive story. Follow the choices to discover the protagonist's fate.~~<br><br>
+
+{link to: 'selezione_lingua', label: 'Inizia la storia / The story begins'}  
+{link to: '1.2', label: 'Crediti e ringraziamenti / Credits and thanks'}  
+{link to: '1.3', label: 'Disclaimer e avvertenze / Disclaimer and warnings'}
+
+
+:: 1.2 {"position":"150,375","size":"100,100"}
+**CREDITI / CREDITS**
+
+~~Premi una delle altrenative per visualizzarlo in quella lingua~~  <br>
+~~Press one of the alternatives to view it in that language~~<br><br>
+{link to: 'crediti_it', label: 'Italiano'}<br>
+{link to: 'crediti_en', label: 'English'}<br><br>
+ {link to: '1', label: 'Torna alla Home / Back to Home'}
+
+
+:: 1.3 {"position":"50,375","size":"100,100"}
+**DISCLAIMER**
+~~Premi una delle alternative per visualizzarlo in quella lingua~~  <br>
+~~Press one of the alternatives to view it in that language~~<br><br>
+{link to: 'disclaimer_it', label: 'Italiano'}<br>
+{link to: 'disclaimer_en', label: 'English'}<br><br>
+ {link to: '1', label: 'Torna alla Home / Back to Home'}
+
+
+:: 2 {"position":"250,200","size":"100,100"}
+~~Seleziona il genere e successivamente il nome del personaggio che vuoi impersonificare~~:<br><br>
+~~Genere~~: {link to: '2.2', label: 'Uomo'} {link to: '2.3', label: 'Donna'}<br><br>
+
+
+:: 2.2 {"position":"400,50","size":"100,100"}
+~~Scrivi nel riquadro il nome del tuo personaggio:~~ {text input for: 'nome'}<br><br>
+{link to: '3.1', label: 'Continua la personalizzazione'}
+
+
+:: 2.2_en {"position":"300,1000","size":"100,100"}
+~~Write your character's name in the box:~~ {text input for: 'nome'}<br><br>
+{link to: '3.1_en', label: 'Continue customization'}
+
+
+:: 2.3 {"position":"550,50","size":"100,100"}
+~~Scrivi nel riquadro il nome del tuo personaggio:~~ {text input for: 'nome'}<br><br>
+{link to: '3.2', label: 'Continua la personalizzazione'}
+
+
+:: 2.3_en {"position":"525,800","size":"100,100"}
+~~Write your character's name in the box:~~ {text input for: 'nome'}<br><br>
+{link to: '3.2_en', label: 'Continue customization'}
+
+
+:: 2_en {"position":"375,500","size":"100,100"}
+~~Select the gender and then the name of the character you want to impersonate~~:<br><br>
+~~Gender~~: {link to: '2.2_en', label: 'Male'} {link to: '2.3_en', label: 'Female'}<br><br>
+
+
+:: 3.1 {"position":"400,200","size":"100,100"}
+~~Benvenuto caro {nome},~~<br>
+~~Inserisci il quartiere che desideri amministrare:~~ {dropdown menu for: 'quartieri', choices: ['Affori', 'Barona', 'Bicocca', 'Bovisa', 'Bruzzano', 'Baggio', 'Cagnola', 'Calvairate', 'Casoretto', 'Città Studi', 'Chinatown', 'Comasina', 'Corvetto', 'Crescenzago', 'Dergano', 'Famagosta', 'Fiera', 'Forlanini', 'Garegnano', 'Garibaldi Repubblica', 'Ghisolfa', 'Gorla', 'Gratosoglio', 'Greco', 'Isola', 'Lambrate', 'Lorenteggio', 'Loreto', 'Maciachini', 'Maggiolina', 'Niguarda', 'NoLo', 'Ortica', 'Padova', 'Portello', 'Porta Garibaldi', 'Porta Romana', 'Porta Ticinese', 'Porta Venezia', 'Porta Vittoria', 'Precotto', 'Quartiere degli Olmi', 'Quarto Oggiaro', 'Quinto Romano', 'Quinto Sole', 'Rogoredo', 'San Cristoforo', 'San Siro', 'Santa Giulia', 'Selinunte', 'Stadera', 'Stephenson', 'Stazione Centrale', 'Ticinese', 'Turro', 'Vialba', 'Vigentino', 'Villapizzone', 'Washington'] }<br><br>
+{link to: '4.1', label: 'Avanti'}<br>
+
+
+:: 3.1_en {"position":"900,1200","size":"100,100"}
+~~Welcome dear {nome},~~<br>
+~~Enter the neighborhood you wish to administer:~~ {dropdown menu for: 'quartieri', choices: ['Affori', 'Barona', 'Bicocca', 'Bovisa', 'Bruzzano', 'Baggio', 'Cagnola', 'Calvairate', 'Casoretto', 'Città Studi', 'Chinatown', 'Comasina', 'Corvetto', 'Crescenzago', 'Dergano', 'Famagosta', 'Fiera', 'Forlanini', 'Garegnano', 'Garibaldi Repubblica', 'Ghisolfa', 'Gorla', 'Gratosoglio', 'Greco', 'Isola', 'Lambrate', 'Lorenteggio', 'Loreto', 'Maciachini', 'Maggiolina', 'Niguarda', 'NoLo', 'Ortica', 'Padova', 'Portello', 'Porta Garibaldi', 'Porta Romana', 'Porta Ticinese', 'Porta Venezia', 'Porta Vittoria', 'Precotto', 'Quartiere degli Olmi', 'Quarto Oggiaro', 'Quinto Romano', 'Quinto Sole', 'Rogoredo', 'San Cristoforo', 'San Siro', 'Santa Giulia', 'Selinunte', 'Stadera', 'Stephenson', 'Stazione Centrale', 'Ticinese', 'Turro', 'Vialba', 'Vigentino', 'Villapizzone', 'Washington'] }<br><br>
+{link to: '4.1_en', label: 'Next'}<br>
+
+
+:: 3.2 {"position":"425,325","size":"100,100"}
+~~Benvenuta cara {nome},~~<br>
+~~Inserisci il quartiere che desideri amministrare:~~ {dropdown menu for: 'quartieri', choices: ['Affori', 'Barona', 'Bicocca', 'Bovisa', 'Bruzzano', 'Baggio', 'Cagnola', 'Calvairate', 'Casoretto', 'Città Studi', 'Chinatown', 'Comasina', 'Corvetto', 'Crescenzago', 'Dergano', 'Famagosta', 'Fiera', 'Forlanini', 'Garegnano', 'Garibaldi Repubblica', 'Ghisolfa', 'Gorla', 'Gratosoglio', 'Greco', 'Isola', 'Lambrate', 'Lorenteggio', 'Loreto', 'Maciachini', 'Maggiolina', 'Niguarda', 'NoLo', 'Ortica', 'Padova', 'Portello', 'Porta Garibaldi', 'Porta Romana', 'Porta Ticinese', 'Porta Venezia', 'Porta Vittoria', 'Precotto', 'Quartiere degli Olmi', 'Quarto Oggiaro', 'Quinto Romano', 'Quinto Sole', 'Rogoredo', 'San Cristoforo', 'San Siro', 'Santa Giulia', 'Selinunte', 'Stadera', 'Stephenson', 'Stazione Centrale', 'Ticinese', 'Turro', 'Vialba', 'Vigentino', 'Villapizzone', 'Washington'] }<br><br>
+{link to: '4.2', label: 'Avanti'}<br>
+
+
+:: 3.2_en {"position":"900,1025","size":"100,100"}
+~~Welcome dear {nome},~~<br>
+~~Enter the neighborhood you wish to administer:~~ {dropdown menu for: 'quartieri', choices: ['Affori', 'Barona', 'Bicocca', 'Bovisa', 'Bruzzano', 'Baggio', 'Cagnola', 'Calvairate', 'Casoretto', 'Città Studi', 'Chinatown', 'Comasina', 'Corvetto', 'Crescenzago', 'Dergano', 'Famagosta', 'Fiera', 'Forlanini', 'Garegnano', 'Garibaldi Repubblica', 'Ghisolfa', 'Gorla', 'Gratosoglio', 'Greco', 'Isola', 'Lambrate', 'Lorenteggio', 'Loreto', 'Maciachini', 'Maggiolina', 'Niguarda', 'NoLo', 'Ortica', 'Padova', 'Portello', 'Porta Garibaldi', 'Porta Romana', 'Porta Ticinese', 'Porta Venezia', 'Porta Vittoria', 'Precotto', 'Quartiere degli Olmi', 'Quarto Oggiaro', 'Quinto Romano', 'Quinto Sole', 'Rogoredo', 'San Cristoforo', 'San Siro', 'Santa Giulia', 'Selinunte', 'Stadera', 'Stephenson', 'Stazione Centrale', 'Ticinese', 'Turro', 'Vialba', 'Vigentino', 'Villapizzone', 'Washington'] }<br><br>
+{link to: '4.2_en', label: 'Next'}<br>
+
+
+:: 4.1 {"position":"525,200","size":"100,100"}
+~~Hai scelto il quartiere~~ **{quartieri}**. ~~Sei sicuro della tua scelta?~~  
+
+{link to: '5.1', label: 'Sì, confermo'}  
+{link to: '3.1', label: 'No, voglio cambiare'}
+
+
+:: 4.1_en {"position":"1100,1200","size":"100,100"}
+~~You have chosen the neighborhood {quartieri}. ~~Are you sure about your choice?~~
+
+{link to: '5.1_en', label: 'Yes, I confirm'}
+{link to: '3.1_en', label: 'No, I want to change'}
+
+
+:: 4.2 {"position":"550,325","size":"100,100"}
+~~Hai scelto il quartiere~~ **{quartieri}**. ~~Sei sicura della tua scelta~~?  
+
+{link to: '5.2', label: 'Sì, confermo'}  
+{link to: '3.2', label: 'No, voglio cambiare'}
+
+
+:: 4.2_en {"position":"1100,1025","size":"100,100"}
+~~You have chosen the neighborhood~~ **{quartieri}**. ~~Are you sure about your choice~~?
+
+{link to: '5.2_en', label: 'Yes, I confirm'}
+{link to: '3.2_en', label: 'No, I want to change'}
+
+
+:: 5.1 {"position":"675,200","size":"100,100"}
+[after 1 second]
+{nome} è un giovane studente cresciuto lontano da Milano, la città che un tempo apparteneva alla sua famiglia. Figlio di un ex dittatore caduto sotto il peso della rivoluzione, è stato educato con l’ombra del passato sempre alle sue spalle.<br> 
+[after 3 second]
+Sua madre gli ha insegnato a credere nella pace e nella democrazia, mentre il mondo gli ha ricordato che il suo nome è sinonimo di tirannia.<br>
+<br>
+[after 6 second]
+Non ha mai conosciuto davvero il potere, solo le sue conseguenze. <br>
+[after 7 second]
+Non ha mai comandato, solo ascoltato storie su chi lo faceva. <br>
+[after 8 second]
+Per anni ha vissuto nell’anonimato, imparando a essere un estraneo nella propria storia, a nascondere il sangue che scorre nelle sue vene. <br>
+[after 9 second]
+Ma sotto l’apparenza di un ragazzo normale, dietro gli occhi di un osservatore silenzioso, si cela qualcosa di più grande: un'eredità spezzata, un fuoco che non si è mai spento del tutto.<br>
+<br>
+[after 14 second]
+{nome} non è un uomo di ideali, né un soldato di partito.<br>
+[after 15 second]
+È un prodotto della divisione, cresciuto tra due mondi senza appartenere a nessuno. <br>
+[after 16 second]
+Ma quando torna a Milano e vede ciò che il comunismo ha fatto alla città, comprende una verità innegabile: senza ordine, la libertà è solo un’illusione.<br>
+[after 20 second]
+Forse il passato di suo padre è una condanna. O forse, è una guida.<br>
+<br>
+{link to: 'inizio.1', label: 'Comincia la tua avventura'}
+[continued]
+
+
+:: 5.1_en {"position":"1300,1200","size":"100,100"}
+[after 1 second]
+{nome} is a young student who grew up far from Milan, the city that once belonged to his family. The son of a former dictator who fell under the weight of the revolution, he was raised with the shadow of the past always behind him.<br>
+[after 3 second]
+His father taught him to believe in peace and democracy, while the world reminded him that his name is synonymous with tyranny.<br>
+<br>
+[after 6 second]
+He has never truly known power, only its consequences. <br>
+[after 7 second]
+He has never commanded, only listened to stories about those who did. <br>
+[after 8 second]
+For years he has lived in anonymity, learning to be a stranger in his own history, to hide the blood that flows in his veins. <br>
+[after 9 seconds]
+But beneath the appearance of a normal boy, behind the eyes of a silent observer, something bigger is hidden: a broken legacy, a fire that has never completely died out.<br>
+<br>
+[after 14 seconds]
+{name} is not a man of ideals, nor a party soldier.<br>
+[after 15 seconds]
+He is a product of division, raised between two worlds without belonging to either. <br>
+[after 16 seconds]
+But when he returns to Milan and sees what communism has done to the city, he understands an undeniable truth: without order, freedom is just an illusion.<br>
+[after 20 seconds]
+Perhaps his father's past is a condemnation. Or perhaps, it is a guide.<br>
+<br>
+{link to: 'inizio.1_en', label: 'Begin your Adventure'}
+[continued]
+
+
+:: 5.2 {"position":"675,350","size":"100,100"}
+[after 1 second]
+~~{nome} è una giovane studentessa cresciuta lontano da Milano, la città che un tempo apparteneva alla sua famiglia. Figlia di un ex dittatore caduto sotto il peso della rivoluzione, è stata educata con l’ombra del passato sempre alle sue spalle.~~
+
+[after 3 second]
+~~Suo padre le ha insegnato a credere nella pace e nella democrazia, mentre il mondo le ha ricordato che il suo nome è sinonimo di tirannia.~~
+
+[after 6 second]
+~~Non ha mai conosciuto davvero il potere, solo le sue conseguenze.~~
+
+[after 7 second]
+~~Non ha mai comandato, solo ascoltato storie su chi lo faceva.~~
+
+[after 8 second]
+~~Per anni ha vissuto nell’anonimato, imparando a essere un’estranea nella propria storia, a nascondere il sangue che scorre nelle sue vene.~~
+
+[after 9 second]
+~~Ma sotto l’apparenza di una ragazza normale, dietro gli occhi di un’osservatrice silenziosa, si cela qualcosa di più grande: un'eredità spezzata, un fuoco che non si è mai spento del tutto.~~
+
+[after 14 second]
+~~{nome} non è una donna di ideali, né una soldatessa di partito.~~
+
+[after 15 second]
+~~È un prodotto della divisione, cresciuta tra due mondi senza appartenere a nessuno.~~
+
+[after 16 second]
+~~Ma quando torna a Milano e vede ciò che il comunismo ha fatto alla città, comprende una verità innegabile: senza ordine, la libertà è solo un’illusione.~~
+
+[after 20 second]
+Forse il passato di suo padre è una condanna. O forse, è una guida.
+
+{link to: 'inizio.2', label: 'Comincia la tua avventura'}
+[continued]
+
+
+:: 5.2_en {"position":"1300,1025","size":"100,100"}
+[after 1 second]
+~~{nome} is a young student who grew up far from Milan, the city that once belonged to her family. Daughter of a former dictator who fell under the weight of the revolution, she was raised with the shadow of the past always at her back.~~
+
+[after 3 seconds]
+~~Her father taught her to believe in peace and democracy, while the world reminded her that her name is synonymous with tyranny.~~
+
+[after 6 seconds]
+~~She has never truly known power, only its consequences.~~
+
+[after 7 seconds]
+~~She has never commanded, only listened to stories of those who did.~~
+
+[after 8 seconds]
+~~For years she has lived in anonymity, learning to be an outsider in her own history, to hide the blood that flows in her veins.~~
+
+[after 9 seconds]
+~~But beneath the appearance of a normal girl, behind the eyes of a silent observer, lies something greater: a broken legacy, a fire that has never completely died.~~
+
+[after 14 second]
+~~{nome} is not a woman of ideals, nor a party soldier.~~
+
+[after 15 seconds]
+~~She is a product of division, raised between two worlds without belonging to either.~~
+
+[after 16 seconds]
+~~But when she returns to Milan and sees what communism has done to the city, she understands an undeniable truth: without order, freedom is just an illusion.~~
+
+[after 20 seconds]
+Perhaps her father's past is a condemnation. Or perhaps, it is a guide.
+
+{link to: 'inizio.2_en', label: 'Begin your Adventure'}
+[continued]
+
+
+:: contatti {"position":"750,475","size":"100,100"}
+
+
+
+:: crediti_en {"position":"600,625","size":"100,100"}
+**THE RESCUE OF MILAN**<br><br>
+**Made by Alex, Lorenzo and Leo** <br><br>
+~~This story was created to entertain and stimulate critical thinking through a parodic and satirical lens. Alex, Lorenzo and Leo's work aims to explore sensitive topics in a provocative way, without ever falling into the promotion of extremist ideologies or movements. The use of characters, symbols and historical situations is purely a narrative device to discuss and reflect, without any intention of offending.~~ <br><br>
+~~Satire, by its nature, seeks to unmask the contradictions and weaknesses of any system, and in this case we aim to do so through a story that exaggerates, mocks and questions issues often treated seriously, but without ever taking a specific political or ideological position.~~ <br><br>
+~~Milan, with its central role in Italian political and social history, is the hub of this narrative. The city is represented as a stage of contradictions, where opposing ideologies clash, mix and transform over time. From its iconic squares to the less traveled alleys, Milan becomes the living and pulsating backdrop in which Giovanni moves, facing challenges that mix reality and fiction in a journey that, despite being surreal, has deep roots in the history of the city.~~ <br><br>
+{link to: '1', label: 'Back to Home'} <br>
+{link to: 'contacts', label: 'Contacts'}
+
+
+:: crediti_it {"position":"575,500","size":"100,100"}
+**IL SALVATAGGIO DI MILANO**<br><br>
+**Realizzato da Alex, Lorenzo e Leo**  <br><br>
+~~Questa storia è stata creata per intrattenere e stimolare il pensiero critico attraverso una lente parodistica e satirica. Il lavoro di Alex, Lorenzo e Leo ha l'obiettivo di esplorare temi delicati in modo provocatorio, senza mai scadere nella promozione di ideologie o movimenti estremisti. L'uso di personaggi, simboli e situazioni storiche è puramente un espediente narrativo per discutere e riflettere, senza alcuna intenzione di offendere.~~  <br><br>
+~~La satira, per sua natura, cerca di smascherare le contraddizioni e i punti deboli di qualsiasi sistema, e in questo caso ci proponiamo di farlo attraverso un racconto che esagera, irride e mette in discussione temi spesso trattati in modo serio, ma senza mai prendere una posizione politica o ideologica specifica.~~  <br><br>
+~~Milano, con il suo ruolo centrale nella storia politica e sociale italiana, è il fulcro di questa narrazione. La città viene rappresentata come un palcoscenico di contraddizioni, dove ideologie opposte si scontrano, si mescolano e si trasformano nel tempo. Dalle sue piazze iconiche ai vicoli meno battuti, Milano diventa lo sfondo vivo e pulsante in cui Giovanni si muove, affrontando sfide che mescolano realtà e finzione in un viaggio che, pur essendo surreale, ha radici profonde nella storia della città.~~  <br><br>
+{link to: '1', label: 'Torna alla Home'}  <br>
+
+
+:: disclaimer_en {"position":"175,850","size":"100,100"}
+**DISCLAIMER**<br><br>
+~~The following content deals with sensitive topics such as fascism and communism.
+It is important to underline that the intent of this story is purely illustrative and comical.~~
+
+~~There is no intention to evoke, promote or support political ideologies, movements or historical groups linked to these terms. All references to fascists and communists are used in a parodic way, with the sole purpose of generating humor.~~
+
+~~The authors do not intend in any way to offend, provoke or create tension between individuals or groups. This story should be considered as a satirical representation and not as a political stance.~~
+
+~~Any resemblance to real people, events or situations is purely coincidental and unintentional. The authors decline all responsibility for misinterpretations or negative reactions resulting from the use of this content.~~<br><br>
+
+{link to: '1', label: 'Back to Home'}
+
+
+:: disclaimer_it {"position":"50,775","size":"100,100"}
+**DISCLAIMER**
+~~Il seguente contenuto tratta di temi sensibili come fascismo e comunismo.  
+È importante sottolineare che l'intento di questa storia è puramente illustrativo e comico.~~  
+
+~~Non vi è alcuna volontà di evocare, promuovere o supportare ideologie politiche, movimenti o gruppi storici legati a tali termini. Tutti i riferimenti a fascisti e comunisti sono utilizzati in chiave parodistica, con l’unico scopo di generare umorismo.~~  
+
+~~Gli autori non intendono in alcun modo offendere, provocare o creare tensioni tra individui o gruppi. Questa storia va considerata come una rappresentazione satirica e non come una presa di posizione politica.~~  
+
+~~Qualsiasi somiglianza con persone, eventi o situazioni reali è puramente casuale e non intenzionale. Gli autori declinano ogni responsabilità per interpretazioni errate o reazioni negative derivanti dalla fruizione di questo contenuto.~~  
+
+{link to: '1', label: 'Torna alla Home'}
+
+
+:: end {"position":"1175,25","size":"100,100"}
+~~Thank you so much for playing our story!~~<br>
+~~We hope this adventure has given you a pleasant, engaging moment — and maybe even a few unexpected surprises. Every choice you made shaped a unique path, but who knows how many other hidden routes are still waiting to be explored? If you'd like to discover new outcomes, try a different strategy, or simply relive the experience from a fresh perspective, you can start over by pressing the button below.~~<br><br>
+~~Also, if you'd like to help us improve, we've prepared a short feedback survey. It only takes a few minutes to share your thoughts, and every response is incredibly valuable to us as we work to make the game even better. You can access the survey at the link below:~~<br>
+https://www.leodev.it/gradimento-storia<br><br>
+
+{embed image: '../immagini_imgur/83B3U0n.jpeg'}
+
+{link to: '1', label: 'Play Again'}
+
+
+:: end1 {"position":"525,1425","size":"100,100"}
+~~You decide not to go to your father. You stay in the neighborhood, with its familiar faces and the rhythm of daily life that flows, but something inside you seems different. Without that visit, without that confrontation, you remain tied to the past, trapped in a routine that no longer belongs to you completely.~~
+
+~~By not going to your father, you remain an ordinary citizen in the {quartieri} neighborhood.~~
+
+**NOTHING HAS CHANGED**
+
+{link to: 'end', label: 'Next'}
+
+
+:: end2 {"position":"2350,1100","size":"100,100"}
+~~{name}, you have succeeded!~~<br>
+~~You have reunified Milan under your dictatorship, with determination and steadfastness.~~<br>
+
+[after 1 second]
+~~Every step you have taken, every sacrifice you have made, has led you to this decisive moment.~~ <br>
+~~The city, once divided, is now under your control, and the future of Milan is in your hands.~~<br>
+
+[after 3 seconds]
+~~But your victory is not just a conquest of power, but a manifestation of will, a test of your determination to do what you believe is necessary.~~ <br>
+
+[after 5 seconds]
+~~The city now follows your command, but the real challenge is maintaining order, stability, and cohesion in a world that has been changed forever.~~ <br>
+
+[after 7 seconds]
+~~Your leadership will be tested in every decision you make, but you have achieved what you you were looking for: control of Milan.~~<br>
+
+[after 9 seconds]
+~~However, power has its price, and the future you have built may never be as stable as it seems. Your dictatorship is only the beginning of a new era, but with it you also bring new challenges.~~<br>
+
+[after 10 seconds]
+~~Prepare yourself, because your fight is not over, but the path you have taken has led you here.~~ <br>
+
+**YOU HAVE REACHED YOUR GOAL**<br>
+{link to: 'end', label: 'Next'}
+
+
+:: end3 {"position":"2550,1100","size":"100,100"}
+~~{name}, you did not take up your father's weapons...~~<br>
+~~You perished while trying to carry out the revolution.~~<br>
+
+[after 1 second]
+~~Your decision not to fight with force, to seek peaceful solutions, led you to a tragic end.~~<br>
+
+[after 3 seconds]
+~~The revolution did not have the hoped-for success, and you fell in the attempt to change Milan, leaving behind a city that remains divided and at the mercy of its internal struggles.~~<br>
+
+[after 5 seconds]
+~~The price you paid for your choice was high, but your death also represents the end of a hope that failed to flourish.~~<br>
+
+[after 7 seconds]
+~~Now, Milan continues to suffer under the same tensions and conflicts, and your memory becomes part of a story that has never been written, but that everyone remembers as a courageous but failed.~~<br>
+
+[after 9 seconds]
+~~Your sacrifice, unfortunately, was not enough to change the course of events. Your life was extinguished without having seen the result of your dream.~~<br>
+
+**YOU'RE DEAD**<br>
+{link to: 'end', label: 'Next'}
+
+
+:: end4 {"position":"2350,1225","size":"100,100"}
+~~You are exiled for life on a remote island in the sea of ​​Iceland, a remote and inhospitable place where survival seems impossible.~~<br>
+~~There is no one to talk to, no resources to feed yourself or take shelter, only the frozen wasteland of Iceland that surrounds you.~~<br>
+~~The days pass slowly, the cold and loneliness wear you down. Your mind begins to falter while your body grows weaker and weaker.~~<br><br>
+
+**YOU ARE DEAD, MISSION FAILED**<br><br>
+
+{link to: 'end', label: 'Next'}
+
+
+:: end5 {"position":"2550,1225","size":"100,100"}
+~~You decide to flee, hoping to save yourself and escape the grip of the rebels. But even in your escape, Milan slips from your hands.~~<br>
+~~The city you had reunified is now divided, without a strong leader to guide it. Chaos and confusion reign, and Milan will never be the same again.~~<br>
+~~You walk away, but the weight of defeat is great. Your mission, although it began with noble intentions, has not had the desired result.~~<br><br>
+
+**YOU FAILED**<br>
+
+{link to: 'end', label: 'Next'}
+
+
+:: end6 {"position":"2550,1375","size":"100,100"}
+~~You failed to resist the rebels' assault. Your determination was tested, but in the end the fight was too hard.~~<br>
+~~Milan will not have the future you had hoped for. Your death will not change anything, and everything will remain as before, with the chaos that envelops the city.~~<br>
+~~The sacrifice you made did not lead to a solution, and Milan continues to struggle with its divisions.~~<br><br>
+
+**THE END, YOU'RE DEAD**<br>
+
+{link to: 'end', label: 'Continue'}
+
+
+:: fine {"position":"1425,25","size":"100,100"}
+~~Grazie di cuore per aver giocato alla nostra storia!~~<br>
+~~Speriamo che questa avventura ti abbia offerto un momento piacevole, stimolante e magari anche qualche sorpresa inaspettata. Ogni scelta che hai preso ha contribuito a creare un percorso unico, ma chissà quante altre strade alternative ti aspettano ancora. Se desideri scoprire nuovi esiti, cambiare strategia o semplicemente rivivere l’esperienza da una nuova prospettiva, puoi ricominciare da capo premendo il pulsante qui sotto.~~<br><br>
+~~Inoltre, se ti fa piacere aiutarci a migliorare, abbiamo preparato un breve test di gradimento. Bastano pochi minuti per condividere il tuo parere, e ogni feedback per noi è prezioso per rendere il gioco sempre migliore. Puoi accedere al questionario cliccando su questo link:~~<br>
+https://www.leodev.it/gradimento-storia<br><br>
+
+{embed image: '../immagini_imgur/83B3U0n.jpeg'}
+
+{link to: '1', label: 'Rigioca'}
+
+
+:: fine1 {"position":"1325,375","size":"100,100"}
+~~Decidi di non andare da tuo padre. Rimani nel quartiere, con i suoi volti familiari e il ritmo della vita quotidiana che scorre, ma qualcosa dentro di te sembra diverso. Senza quella visita, senza quel confronto, resti legato al passato, intrappolato in una routine che non ti appartiene più completamente.~~  
+
+~~Non recandoti dal padre, rimani un comune cittadino del quartiere{quartieri}.~~  
+
+**NULLA È CAMBIATO**  
+
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine2.1 {"position":"2000,150","size":"100,100"}
+~~{nome}, sei riuscito nel tuo intento!~~<br>
+~~Hai riunificato Milano sotto la tua dittatura, con determinazione e fermezza.~~<br>
+
+[after 1 second]
+~~Ogni passo che hai compiuto, ogni sacrificio che hai fatto, ti ha condotto a questo momento decisivo.~~ <br>
+~~La città, un tempo divisa, ora è sotto il tuo controllo, e il futuro di Milano è nelle tue mani.~~<br>
+
+[after 3 second]
+~~Ma la tua vittoria non è solo una conquista di potere, ma una manifestazione di volontà, una prova della tua determinazione a fare ciò che credi necessario.~~ <br>
+
+[after 5 second]
+~~La città ora segue il tuo comando, ma la vera sfida è mantenere l'ordine, la stabilità, e la coesione in un mondo che è stato cambiato per sempre.~~ <br>
+
+[after 7 second]
+~~La tua leadership sarà messa alla prova in ogni decisione che prenderai, ma hai ottenuto ciò che cercavi: il controllo di Milano.~~<br>
+
+[after 9 second]
+~~Tuttavia, il potere ha il suo prezzo, e il futuro che hai costruito potrebbe non essere mai così stabile come sembra. La tua dittatura è solo l'inizio di una nuova era, ma con essa porti anche nuove sfide.~~<br>
+
+[after 10 second]
+~~Preparati, perché la tua lotta non è finita, ma il cammino che hai intrapreso ti ha condotto fino a qui.~~ <br>
+
+**HAI RAGGIUNTO IL TUO OBBIETTIVO**<br>
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine2.2 {"position":"1975,575","size":"100,100"}
+~~{nome}, sei riuscita nel tuo intento!~~<br>
+~~Hai riunificata Milano sotto la tua dittatura, con determinazione e fermezza.~~<br>
+
+[after 1 second]
+~~Ogni passo che hai compiuto, ogni sacrificio che hai fatto, ti ha condotto a questo momento decisivo.~~ <br>
+~~La città, un tempo divisa, ora è sotto il tuo controllo, e il futuro di Milano è nelle tue mani.~~<br>
+
+[after 3 second]
+~~Ma la tua vittoria non è solo una conquista di potere, ma una manifestazione di volontà, una prova della tua determinazione a fare ciò che credi necessario.~~ <br>
+
+[after 5 second]
+~~La città ora segue il tuo comando, ma la vera sfida è mantenere l'ordine, la stabilità, e la coesione in un mondo che è stato cambiato per sempre.~~ <br>
+
+[after 7 second]
+~~La tua leadership sarà messa alla prova in ogni decisione che prenderai, ma hai ottenuto ciò che cercavi: il controllo di Milano.~~<br>
+
+[after 9 second]
+~~Tuttavia, il potere ha il suo prezzo, e il futuro che hai costruito potrebbe non essere mai così stabile come sembra. La tua dittatura è solo l'inizio di una nuova era, ma con essa porti anche nuove sfide.~~<br>
+
+[after 10 second]
+~~Preparati, perché la tua lotta non è finita, ma il cammino che hai intrapreso ti ha condotto fino a qui.~~ <br>
+
+**HAI RAGGIUNTO IL TUO OBBIETTIVO**<br>
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine3.1 {"position":"2000,275","size":"100,100"}
+~~{nome}, non hai preso le armi di tuo padre...~~<br>
+~~Sei perito durante il tentativo di attuare la rivoluzione.~~<br>
+
+[after 1 second]
+~~La tua decisione di non combattere con la forza, di cercare soluzioni pacifiche, ti ha portato a una tragica fine.~~<br>
+
+[after 3 second]
+~~La rivoluzione non ha avuto il successo sperato, e tu sei caduto nel tentativo di cambiare Milano, lasciando dietro di te una città che rimane divisa e in balia delle sue lotte interne.~~<br>
+
+[after 5 second]
+~~Il prezzo che hai pagato per la tua scelta è stato alto, ma la tua morte rappresenta anche la fine di una speranza che non è riuscita a fiorire.~~<br>
+
+[after 7 second]
+~~Ora, Milano continua a soffrire sotto le stesse tensioni e conflitti, e la tua memoria diventa parte di una storia che non è mai stata scritta, ma che tutti ricordano come un tentativo coraggioso ma fallito.~~<br>
+
+[after 9 second]
+~~Il tuo sacrificio, purtroppo, non è stato sufficiente a cambiare il corso degli eventi. La tua vita si è spenta senza aver visto il risultato del tuo sogno.~~<br>
+
+**SEI MORTO**<br>
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine3.2 {"position":"1975,700","size":"100,100"}
+~~{nome}, non hai preso le armi di tuo padre...~~<br>
+~~Sei perita durante il tentativo di attuare la rivoluzione.~~<br>
+
+[after 1 second]
+~~La tua decisione di non combattere con la forza, di cercare soluzioni pacifiche, ti ha portato a una tragica fine.~~<br>
+
+[after 3 second]
+~~La rivoluzione non ha avuto il successo sperato, e tu sei caduta nel tentativo di cambiare Milano, lasciando dietro di te una città che rimane divisa e in balia delle sue lotte interne.~~<br>
+
+[after 5 second]
+~~Il prezzo che hai pagato per la tua scelta è stato alto, ma la tua morte rappresenta anche la fine di una speranza che non è riuscita a fiorire.~~<br>
+
+[after 7 second]
+~~Ora, Milano continua a soffrire sotto le stesse tensioni e conflitti, e la tua memoria diventa parte di una storia che non è mai stata scritta, ma che tutti ricordano come un tentativo coraggioso ma fallito.~~<br>
+
+[after 9 second]
+~~Il tuo sacrificio, purtroppo, non è stato sufficiente a cambiare il corso degli eventi. La tua vita si è spenta senza aver visto il risultato del tuo sogno.~~<br>
+
+**SEI MORTA**<br>
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine4.1 {"position":"2325,325","size":"100,100"}
+~~Vieni esiliato a vita su un'isola sperduta nel mare dell'Islanda, un luogo remoto e inospitale dove la sopravvivenza sembra impossibile.~~<br>
+~~Non c'è nessuno con cui parlare, nessuna risorsa per nutrirsi o rifugiarsi, solo il deserto gelido dell'Islanda che ti circonda.~~<br>
+~~I giorni passano lentamente, il freddo e la solitudine ti logorano. La tua mente inizia a vacillare mentre il corpo si indebolisce sempre di più.~~<br><br>
+
+**HA FALLITO LA MISSIONE**<br><br>
+
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine4.2 {"position":"2350,750","size":"100,100"}
+~~Vieni esiliata a vita su un'isola sperduta nel mare dell'Islanda, un luogo remoto e inospitale dove la sopravvivenza sembra impossibile.~~<br>
+~~Non c'è nessuno con cui parlare, nessuna risorsa per nutrirsi o rifugiarsi, solo il deserto gelido dell'Islanda che ti circonda.~~<br>
+~~I giorni passano lentamente, il freddo e la solitudine ti logorano. La tua mente inizia a vacillare mentre il corpo si indebolisce sempre di più.~~<br><br>
+
+**HAI FALLITO LA MISSIONE**<br><br>
+
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine5.1 {"position":"2475,425","size":"100,100"}
+~~Hai deciso di fuggire, sperando di salvare te stesso e di sfuggire alla morsa dei ribelli. Ma anche nella fuga, Milano ti sfugge dalle mani.~~<br>
+~~La città che avevi riunificato è ora divisa, senza un leader forte a guidarla. Il caos e la confusione regnano, e Milano non sarà mai più la stessa.~~<br>
+~~Ti allontani, ma il peso della sconfitta è grande. La tua missione, sebbene fosse iniziata con nobili intenzioni, non ha avuto il risultato sperato.~~<br><br>
+
+**HAI FALLITO**<br>
+
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine5.2 {"position":"2550,775","size":"100,100"}
+~~Hai deciso di fuggire, sperando di salvare te stessa e di sfuggire alla morsa dei ribelli. Ma anche nella fuga, Milano ti sfugge dalle mani.~~<br>
+~~La città che avevi riunificato è ora divisa, senza un leader forte a guidarla. Il caos e la confusione regnano, e Milano non sarà mai più la stessa.~~<br>
+~~Ti allontani, ma il peso della sconfitta è grande. La tua missione, sebbene fosse iniziata con nobili intenzioni, non ha avuto il risultato sperato.~~<br><br>
+
+**FINE, HAI FALLITO**<br>
+
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine6.1 {"position":"2475,550","size":"100,100"}
+~~Non sei riuscito a resistere all'assalto dei ribelli. La tua determinazione è stata messa alla prova, ma alla fine la lotta è stata troppo dura.~~<br>
+~~Milano non avrà il futuro che avevi sperato. La tua morte non cambierà nulla, e tutto rimarrà come prima, con il caos che avvolge la città.~~<br>
+~~Il sacrificio che hai fatto non ha portato a una soluzione, e Milano continua a lottare con le sue divisioni.~~<br><br>
+
+**SEI MORTO**<br>
+
+{link to: 'fine', label: 'Avanti'}
+
+
+:: fine6.2 {"position":"2550,925","size":"100,100"}
+~~Non sei riuscita a resistere all'assalto dei ribelli. La tua determinazione è stata messa alla prova, ma alla fine la lotta è stata troppo dura.~~<br>
+~~Milano non avrà il futuro che avevi sperato. La tua morte non cambierà nulla, e tutto rimarrà come prima, con il caos che avvolge la città.~~<br>
+~~Il sacrificio che hai fatto non ha portato a una soluzione, e Milano continua a lottare con le sue divisioni.~~<br><br>
+
+**FINE, SEI MORTA**<br>
+
+{link to: 'fine', label: 'Avanti'}
+
+
+:: inizio.1 {"position":"850,200","size":"100,100"}
+*Stai tornando a Milano dopo tanto tempo...*  
+
+~~L'aria era densa di nostalgia mentre attraversavi le strade familiari, ora mutate dal tempo e dalla storia. Gli edifici, un tempo testimoni silenziosi del passato, sembravano ora impregnati di una nuova vita, ma anche di una pesante consapevolezza.~~ 
+
+~~La città che avevi conosciuto era cambiata. Lo avvertivi in ogni angolo, in ogni sguardo. I cartelloni, le bandiere e i murales parlavano di un'ideologia dominante, di una trasformazione radicale. Mentre i tuoi passi riecheggiavano sui ciottoli delle strade antiche, una strana sensazione di straniamento e familiarità ti avvolgeva.~~  
+
+*È allora che ti rendi conto... Milano è governata dai comunisti.*  
+
+{link to: 'inizio2.1', label: 'Cosa è successo?'}
+
+
+:: inizio.1_en {"position":"1475,1200","size":"100,100"}
+*You are returning to Milan after a long time...*
+
+~~The air was thick with nostalgia as you walked through the familiar streets, now changed by time and history. The buildings, once silent witnesses of the past, now seemed imbued with a new life, but also with a heavy awareness.~~
+
+~~The city you had known had changed. You felt it in every corner, in every glance. The billboards, flags and murals spoke of a dominant ideology, of a radical transformation. As your footsteps echoed on the cobblestones of the ancient streets, a strange feeling of estrangement and familiarity enveloped you.~~
+
+*It is then that you realize... Milan is governed by the communists.*
+
+{link to: 'inizio2.1_en', label: 'What happened?'}
+
+
+:: inizio.2 {"position":"850,350","size":"100,100"}
+*Stai tornando a Milano dopo tanto tempo...*  
+
+~~L'aria era densa di nostalgia mentre attraversavi le strade familiari, ora mutate dal tempo e dalla storia. Gli edifici, un tempo testimoni silenziosi del passato, sembravano ora impregnati di una nuova vita, ma anche di una pesante consapevolezza.~~ 
+
+~~La città che avevi conosciuto era cambiata. Lo avvertivi in ogni angolo, in ogni sguardo. I cartelloni, le bandiere e i murales parlavano di un'ideologia dominante, di una trasformazione radicale. Mentre i tuoi passi riecheggiavano sui ciottoli delle strade antiche, una strana sensazione di straniamento e familiarità ti avvolgeva.~~  
+
+*È allora che ti rendi conto... Milano è governata dai comunisti.*  
+
+{link to: 'inizio2.2', label: 'Cosa è successo?'}
+
+
+:: inizio.2_en {"position":"1475,1025","size":"100,100"}
+*You are returning to Milan after a long time...*
+
+~~The air was thick with nostalgia as you walked through the familiar streets, now changed by time and history. The buildings, once silent witnesses of the past, now seemed imbued with a new life, but also with a heavy awareness.~~
+
+~~The city you had known had changed. You felt it in every corner, in every glance. The billboards, flags and murals spoke of a dominant ideology, of a radical transformation. As your footsteps echoed on the cobblestones of the ancient streets, a strange feeling of estrangement and familiarity enveloped you.~~
+
+*It is then that you realize... Milan is governed by the communists.*
+
+{link to: 'inizio2.2_en', label: 'What happened?'}
+
+
+:: inizio2.1 {"position":"1000,200","size":"100,100"}
+[after 1 second]
+~~Ti fermasti un attimo, colto di sorpresa dall'inaspettato. I tuoi occhi si posarono sui manifesti propagandistici che tappezzavano i muri e gli edifici, testimoni silenziosi di un cambiamento radicale.~~  
+[after 5 second]
+~~Colori vivaci e slogan perentori dichiaravano l'ascesa del nuovo regime. La falce e il martello, simboli che un tempo avevi visto solo nei libri di storia, ora dominavano il panorama urbano, sostituendo i vecchi emblemi della città che ricordavi.~~  
+[after 9 second]
+~~Non era solo una questione politica: Milano sembrava riplasmata in qualcosa di nuovo, di irriconoscibile. Strade, edifici, persino le persone trasmettevano un'energia diversa, un'aria di rivoluzione e disciplina.~~  
+[after 14 second]
+~~Le tue emozioni erano contrastanti. Da un lato, la curiosità di comprendere questa nuova realtà, di scoprire cosa fosse accaduto durante la tua assenza. Dall'altro, la nostalgia struggente per un passato che sembrava ormai svanito nel nulla.~~  
+[after 18 second]
+{link to: 'inizio3.1', label: 'Continua a investigare'}  
+[continued]
+
+
+:: inizio2.1_en {"position":"1650,1200","size":"100,100"}
+[after 1 second]
+~~You stopped for a moment, taken aback by the unexpected. Your eyes rested on the propaganda posters that covered the walls and buildings, silent witnesses of a radical change.~~
+[after 5 seconds]
+~~Bright colors and peremptory slogans declared the rise of the new regime. The hammer and sickle, symbols you had once only seen in history books, now dominated the urban landscape, replacing the old emblems of the city you remembered.~~
+[after 9 seconds]
+~~It wasn't just a political issue: Milan seemed to have been reshaped into something new, unrecognizable. Streets, buildings, even people conveyed a different energy, an air of revolution and discipline.~~
+[after 14 seconds]
+~~Your emotions were mixed. On one hand, the curiosity to understand this new reality, to discover what had happened during your absence. On the other hand, the poignant nostalgia for a past that seemed to have vanished into thin air.~~
+[after 18 seconds]
+{link to: 'inizio3.1_en', label: 'Keep investigating'}
+[continued]
+
+
+:: inizio2.2 {"position":"1000,350","size":"100,100"}
+[after 1 second]
+~~Ti fermasti un attimo, colto di sorpresa dall'inaspettato. I tuoi occhi si posarono sui manifesti propagandistici che tappezzavano i muri e gli edifici, testimoni silenziosi di un cambiamento radicale.~~  
+[after 5 second]
+~~Colori vivaci e slogan perentori dichiaravano l'ascesa del nuovo regime. La falce e il martello, simboli che un tempo avevi visto solo nei libri di storia, ora dominavano il panorama urbano, sostituendo i vecchi emblemi della città che ricordavi.~~  
+[after 9 second]
+~~Non era solo una questione politica: Milano sembrava riplasmata in qualcosa di nuovo, di irriconoscibile. Strade, edifici, persino le persone trasmettevano un'energia diversa, un'aria di rivoluzione e disciplina.~~  
+[after 14 second]
+~~Le tue emozioni erano contrastanti. Da un lato, la curiosità di comprendere questa nuova realtà, di scoprire cosa fosse accaduto durante la tua assenza. Dall'altro, la nostalgia struggente per un passato che sembrava ormai svanito nel nulla.~~  
+[after 18 second]
+{link to: 'inizio3.2', label: 'Continua a investigare'}  
+[continued]
+
+
+:: inizio2.2_en {"position":"1650,1025","size":"100,100"}
+[after 1 second]
+~~You stopped for a moment, taken aback by the unexpected. Your eyes rested on the propaganda posters that covered the walls and buildings, silent witnesses of a radical change.~~
+[after 5 seconds]
+~~Bright colors and peremptory slogans declared the rise of the new regime. The hammer and sickle, symbols you had once only seen in history books, now dominated the urban landscape, replacing the old emblems of the city you remembered.~~
+[after 9 seconds]
+~~It wasn't just a political issue: Milan seemed to have been reshaped into something new, unrecognizable. Streets, buildings, even people conveyed a different energy, an air of revolution and discipline.~~
+[after 14 seconds]
+~~Your emotions were mixed. On one hand, the curiosity to understand this new reality, to discover what had happened during your absence. On the other hand, the poignant nostalgia for a past that seemed to have vanished into thin air.~~
+[after 18 seconds]
+{link to: 'inizio3.2_en', label: 'Keep investigating'}
+[continued]
+
+
+:: inizio3.1 {"position":"1150,200","size":"100,100"}
+[after 1 second]
+~~Mentre continuavi a camminare, notavi i volti dei cittadini, ora segnati da un misto di speranza e rassegnazione. La loro espressione, una fusione di emozioni contrastanti, sembrava riflettere l'anima stessa della città.~~  
+[after 6 second]
+~~Le piazze erano piene di vita, con il rumore delle conversazioni, i mercati che brulicavano di venditori e acquirenti. Ma sotto quella superficie vibrante, c'era una tensione palpabile, come se ogni parola e ogni gesto fossero carichi di significato. Ogni angolo di Milano sembrava raccontare una storia diversa, una storia fatta di lotte, sacrifici e cambiamenti che avevano scolpito il volto della città.~~  
+[after 13 second]
+~~La tua mente era un vortice di pensieri, cercando di conciliare l'immagine di Milano che avevi amato con quella che avevi davanti agli occhi. Milano, la tua Milano, non era più quella di un tempo: era un mosaico complesso e affascinante, un luogo di contrasti in cui il passato e il presente si scontravano e si fondevano, dando vita a qualcosa di nuovo, ma anche inquietante.~~  
+[after 18 second]
+{link to: '01.1', label: 'Avanti'}  
+[continued]
+
+
+:: inizio3.1_en {"position":"1825,1200","size":"100,100"}
+[after 1 second]
+~~As you continued walking, you noticed the faces of the citizens, now marked by a mixture of hope and resignation. Their expression, a fusion of contrasting emotions, seemed to reflect the very soul of the city.~~
+[after 6 second]
+~~The squares were full of life, with the sound of conversations, the markets bustling with sellers and buyers. But beneath that vibrant surface, there was a palpable tension, as if every word and every gesture were loaded with meaning. Every corner of Milan seemed to tell a different story, a story made of struggles, sacrifices and changes that had sculpted the face of the city.~~
+[after 13 second]
+~~Your mind was a vortex of thoughts, trying to reconcile the image of Milan that you had loved with the one you had before your eyes. Milan, your Milan, was no longer what it once was: it was a complex and fascinating mosaic, a place of contrasts where the past and the present collided and merged, giving life to something new, but also disturbing.~~
+[after 18 seconds]
+{link to: '01.1_en', label: 'Continue'}
+[continued]
+
+
+:: inizio3.2 {"position":"1150,350","size":"100,100"}
+[after 1 second]
+~~Mentre continuavi a camminare, notavi i volti dei cittadini, ora segnati da un misto di speranza e rassegnazione. La loro espressione, una fusione di emozioni contrastanti, sembrava riflettere l'anima stessa della città.~~  
+[after 6 second]
+~~Le piazze erano piene di vita, con il rumore delle conversazioni, i mercati che brulicavano di venditori e acquirenti. Ma sotto quella superficie vibrante, c'era una tensione palpabile, come se ogni parola e ogni gesto fossero carichi di significato. Ogni angolo di Milano sembrava raccontare una storia diversa, una storia fatta di lotte, sacrifici e cambiamenti che avevano scolpito il volto della città.~~  
+[after 13 second]
+~~La tua mente era un vortice di pensieri, cercando di conciliare l'immagine di Milano che avevi amato con quella che avevi davanti agli occhi. Milano, la tua Milano, non era più quella di un tempo: era un mosaico complesso e affascinante, un luogo di contrasti in cui il passato e il presente si scontravano e si fondevano, dando vita a qualcosa di nuovo, ma anche inquietante.~~  
+[after 18 second]
+{link to: '01.2', label: 'Avanti'}  
+[continued]
+
+
+:: inizio3.2_en {"position":"1825,1025","size":"100,100"}
+[after 1 second]
+~~As you continued walking, you noticed the faces of the citizens, now marked by a mixture of hope and resignation. Their expression, a fusion of contrasting emotions, seemed to reflect the very soul of the city.~~
+[after 6 second]
+~~The squares were full of life, with the sound of conversations, the markets bustling with sellers and buyers. But beneath that vibrant surface, there was a palpable tension, as if every word and every gesture were loaded with meaning. Every corner of Milan seemed to tell a different story, a story made of struggles, sacrifices and changes that had sculpted the face of the city.~~
+[after 13 second]
+~~Your mind was a vortex of thoughts, trying to reconcile the image of Milan that you had loved with the one you had before your eyes. Milan, your Milan, was no longer what it once was: it was a complex and fascinating mosaic, a place of contrasts where the past and the present collided and merged, giving life to something new, but also disturbing.~~
+[after 18 seconds]
+{link to: '01.2_en', label: 'Continue'}
+[continued]
+
+
+:: selezione_lingua {"position":"250,675","size":"100,100"}
+~~Seleziona la lingua per la narrazione~~<br><br>
+{link to: '2', label: 'Italiano'}<br>
+{link to: '2_en', label: 'English'}

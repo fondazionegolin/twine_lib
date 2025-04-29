@@ -1,0 +1,236 @@
+/* Stili per il modale di voto */
+.vote-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.vote-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.vote-modal-container {
+    background-color: white;
+    border-radius: 8px;
+    width: 400px;
+    height: 400px; /* Modale quadrato */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.vote-modal-overlay.active .vote-modal-container {
+    transform: scale(1);
+}
+
+.vote-modal-header {
+    background-color: #e74c3c; /* Rosso come i cuoricini */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vote-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.vote-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.vote-modal-body {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vote-modal-body p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+}
+
+.vote-hearts {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.vote-heart {
+    font-size: 3rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.vote-heart svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vote-heart .heart-outline {
+    stroke: #000;
+    stroke-width: 2px;
+    fill: transparent;
+}
+
+.vote-heart .heart-fill {
+    fill: #e74c3c; /* Rosso per i cuori riempiti */
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.vote-heart:hover {
+    transform: scale(1.15);
+}
+
+.vote-heart.selected .heart-fill {
+    opacity: 1;
+}
+
+.vote-feedback {
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 24px;
+    font-weight: 500;
+    color: #e74c3c;
+}
+
+.vote-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.vote-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.vote-cancel {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.vote-cancel:hover {
+    background-color: #d0d0d0;
+}
+
+.vote-submit {
+    background-color: #3498db;
+    color: white;
+}
+
+.vote-submit:hover {
+    background-color: #2980b9;
+}
+
+.vote-submit:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Pulsante di voto fluttuante */
+.floating-vote-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-vote-btn:hover {
+    transform: scale(1.1);
+    background-color: #c0392b;
+}
+
+.floating-vote-btn i {
+    font-size: 1.5rem;
+}
+
+/* Animazione per il feedback */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.vote-feedback.show {
+    animation: fadeInOut 3s forwards;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .vote-star {
+        font-size: 2rem;
+        margin: 0 3px;
+    }
+    
+    .vote-modal-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .vote-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .floating-vote-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}

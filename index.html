@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Twine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="main-navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#">Career connect 2025 </a>
+            </div>
+            <div class="navbar-breadcrumb" id="breadcrumb">
+                <span class="breadcrumb-item active">Home</span>
+            </div>
+            <div class="navbar-actions">
+                <button id="home-nav-btn" class="navbar-btn" title="Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="dark-mode-toggle" class="navbar-btn" title="Cambia tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div id="user-container" class="user-container">
+                    <button id="user-btn" class="navbar-btn user-btn" title="Profilo">
+                        <i class="fas fa-user"></i>
+                        <span class="user-name"></span>
+                    </button>
+                    <div class="user-popup">
+                        <div class="user-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="user-popup-name"></span>
+                        </div>
+                        <div class="user-actions">
+                            <button id="settings-btn" class="user-action-btn">
+                                <i class="fas fa-cog"></i> Impostazioni
+                            </button>
+                            <button id="logout-btn" class="user-action-btn">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </button>
+                            <button id="stats-btn" class="user-action-btn">
+                                <i class="fas fa-chart-bar"></i> Statistiche
+                            </button>
+                            <button id="vote-stats-btn" class="user-action-btn">
+                                <i class="fas fa-star"></i> Statistiche Voti
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="book">
+        <!-- Copertina -->
+        <div class="page cover">
+            <div class="content">
+                <h1>Progetti Twine</h1>
+                <p class="subtitle">Una raccolta di storie interattive</p>
+                <div class="cover-image">
+                    <img src="img/cover.jpg" alt="Copertina" onerror="this.src='img/default-cover.jpg'">
+                </div>
+                <p class="instructions">Scorri per sfogliare</p>
+                <button class="big-button next-page-btn">Inizia <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Indice -->
+        <div class="page index">
+            <div class="content">
+                <h2>Indice delle Scuole</h2>
+                <ul id="class-list">
+                    <!-- Le scuole verranno caricate dinamicamente -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contenuto dinamico -->
+        <div id="dynamic-pages"></div>
+    </div>
+
+    <!-- Navigazione -->
+    <div class="navigation">
+        <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Modale per visualizzare i progetti Twine -->
+    <div id="project-modal" class="modal">
+        <nav class="navbar modal-navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <a href="#" id="close-modal-btn">Chiudi</a>
+                </div>
+                <div class="navbar-breadcrumb" id="modal-breadcrumb">
+                    <span class="breadcrumb-item active">Progetto</span>
+                </div>
+                <div class="navbar-actions">
+                    <button id="back-to-class-btn" class="navbar-btn" title="Torna alla classe">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button id="modal-home-btn" class="navbar-btn" title="Home">
+                        <i class="fas fa-home"></i>
+                    </button>
+                    <button id="modal-dark-mode-toggle" class="navbar-btn" title="Cambia tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div id="modal-rating-container" class="navbar-rating-container">
+                        <button id="modal-rating-btn" class="navbar-btn rating-btn" title="Valuta">
+                            <i class="far fa-heart"></i>
+                            <span class="rating-value">0</span>
+                        </button>
+                        <div class="rating-popup">
+                            <div class="rating-stars">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <div class="rating-text">Clicca per valutare</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="modal-content">
+            <div id="project-container">
+                <iframe id="project-frame" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content settings-modal-content">
+            <div class="modal-header">
+                <h2>Impostazioni Profilo</h2>
+                <span class="close" id="close-settings-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="settings-nome">Nome</label>
+                        <input type="text" id="settings-nome" name="nome" placeholder="Inserisci il tuo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="settings-cognome">Cognome</label>
+                        <input type="text" id="settings-cognome" name="cognome" placeholder="Inserisci il tuo cognome">
+                    </div>
+                    <div class="form-group">
+                        <label for="settings-avatar-file">Carica Avatar</label>
+                        <input type="file" id="settings-avatar-file" name="avatar-file" accept="image/*">
+                        <div class="avatar-preview">
+                            <img id="avatar-preview-img" src="" alt="Avatar Preview">
+                        </div>
+                        <input type="hidden" id="settings-avatar" name="avatar">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Salva</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/popup-fix.js"></script>
+    <script src="js/direct-cover.js"></script>
+    <script>
+        // Controlla se l'utente è loggato
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('user') || '{"isLoggedIn": false}');
+            if (!user.isLoggedIn) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>

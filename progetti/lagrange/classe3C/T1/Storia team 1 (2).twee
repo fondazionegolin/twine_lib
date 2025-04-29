@@ -1,0 +1,359 @@
+:: StoryTitle
+Storia team 1
+
+
+:: StoryData
+{
+  "ifid": "15D09472-4C32-4378-B242-ACFC1DC040A0",
+  "format": "Chapbook",
+  "format-version": "2.3.0",
+  "start": "parafrasi",
+  "zoom": 1
+}
+
+
+:: 1.1 {"position":"1150,700","size":"100,100"}
+[after 1s]
+[align center]
+Un anno dopo la grande disgrazia del 1973. <br>
+
+[cont]
+
+
+[after 2s]
+La fila si snoda tra le macerie, occhi scavati e volti smunti. Un pezzo di pane raffermo, un mestolo di zuppa annacquata: la nostra razione quotidiana. L'umiliazione è un sapore amaro, più forte della fame. Un tempo eravamo una nazione, ora siamo mendicanti alla mercé dei vincitori. Ma sotto la cenere della sconfitta, arde ancora una scintilla di orgoglio. Non resteremo a guardare mentre la nostra gente muore di stenti.
+
+[[Vai a prendere il cibo ->1.2]]
+
+
+:: 1.2 {"position":"1275,700","size":"100,100"}
+
+
+La voce di mio padre si spezza in un rantolo, le mani che stringono l'aria come se potessero afferrare un'ultima speranza. Il capo della milizia, il suo volto distorto dalla rabbia, infierisce con calci e pugni. La folla si ritrae, occhi bassi, nessuno osa intervenire. Io, immobile, paralizzato dall'orrore, vedo la vita spegnersi negli occhi di mio padre. Un ruggito di rabbia mi sale dal petto, un fuoco che brucia ogni esitazione. Oggi, la mia guerra personale ha inizio.
+
+[[rivolgiti al tuo amico->1.3]]
+
+
+:: 1.3 {"position":"1425,700","size":"100,100"}
+Il mio migliore amico mi guardò con occhi spenti, la paura che gli annebbiava lo sguardo. "Non posso farlo," disse, la voce tremante. "È troppo pericoloso. Non abbiamo alcuna possibilità contro di loro." Capivo la sua paura, lo capivo fin troppo bene. La guerra ci aveva segnato entrambi, lasciando cicatrici profonde che non sarebbero mai guarite.
+
+Ma sapevo anche che non potevamo arrenderci. Milano era la nostra casa, la nostra città, e non potevamo permettere che venisse distrutta. "Dobbiamo lottare," gli dissi, cercando di infondergli coraggio. "Dobbiamo provare."
+<br>
+
+{link to: '1.4', label: 'digli che è l'ultima speranza'}
+
+{link to: '4.1', label: 'Sminuisci i rischi della missione'}
+
+
+:: 1.4 {"position":"1575,700","size":"100,100"}
+Quando il mio amico finalmente accettò di aiutarmi, sentii un peso enorme alleggerirsi dalle mie spalle. Sapevo che insieme avremmo potuto fare la differenza. Ci sedemmo attorno a un tavolo improvvisato, illuminato dalla fioca luce di una candela, e iniziammo a pianificare.
+
+Dovevamo essere astuti, agire nell'ombra, colpire dove faceva più male. Studiammo le mappe della città, analizzando le difese nemiche, individuando i punti deboli. Ogni quartiere era un labirinto di strade e vicoli, un terreno di battaglia potenziale.
+
+Discutemmo di strategie, di tattiche, di come avremmo potuto sfruttare le nostre conoscenze del territorio e le nostre abilità di combattimento. Dovevamo trovare un modo per unire le diverse fazioni, per risvegliare lo spirito di resistenza nella popolazione.
+
+Sapevamo che sarebbe stata una lotta difficile, che avremmo dovuto affrontare pericoli e ostacoli insormontabili. Ma eravamo determinati a non arrenderci, a lottare per la nostra città, per il nostro futuro.
+
+
+
+
+
+
+
+
+
+<br>
+
+{link to: '1.5', label: 'Inizia a pianificare'}
+
+
+
+:: 1.5 {"position":"1750,700","size":"100,100"}
+L'adrenalina ci scorreva nelle vene mentre ci muovevamo nell'ombra, lasciando la zona sicura alle nostre spalle. Sapevamo che il rischio era enorme, ma la posta in gioco era troppo alta per tirarci indietro. Il nostro obiettivo: eliminare il capo nemico, il simbolo del potere che opprimeva la nostra città.
+
+Ci infiltrammo nel cuore del loro territorio, sfruttando le nostre conoscenze del territorio e le nostre abilità di combattimento. Ogni passo era un pericolo, ogni angolo un potenziale agguato. Ma eravamo determinati a non fallire.
+
+
+<br>
+
+{link to: '2.1', label: 'Prosegui con irruenza'}<br>
+{link to: '1.6', label: 'Prova a distrarre le guardie'}<br>
+{link to: '3.1', label: 'Prova a corrompere una guardia'}<br>
+
+
+:: 1.6 {"position":"1900,700","size":"100,100"}
+La prigionia non ci aveva spezzato, aveva solo alimentato la nostra rabbia e la nostra determinazione. Sapevamo che dovevamo fuggire, che dovevamo trovare un modo per ribaltare la situazione. In silenzio, pianifichiamo la nostra fuga, sfruttando le nostre conoscenze del territorio e le nostre abilità di combattimento.
+
+Mentre le guardie si distraevano, riuscimmo a impossessarci delle loro armi ea liberare gli altri prigionieri. Insieme, ci muoviamo nell'ombra, silenziosi come fantasmi, cercando di raggiungere l'armeria.
+
+
+<br>
+{link to: '1.7', label: 'Fai esplodere'}
+
+
+:: 1.7 {"position":"2050,700","size":"100,100"}
+Una volta lì, ci armammo fino ai denti e piazzammo degli esplosivi strategici. L'esplosione fu devastante, un'onda d'urto che scosse l'intero edificio. Nel caos che ne seguì, riuscimmo a fuggire, lasciando dietro di noi un sentiero di distruzione.
+
+Eravamo di nuovo liberi, ma sapevamo che non sarebbe durata a lungo. La milizia ci avrebbe dato la caccia, ma eravamo determinati a non farci prendere. abbiamo un piano, un modo per ribaltare la situazione, per liberare la nostra città.
+
+
+<br>
+
+{link to: '1.8', label: 'Avverti i alleati'}
+
+
+:: 1.8 {"position":"2200,700","size":"100,100"}
+L'eco di quelle parole risuona nella mia mente, un tamburo di guerra che batte all'unisono con il mio cuore. 'Stanotte, il colpo'. Non è solo un avvertimento, è una scintilla, una scintilla che accende la miccia della ribellione. Finalmente, dopo anni di sottomissione, il Quartiere Italiano si risveglia. Le voci si alzano, i sussurri si trasformano in grida di sfida. La paura lascia il posto alla rabbia, la disperazione alla determinazione. Stasera, non saremo vittime, saremo combattenti. Stasera, getteremo le basi per una rivoluzione che cambierà il volto di Milano per sempre.<br>
+
+FINE.
+
+
+:: 10.1 {"position":"2375,1275","size":"100,100"}
+L'assalto fu un'esplosione di violenza, un uragano di rabbia e determinazione. Sfruttammo la sorpresa, la conoscenza dei cunicoli sotterranei, la rabbia che ci alimentava. Colpi di arma da fuoco, grida, esplosioni. La fortezza tremò sotto il nostro attacco, le loro difese crollarono sotto la nostra furia. Avanzammo, conquistando stanza dopo stanza, liberando prigionieri, seminando il caos. Milano era di nuovo nostra, o almeno, stavamo facendo di tutto per farla tornare tale.
+
+Ma il capo, il cuore pulsante della milizia, era sfuggito alla nostra presa. Lo cercammo ovunque, ma era sparito, come un fantasma. Sapevo che non avremmo potuto lasciare che vivesse, che continuasse a tramare nell'ombra. Ma non potevo permettermi di perdere tempo, di inseguire un'ombra. Dovevamo consolidare la nostra vittoria, dovevamo riorganizzare la resistenza, dovevamo preparare Milano alla battaglia finale. Il capo sarebbe tornato, lo sapevo. Ma noi saremmo stati pronti.
+
+
+
+
+
+
+
+
+
+
+<br>
+
+{link to: '10.2', label: 'continua'}
+
+
+:: 10.2 {"position":"2500,1275","size":"100,100"}
+L'assalto era stato un successo, ma a caro prezzo. La battaglia era furiosa, le perdite pesanti. Tra i caduti, il mio alleato, la donna che mi aveva dato fiducia, che aveva creduto in me quando tutti gli altri avevano dubitato. L'avevo vista cadere, colpita da un proiettile, mentre cercava di proteggermi. I suoi occhi, un attimo prima pieni di vita e determinazione, si erano spenti per sempre. Un dolore sordo mi invase, un senso di colpa che mi schiacciò. L'avevo condotta alla morte, avevo tradito la sua fiducia. Ma non potevo fermarmi, non potevo permettere che la sua morte fosse vana. Dovevo continuare la lotta, dovevo vendicare la sua morte, dovevo liberare Milano. La sua memoria sarebbe stata la mia bussola, la mia forza, la mia ispirazione.
+
+
+<br>
+
+{link to: '10.3', label: 'continua'}
+
+
+:: 10.3 {"position":"2650,1275","size":"100,100"}
+Ma il destino aveva altri piani. Durante una delle nostre incursioni, fui circondato, sopraffatto, catturato. Mi trascinarono via, come un animale braccato, e mi rinchiusero in una cella buia, umida, fredda. Il processo fu una farsa, una formalità. Mi condannarono all'ergastolo, a marcire in quella prigione, a dimenticare il sole, la libertà, la speranza. Sapevo che non sarei mai più uscito di lì, che la mia lotta era finita. Ma nel mio cuore, la ribellione continuava a bruciare. Sapevo che altri avrebbero preso il mio posto, che la fiamma della resistenza non si sarebbe mai spenta. Milano sarebbe stata libera, un giorno. Ne ero certo.<br>
+
+[align center]
+
+FINE.
+
+
+:: 2.1 {"position":"1750,575","size":"100,100"}
+Nonostante la nostra determinazione e le nostre abilità, ci rendiamo conto che non ce l'avremmo fatta. Eravamo in inferiorità numerica, le loro difese erano troppo forti, e le nostre risorse stavano finendo. La battaglia era feroce, le pallottole fischiavano nell'aria, le esplosioni scuotevano l'edificio.
+
+Vedemmo i nostri compagni cadere uno dopo l'altro, colpiti dai proiettili nemici. Il fumo e la polvere ci impedivano di vedere chiaramente, ma sentivamo le loro urla di dolore e di disperazione.
+
+Ci ritirammo, cercando di portare con noi i feriti. Ma sapevamo che era solo questione di tempo prima che ci raggiungessero. Eravamo braccati, senza via di scampo.
+
+La sconfitta ci pesava come un macigno sul cuore. eravamo fallito, avevamo deluso la nostra città, avevamo deluso noi stessi. Ma sapevamo che non potevamo arrenderci. Dovevamo trovare un altro modo, un'altra strategia, un'altra possibilità.
+<br>
+
+{link to: '2.2', label: 'Cerca un altro modo'}
+
+
+:: 2.2 {"position":"1900,575","size":"100,100"}
+La sconfitta bruciava come una ferita aperta, ma non potevamo permetterci di cedere alla disperazione. Dovevamo trovare un altro modo, un'altra strategia, un'altra possibilità per liberare la nostra città. Ci ritirammo in un rifugio sicuro, dove potevamo riposare e curare le nostre ferite.
+
+Ci sedemmo attorno a un tavolo improvvisato, illuminato dalla fioca luce di una candela, e iniziamo a discutere. Dovevamo ripensare il nostro approccio, trovare un modo per sfruttare i nostri punti di forza e aggirare le loro difese.
+
+"Dobbiamo trovare degli alleati," dissi, "qualcuno che condivida il nostro obiettivo, qualcuno che sia disposto a combattere al nostro fianco."
+
+"Ma chi?" chiede al mio amico, "la maggior parte delle persone è troppo spaventata per reagire."
+
+"Ci sono sempre delle eccezioni," risposi, "dobbiamo solo trovarle."
+
+Iniziamo a elaborare un piano, un modo per contattare i gruppi di resistenza che operano nell'ombra, per convincerli a unirsi alla nostra causa. Sapevamo che sarebbe stata una missione difficile, ma eravamo determinati a non arrenderci.
+
+
+
+
+
+
+
+
+
+<br>
+{link to: '2.3', label: ' Tentano il nuovo piano'}
+
+
+:: 2.3 {"position":"2050,575","size":"100,100"}
+Tentammo di uscire dalla città usando un percorso diverso, una via che pensavamo fosse meno sorvegliata. Ci muoviamo nell'ombra, silenziosi come fantasmi, cercando di evitare le pattuglie nemiche. Ma la città era una trappola, un labirinto di strade e vicoli sorvegliati.
+
+Ci imbattemmo in un posto di blocco, un gruppo di soldati armati che ci sbarrava la strada. Cercammo di evitarli, di trovare un'altra via, ma era troppo tardi. Ci avevano visti.
+
+Ci attaccarono senza pietà, sparando raffiche di proiettili. Cercammo di difenderci, di resistere, ma eravamo in inferiorità numerica e le loro armi erano troppo potenti.
+
+Ci catturarono, ci legarono e ci portarono via. Eravamo prigionieri, nelle mani del nemico. La nostra missione era fallita, la nostra speranza era svanita.
+
+Ci rinchiusero in una cella buia e umida, dove l'unica luce proveniva da una fessura nel muro. Eravamo soli, abbandonati, senza sapere cosa ci sarebbe successo.
+
+
+
+
+
+
+
+
+
+<br>
+
+{link to: '2.4', label: 'Tenta di salvarti'}
+
+
+:: 2.4 {"position":"2350,700","size":"100,100"}
+Le loro mani erano legate dietro la schiena, i volti segnati dalla paura e dalla polvere. Non c'era pietà negli occhi del capo, solo un freddo calcolo. 'Traditori', sibilò, la voce carica di disprezzo. 'Avete osato sfidarmi, avete osato ribellarvi'. Le guardie li trascinarono verso il patibolo, la folla ammutolita ad assistere allo spettacolo. Un colpo secco, un tonfo sordo, e il silenzio calò sulla piazza. La giustizia del capo era stata eseguita, un monito per chiunque osasse seguire le loro orme. I loro corpi rimasero appesi, un macabro avvertimento, mentre la città tratteneva il respiro.<br>
+
+FINE.
+
+
+:: 3.1 {"position":"1900,800","size":"100,100"}
+"Il suo sguardo era di ghiaccio, la voce un sibilo carico di rancore. 'Hanno osato sfidarmi?' pensò, stringendo i pugni. 'Hanno osato ribellarsi?'. La vendetta era l'unica risposta possibile, un fuoco che gli bruciava dentro, alimentato dall'umiliazione e dalla rabbia. Non avrebbe lasciato che quell'affronto rimanesse impunito. Avrebbe distrutto ogni singolo ribelle, avrebbe raso al suolo il loro quartiere, avrebbe fatto di Milano un monito per chiunque osasse mettersi contro di lui. La vendetta sarebbe stata la sua opera d'arte, il suo capolavoro di distruzione."
+
+<br>
+
+{link to: '3.2', label: 'Il capo sfugge'}
+
+
+:: 3.2 {"position":"2050,800","size":"100,100"}
+"Gli occhi del capo saettavano nell'ombra, scrutando ogni angolo del quartiere italiano. La sua voce, un ringhio gutturale, risuonava tra i vicoli deserti. 'Trovali!' ordinò ai suoi uomini, la rabbia che gli deformava il volto. 'Setacciate ogni casa, ogni rifugio, ogni buco in cui questi traditori potrebbero nascondersi!'. Non avrebbe lasciato che nessuno sfuggisse alla sua vendetta. Doveva trovarli, doveva annientare ogni traccia di ribellione, doveva dimostrare a tutti chi comandava a Milano. La caccia era iniziata, e la città intera tremava al pensiero della sua furia."
+<br>
+
+
+{link to: '2.4', label: 'Il capo li cerca'}
+
+
+:: 4.1 {"position":"1425,975","size":"100,100"}
+Lo guardai negli occhi, cercando di trovare una scintilla di coraggio, ma vidi solo paura. 'Ho una famiglia,' disse, la voce un sussurro spezzato. 'Non posso rischiare di perderli.' Capii. La sua paura era un muro invalicabile, un ostacolo che non potevo superare. Annuì lentamente, il cuore pesante. 'Ti capisco,' dissi, anche se una parte di me si sentiva tradita. 'Ma io non posso fermarmi.' Mi voltai e mi allontanai, lasciandolo lì, con la sua paura e la sua famiglia. Sapevo che sarei stato solo, ma ero determinato a combattere per Milano, anche se ciò significava farlo da solo. La città aveva bisogno di me, e io non l'avrei abbandonata.
+<br>
+
+{link to: '4.2', label: 'Vai avanti da solo con la missione'} <br>
+
+
+
+:: 4.2 {"position":"1575,975","size":"100,100"}
+Il mio amico aveva fatto la sua scelta, e io dovevo fare la mia. Non potevo permettere che la paura lo paralizzasse, né che mi paralizzasse. Dovevo andare avanti, dovevo trovare un modo per fermare quello che stava succedendo. Il piano iniziale era semplice: ottenere informazioni sulla loro missione. Ma come? Dovevo trovare qualcuno che sapesse cosa stava succedendo, qualcuno che potesse darmi le risposte che cercavo. Sapevo che era rischioso, che avrei potuto essere scoperto, ma non avevo altra scelta. Milano era in pericolo, e io ero l'unico che poteva fare qualcosa.
+
+<br>
+
+{link to: '5.1', label: 'Affronta direttamente i rapitori'}<br>
+{link to: '6.1', label: 'condividi le informazioni con un altro amico'}
+
+
+:: 5.1 {"position":"1700,925","size":"100,100"}
+Il buio mi avvolse all'improvviso, un pugno allo stomaco che mi tolse il respiro. Sentii delle mani ruvide che mi afferravo, mi trascinavano via. Cercai di reagire, di divincolarmi, ma ero sopraffatto. La mia testa sbatté contro qualcosa di duro, e il mondo svanì. Quando riaprii gli occhi, ero legato a una sedia, le mani strette da corde che mi facevano male. La stanza era buia, illuminata solo da una singola lampadina appesa al soffitto. Davanti a me, le ombre si muovevano, figure minacciose che mi osservavano in silenzio. Ero stato catturato. La mia missione era fallita, almeno per ora.
+<br>
+
+{link to: '5.2', label: 'continua'}
+
+
+:: 5.2 {"position":"1850,925","size":"100,100"}
+Il buio era una morsa, la paura un veleno che mi scorreva nelle vene. Ero legato, impotente, in attesa del loro prossimo passo. Ma nel profondo del mio cuore, sapevo che non ero solo. Un senso di colpa lo rodeva, un peso insostenibile che lo spingeva ad agire. Sapeva di avermi abbandonato, di avermi lasciato solo ad affrontare il pericolo. Ma sapeva anche che non poteva vivere con quel rimorso. Doveva fare qualcosa, doveva riscattarsi. Sentii dei passi avvicinarsi, ma non erano quelli delle guardie. Era lui, il mio amico, gli occhi pieni di determinazione, un coltello stretto nella mano. 'Sono qui per te,' sussurrò, la voce roca. 'Non ti lascerò morire.' Il senso di colpa lo aveva trasformato in un guerriero, pronto a rischiare tutto per salvarmi.
+<br>
+
+{link to: '5.4', label: 'Tenti di scappare'}
+
+
+:: 5.4 {"position":"2025,925","size":"100,100"}
+Il suo corpo si accasciò a terra, un tonfo sordo che risuonò nella cella. I suoi occhi, un attimo prima pieni di vita e determinazione, ora erano spenti, fissi nel vuoto. Un rivolo di sangue gli colava dalla tempia, macchiando il pavimento di rosso. Lo guardai, incredulo, il cuore che mi martellava nel petto. 'No!' urlai, la voce spezzata dal dolore. 'Non tu!' Aveva dato la sua vita per me, per permettermi di fuggire, per darmi una possibilità di salvare Milano. Il senso di colpa mi schiacciò, un peso insostenibile che mi piegò in due. Ma sapevo che non potevo fermarmi, che dovevo onorare il suo sacrificio. Con un grido di rabbia e dolore, mi liberai dalle corde e mi lanciai fuori dalla cella, pronto a combattere per entrambi.
+
+<br>
+
+
+{link to: '5.5', label: 'Vieni catturato'}
+
+
+:: 5.5 {"position":"2200,925","size":"100,100"}
+Il freddo metallo mi sfiorò la pelle, un brivido che mi percorse la schiena. Le cinghie mi strinsero, immobilizzandomi sulla sedia. Il ronzio elettrico riempì l'aria, un presagio di morte imminente. I loro occhi mi fissavano, freddi e impassibili, mentre il boia si avvicinava, la mano pronta a premere l'interruttore. La mia vita, la mia lotta, tutto stava per finire qui, su questa sedia, in questa stanza. Ma nel mio cuore, la speranza non era ancora spenta. Sapevo che la ribellione sarebbe continuata, che la mia morte non sarebbe stata vana. Milano sarebbe risorta dalle ceneri, e il mio sacrificio avrebbe alimentato la sua rinascita.<br>
+
+
+FINE.
+
+
+
+:: 6.1 {"position":"1675,1100","size":"100,100"}
+Il mio amico aveva fatto la sua scelta, e io dovevo fare la mia. Non potevo permettere che la paura lo paralizzasse, né che mi paralizzasse. Dovevo andare avanti, dovevo trovare un modo per fermare quello che stava succedendo. Il piano iniziale era semplice: ottenere informazioni sulla loro missione. Ma come? Dovevo trovare qualcuno che sapesse cosa stava succedendo, qualcuno che potesse darmi le risposte che cercavo. Sapevo che era rischioso, che avrei potuto essere scoperto, ma non avevo altra scelta. Milano era in pericolo, e io ero l'unico che poteva fare qualcosa.
+Dovevo cambiare strategia. Non potevo più agire alla luce del sole, dovevo diventare un'ombra, un fantasma che si muoveva tra i vicoli. Avrei raccolto informazioni, seminato discordia, ispirato la ribellione. Avrei usato le loro stesse armi contro di loro, la paura, la paranoia. Avrei trovato un modo per farli crollare, per farli pentire di aver osato mettere piede a Milano. Un nuovo piano si formava nella mia mente, un piano rischioso, folle, ma forse, l'unica speranza per la nostra città.
+
+<br>
+
+{link to: '6.2', label: 'continua'}
+
+
+:: 6.2 {"position":"1825,1100","size":"100,100"}
+Mi muovevo nell'ombra, un fantasma tra le macerie di Milano. Sapevo di non poter farcela da solo, avevo bisogno di aiuto, di qualcuno che credesse nella mia causa. Ma di chi potevo fidarmi? In un vicolo buio, una figura mi si avvicinò. Era una donna, gli occhi scuri e penetranti, il volto segnato dalla lotta. 'So chi sei,' disse, la voce un sussurro. 'E so cosa vuoi fare.' Mi raccontò di un gruppo di ribelli, nascosti nelle profondità della città, pronti a combattere. Erano stanchi di vivere nell'ombra, stanchi di subire. Volevano riprendersi Milano, e io ero la loro speranza. 'Possiamo aiutarti,' disse, tendendomi la mano. 'Ma devi fidarti di noi.' Un nuovo alleato, una nuova speranza. Forse, insieme, avremmo potuto cambiare il destino di Milano.
+
+
+
+<br>
+
+{link to: '7.1', label: 'Fidati di lui'}<br>
+{link to: '8.1', label: 'Non fidarti di lui'}
+
+
+:: 7.1 {"position":"1950,1050","size":"100,100"}
+Le informazioni che avevo raccolto erano preziose, un mosaico di piani oscuri e segreti militari. Sapevo che non potevo tenerle per me, dovevo condividerle con chi poteva usarle per cambiare le sorti della guerra. Mi fidavo di loro, dei ribelli che mi avevano accolto, della loro sete di giustizia. Li radunai in un rifugio nascosto, e con la voce bassa e decisa, iniziai a raccontare. Parlai dei loro piani, delle loro armi, dei loro punti deboli. Vidi i loro occhi illuminarsi di rabbia e speranza, la determinazione che si accendeva nei loro cuori. Sapevano cosa fare, sapevano come colpire. Insieme, avremmo usato quelle informazioni per ribaltare la situazione, per dare a Milano una nuova possibilità.
+<br>
+
+{link to: '7.2', label: 'continua'}
+
+
+:: 7.2 {"position":"2100,1050","size":"100,100"}
+La fiducia era un lusso che non potevo più permettermi. Ogni sguardo, ogni parola, ogni gesto poteva nascondere un tradimento. I ribelli mi avevano accolto, mi avevano dato una speranza, ma potevo davvero fidarmi di loro? La mia mente era un labirinto di dubbi e sospetti, alimentato dalla paura e dalla paranoia. Sapevo che dovevo proteggere Milano, a qualsiasi costo. E se ciò significava tradire chi mi aveva aiutato, allora così sarebbe stato. La decisione era difficile, dolorosa, ma necessaria. Dovevo trovare un modo per usare le loro informazioni contro di loro, per smascherare i loro piani, per distruggerli dall'interno. La mia lealtà era solo per Milano, e per la sua rinascita.
+
+<br>
+
+{link to: '5.1', label: 'continua'}
+
+
+:: 8.1 {"position":"1950,1200","size":"100,100"}
+Le informazioni erano un'arma troppo potente per essere condivisa. La fiducia era un lusso che non potevo permettermi. Dovevo trovare un modo per agire da solo, per usare quelle informazioni senza rischiare di essere tradito. Dovevo diventare un'ombra, un agente solitario che colpiva i nemici di Milano senza rivelare i suoi segreti. La mia lealtà era solo per la città, e per la sua rinascita.
+
+<br>
+
+{link to: '8.3', label: 'continua.'}
+
+
+:: 8.3 {"position":"2125,1200","size":"100,100"}
+Era giunto il momento di agire. Il piano era rischioso, folle, ma l'unica speranza per Milano. Avremmo attaccato la milizia, avremmo colpito al cuore il nemico, avremmo dimostrato che la ribellione non era morta. Con il cuore che mi batteva all'impazzata, guidai i ribelli attraverso i vicoli bui, verso la loro fortezza. Il silenzio era teso, rotto solo dal rumore dei nostri passi. Sapevamo che stavamo entrando nella tana del lupo, ma eravamo pronti a combattere. Eravamo pronti a riprenderci Milano.
+
+<br>
+
+{link to: '9.1', label: 'Fingiti uno dei soldati'}
+{link to: '10.1', label: 'Attaccalo subito'}
+
+
+
+:: 9.1 {"position":"2375,1125","size":"100,100"}
+Il piano era tracciato, ogni dettaglio studiato, ogni mossa calcolata. Non c'era tempo per esitazioni, per ripensamenti. Dovevo agire, dovevamo agire. La milizia aveva tenuto Milano sotto il suo giogo per troppo tempo, era ora di spezzare quelle catene. Con il cuore che batteva all'impazzata, guidai i ribelli attraverso i vicoli bui, verso la loro fortezza. Il silenzio era teso, rotto solo dal rumore dei nostri passi. Sapevamo che stavamo entrando nella tana del lupo, ma eravamo pronti a combattere. Eravamo pronti a riprenderci Milano.
+
+
+<br>
+
+{link to: '9.2', label: 'continua'}
+
+
+:: 9.2 {"position":"2525,1125","size":"100,100"}
+Il capo era il cuore pulsante della milizia, la mente dietro l'oppressione. Sapevo che dovevo eliminarlo, dovevo spezzare la loro catena di comando. Lo trovai nel suo ufficio, circondato dalle sue guardie. Lo affrontai a viso aperto, senza paura, senza esitazioni. Un colpo secco, preciso, e il capo cadde a terra, senza vita. La milizia era decapitata, il loro potere spezzato.
+
+La fuga fu rocambolesca, una corsa disperata attraverso i vicoli bui, inseguiti dalle ultime sacche di resistenza. Riuscimmo a seminarli, a sparire nel nulla, come fantasmi. Milano era libera, ma il prezzo era stato alto. Eravamo diventati leggende, eroi silenziosi, di cui nessuno avrebbe mai parlato. Eravamo l'ombra che aveva salvato la città.<br>
+
+FINE.
+
+
+:: parafrasi {"position":"975,700","size":"100,100"}
+Dopo la guerra Civile avvenuta nel 1973 dalle famiglie piu importanti di Milano: 
+- Famiglia Agnelli
+- Famiglia Pirelli
+- Familgia Flack
+- Famiglia Borromeo
+- Famiglia Brambilla <br>
+milano viene divisa in diverse zone.<br>
+Il protagonista è un ex soldato speciale italiano e il suo obbiettivo cercare di riunificare milano.<br>
+
+[[inizia ->1.1]]

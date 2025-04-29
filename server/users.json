@@ -1,0 +1,26 @@
+{
+  "blackix": {
+    "password_hash": "669e9e844bdbadd7cb3bed43ddf99f4e1adf4c7d4c5b2efa22c370ba3c6c2e38",
+    "salt": "89BxTadFspsV8JBC",
+    "created_at": "2025-04-15 12:44:18"
+  },
+  "admin": {
+    "password_hash": "b439414a6a98da780781b4bfd98359ad82b5aae3d57b81dfe3724e7af7511a37",
+    "salt": "XYZ123abcDEF456",
+    "created_at": "2025-04-29 12:21:13",
+    "is_admin": true
+  },
+  "gigi": {
+    "password_hash": "20e89ba85f556302169f33721c71d2d98640c1d7fc9ba2d51a223cbde4ebf379",
+    "salt": "ZXLnSRzQOWNkMXyX",
+    "created_at": "2025-04-15 13:53:33",
+    "nome": "Ale",
+    "cognome": "",
+    "avatar": "images/avatars/gigi_20250415140420.jpg"
+  },
+  "pippo": {
+    "password_hash": "557a4fe44e2424c423e438fc997d100442d786123be2579a03ae3c608caf05e1",
+    "salt": "fIVwdokHE8kHeXFN",
+    "created_at": "2025-04-18 17:36:19"
+  }
+}

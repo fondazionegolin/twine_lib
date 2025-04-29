@@ -1,0 +1,58 @@
+[
+  {
+    "id": "lagrange",
+    "name": "Lagrange",
+    "type": "school",
+    "classes": [
+      {
+        "id": "lagrange_classe3C",
+        "name": "Classe 3C",
+        "description": "Progetti della classe classe3C della scuola lagrange",
+        "school": "lagrange"
+      },
+      {
+        "id": "lagrange_classe3D",
+        "name": "Classe 3D",
+        "description": "Progetti della classe classe3D della scuola lagrange",
+        "school": "lagrange"
+      }
+    ]
+  },
+  {
+    "id": "tenca",
+    "name": "Tenca",
+    "type": "school",
+    "classes": [
+      {
+        "id": "tenca_classe4A",
+        "name": "Classe 4A",
+        "description": "Progetti della classe classe4A della scuola tenca",
+        "school": "tenca"
+      },
+      {
+        "id": "tenca_classe4E",
+        "name": "Classe 4E",
+        "description": "Progetti della classe classe4E della scuola tenca",
+        "school": "tenca"
+      },
+      {
+        "id": "tenca_classe3B",
+        "name": "Classe 3B",
+        "description": "Progetti della classe classe3B della scuola tenca",
+        "school": "tenca"
+      },
+      {
+        "id": "tenca_classe3F",
+        "name": "Classe 3F",
+        "description": "Progetti della classe classe3F della scuola tenca",
+        "school": "tenca"
+      },
+      {
+        "id": "tenca_classe3E",
+        "name": "Classe 3E",
+        "description": "Progetti della classe classe3E della scuola tenca",
+        "school": "tenca"
+      }
+    ]
+  }
+]

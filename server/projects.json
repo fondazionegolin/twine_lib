@@ -1,0 +1,344 @@
+{
+  "lagrange": {
+    "classe3C": [
+      {
+        "id": "lagrange_classe3C_Frammenti_del_futuro__Riflessi_del_passato",
+        "name": "Frammenti del futuro, Riflessi del passato",
+        "description": "Frammenti del futuro, Riflessi del passato",
+        "file": "progetti/lagrange/classe3C/Frammenti del futuro_ Riflessi del passato.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-dragon"
+      },
+      {
+        "id": "lagrange_classe3C_storia",
+        "name": "Il salvataggio di Milano",
+        "description": "Il salvataggio di Milano",
+        "file": "progetti/lagrange/classe3C/storia.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-book-open"
+      },
+      {
+        "id": "lagrange_classe3C_Storia_TEAM2",
+        "name": "Storia TEAM2",
+        "description": "Storia TEAM2",
+        "file": "progetti/lagrange/classe3C/Storia TEAM2.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-mask"
+      },
+      {
+        "id": "lagrange_classe3C_Storia_team_1_(1)",
+        "name": "Storia team 1",
+        "description": "Storia team 1",
+        "file": "progetti/lagrange/classe3C/Storia team 1 (1).html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-rocket"
+      },
+      {
+        "id": "lagrange_classe3C_The_Glitch_(2)",
+        "name": "The Glitch",
+        "description": "The Glitch",
+        "file": "progetti/lagrange/classe3C/The Glitch (2).html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-laptop-code"
+      }
+    ],
+    "classe3D": [
+      {
+        "id": "lagrange_classe3D_Eredi_del_destino",
+        "name": "Eredi del destino",
+        "description": "Eredi del destino",
+        "file": "progetti/lagrange/classe3D/Eredi_del_destino.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-crown"
+      },
+      {
+        "id": "lagrange_classe3D_Milano_gratis",
+        "name": "MILANO GRATIS",
+        "description": "MILANO GRATIS",
+        "file": "progetti/lagrange/classe3D/Milano_gratis.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-city"
+      },
+      {
+        "id": "lagrange_classe3D_Manfagiolo",
+        "name": "Manfagiolo",
+        "description": "Manfagiolo",
+        "file": "progetti/lagrange/classe3D/Manfagiolo.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-hiking"
+      },
+      {
+        "id": "lagrange_classe3D_caldera",
+        "name": "caldera",
+        "description": "caldera",
+        "file": "progetti/lagrange/classe3D/caldera.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-mountain"
+      },
+      {
+        "id": "lagrange_classe3D_st1",
+        "name": "st1",
+        "description": "st1",
+        "file": "progetti/lagrange/classe3D/st1.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-question-circle"
+      }
+    ]
+  },
+  "tenca": {
+    "classe4A": [
+      {
+        "id": "tenca_classe4A_50_sfumature_di_Milano",
+        "name": "50 sfumature di Milano",
+        "description": "50 sfumature di Milano",
+        "file": "progetti/tenca/classe4A/50 sfumature di Milano.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-building"
+      },
+      {
+        "id": "tenca_classe4A_Camilla__Oltre_il_Tempo_",
+        "name": "Camilla: Oltre il Tempo!",
+        "description": "Camilla: Oltre il Tempo!",
+        "file": "progetti/tenca/classe4A/Camilla_ Oltre il Tempo_.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-clock"
+      },
+      {
+        "id": "tenca_classe4A_INTRIGHI_NELLA_MILANO_DELLA_CONTRORIFORMA",
+        "name": "INTRIGHI NELLA MILANO DELLA CONTRORIFORMA",
+        "description": "INTRIGHI NELLA MILANO DELLA CONTRORIFORMA",
+        "file": "progetti/tenca/classe4A/INTRIGHI NELLA MILANO DELLA CONTRORIFORMA.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-landmark"
+      },
+      {
+        "id": "tenca_classe4A_Il_conflitto_degli_Abissi",
+        "name": "Il conflitto degli Abissi",
+        "description": "Il conflitto degli Abissi",
+        "file": "progetti/tenca/classe4A/Il conflitto degli Abissi.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-water"
+      },
+      {
+        "id": "tenca_classe4A_La_storia_di_Elisabetta",
+        "name": "La storia di Elisabetta",
+        "description": "La storia di Elisabetta",
+        "file": "progetti/tenca/classe4A/La storia di Elisabetta.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-female"
+      }
+    ],
+    "classe4E": [
+      {
+        "id": "tenca_classe4E_ArchCity",
+        "name": "ArchCity",
+        "description": "ArchCity",
+        "file": "progetti/tenca/classe4E/ArchCity.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-archway"
+      },
+      {
+        "id": "tenca_classe4E_La_ribellione_interna",
+        "name": "La ribellione interna",
+        "description": "La ribellione interna",
+        "file": "progetti/tenca/classe4E/La ribellione interna.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-fist-raised"
+      },
+      {
+        "id": "tenca_classe4E_OLTRE_IL_CONFINE_ROSA",
+        "name": "OLTRE IL CONFINE ROSA",
+        "description": "OLTRE IL CONFINE ROSA",
+        "file": "progetti/tenca/classe4E/OLTRE IL CONFINE ROSA.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-map-signs"
+      },
+      {
+        "id": "tenca_classe4E_Tutto___compiuto",
+        "name": "Tutto è compiuto",
+        "description": "Tutto è compiuto",
+        "file": "progetti/tenca/classe4E/Tutto _ compiuto.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-check-circle"
+      },
+      {
+        "id": "tenca_classe4E_Una_normale_Domenica_di_Conquista",
+        "name": "Una normale Domenica di Conquista",
+        "description": "Una normale Domenica di Conquista",
+        "file": "progetti/tenca/classe4E/Una normale Domenica di Conquista.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-flag"
+      }
+    ],
+    "classe3B": [
+      {
+        "id": "tenca_classe3B_3_B_team_1",
+        "name": "3 B team 1",
+        "description": "3 B team 1",
+        "file": "progetti/tenca/classe3B/3 B team 1.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-compass"
+      },
+      {
+        "id": "tenca_classe3B_3B-Team_4",
+        "name": "3B-Team 4",
+        "description": "3B-Team 4",
+        "file": "progetti/tenca/classe3B/3B-Team 4.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-users"
+      },
+      {
+        "id": "tenca_classe3B_3b_team_3",
+        "name": "3b team 3",
+        "description": "3b team 3",
+        "file": "progetti/tenca/classe3B/3b team 3.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-user-friends"
+      },
+      {
+        "id": "tenca_classe3B_B3_-_GRUPPO_5",
+        "name": "B3 - GRUPPO 5",
+        "description": "B3 - GRUPPO 5",
+        "file": "progetti/tenca/classe3B/B3 - GRUPPO 5.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-user-astronaut"
+      },
+      {
+        "id": "tenca_classe3B_team2_3b",
+        "name": "team2 3b",
+        "description": "team2 3b",
+        "file": "progetti/tenca/classe3B/team2 3b.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": "fa-people-carry"
+      }
+    ],
+    "classe3F": [
+      {
+        "id": "tenca_classe3F_Differenze_linguistiche",
+        "name": "Differenze linguistiche",
+        "description": "Differenze linguistiche",
+        "file": "progetti/tenca/classe3F/Differenze linguistiche.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3F_Nova_Vita",
+        "name": "Nova Vita",
+        "description": "Nova Vita",
+        "file": "progetti/tenca/classe3F/Nova Vita.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3F_Sotto_il_Sole_di_Milano",
+        "name": "Sotto il Sole di Milano",
+        "description": "Sotto il Sole di Milano",
+        "file": "progetti/tenca/classe3F/Sotto il Sole di Milano.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3F_The_Night_City",
+        "name": "The Night City",
+        "description": "The Night City",
+        "file": "progetti/tenca/classe3F/The Night City.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3F_l_ultima_sinfonia",
+        "name": "l'ultima sinfonia",
+        "description": "l'ultima sinfonia",
+        "file": "progetti/tenca/classe3F/l_ultima sinfonia.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      }
+    ],
+    "classe3E": [
+      {
+        "id": "tenca_classe3E_Binari_fantasma",
+        "name": "Binari fantasma",
+        "description": "Binari fantasma",
+        "file": "progetti/tenca/classe3E/Binari fantasma.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3E_DEGRADACION",
+        "name": "DEGRADACION",
+        "description": "DEGRADACION",
+        "file": "progetti/tenca/classe3E/DEGRADACION.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3E_La_città_senza_prezzo",
+        "name": "La città senza prezzo",
+        "description": "La città senza prezzo",
+        "file": "progetti/tenca/classe3E/La città senza prezzo.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3E_Milano_al_femminile",
+        "name": "Milano al femminile",
+        "description": "Milano al femminile",
+        "file": "progetti/tenca/classe3E/Milano al femminile.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3E_milano_vuota",
+        "name": "milano vuota",
+        "description": "milano vuota",
+        "file": "progetti/tenca/classe3E/milano vuota.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      },
+      {
+        "id": "tenca_classe3E_se_Milano_non_fosse_la_città_della_moda",
+        "name": "se Milano non fosse la città della moda",
+        "description": "se Milano non fosse la città della moda",
+        "file": "progetti/tenca/classe3E/se Milano non fosse la città della moda.html",
+        "authors": [],
+        "tags": [],
+        "cover_image": ""
+      }
+    ]
+  }
+}

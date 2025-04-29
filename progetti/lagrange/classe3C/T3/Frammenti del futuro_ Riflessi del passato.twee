@@ -1,0 +1,257 @@
+:: StoryTitle
+Frammenti del futuro, Riflessi del passato
+
+
+:: StoryData
+{
+  "ifid": "20B045CC-CD30-418A-A196-A7B3B4C2C909",
+  "format": "Chapbook",
+  "format-version": "2.3.0",
+  "start": "P0",
+  "zoom": 0.6
+}
+
+
+:: P0 {"position":"600,300","size":"100,100"}
+~~Frammenti del futuro E  Riflessi del passato~~
+  
+
+ INTRODUZIONE<br>
+ 
+ *In un mondo dove il denaro e il successo hanno perso ogni significato, Angro e Dabio si incontrano per caso. Angro, con il suo libro che prevede il futuro, e Dabio, con la sua capacità di tornare indietro nel tempo, capiscono di essere complementari. Insieme, decidono di unire le forze per salvare il mondo dalla crisi economica, energetica e sociale che lo sta distruggendo.*
+ <br>
+[after 2 second]
+*Ma non sarà facile. Ogni regressione di Dabio porta nuove informazioni, ma anche nuove sfide. Angro, grazie al libro, può prevedere gli eventi, ma ogni scelta ha conseguenze imprevedibili. Insieme, dovranno affrontare nemici, prendere decisioni difficili e scoprire il vero motivo dietro il ciclo infinito in cui sono intrappolati.*
+[continued]
+  
+<br>  {link to: 'P1', label: 'inizio gioco'}
+
+
+:: P1 {"position":"825,275","size":"100,100"}
+Dabio, un giovane di 25 anni, si sveglia nel bel mezzo di una città in tumulto. Fuori dalla sua finestra, il mondo è in fiamme: persone in fuga, automobili distrutte e un senso di disperazione nell'aria.
+
+
+{embed image: ''}
+
+<br>{link to: 'P21', label: 'Dabio si lascia spingere dalla curiosità e decide di informarsi'}<br>
+{link to: 'P22', label: 'Dabio si sente troppo stanco e decide di tornare a dormire.'}
+
+
+:: P10 {"position":"2750,325","size":"100,100"}
+Decide come obiettivo di sopravvivere e risolvere il caos.
+
+<br>{link to: 'P111', label: 'cambia come Angro'}<br>
+{link to: 'P112', label: 'continua come Dabio'}
+
+
+:: P111 {"position":"2975,300","size":"100,100"}
+Nel frattempo, Angro, trova un libro misterioso sulla sua scrivania. Il libro ha una copertina antica e sembra emanare un'energia inquietante.
+<br>{link to: 'P121', label: 'legge il libro'}<br>
+{link to: 'P122', label: 'non legge il libro'}
+
+
+:: P112 {"position":"3050,525","size":"100,100"}
+decidi di continuare il viaggio come Dabio
+<br>{link to: 'P151', label: 'next'}
+
+
+:: P121 {"position":"3275,325","size":"100,100"}
+Angro, inizialmente, lo scambia per un romanzo fantascientifico. Tuttavia, mentre lo legge, si rende conto che i dettagli sono troppo precisi per essere una semplice finzione. Dopo qualche giorno, Angro nota che gli eventi descritti nel libro si stanno avverando con precisione. Capisce che il libro non è solo un romanzo, ma una guida per il futuro.
+<br>{link to: 'P13', label: 'next'}
+
+
+:: P122 {"position":"3300,525","size":"100,100"}
+Angro lo sfoglia distrattamente, ma lo mette da parte, convinto che sia solo un romanzo fantascientifico lasciato da un amico. Non lo legge. Quella decisione cambierà tutto.
+<br>{link to: 'P152', label: 'next'}
+
+
+:: P13 {"position":"3425,175","size":"100,100"}
+Dopo qualche giorno, Angro nota che gli eventi descritti nel libro si stanno avverando con precisione. Capisce che il libro non è solo un romanzo, ma una guida per il futuro.
+<br>{link to: 'P141', label: 'prepara e parte'}<br>
+{link to: 'P142', label: 'non prepara  e parte'}
+
+
+:: P141 {"position":"3675,300","size":"100,100"}
+Angro, dopo aver trovato il libro misterioso, decide di incontrare Dabio per condividere le sue scoperte.
+<br>{link to: 'P151', label: 'next'}
+
+
+:: P142 {"position":"3700,525","size":"100,100"}
+decide di non preparare prima della partenza.
+<br>{link to: 'P152', label: 'next'}
+
+
+:: P151 {"position":"3900,375","size":"100,100"}
+Dabio incontra Angro, che gli parla del libro misterioso e del suo potere di prevedere il futuro. Angro è entusiasta e cerca di convincere Dabio che il libro è la chiave per sopravvivere e salvare il mondo. Tuttavia, Dabio è scettico. Il caos fuori dalla sua finestra lo ha reso cinico e diffidente, e non riesce a credere che un semplice libro possa avere un tale potere.
+<br>{link to: 'P161', label: 'Dabio  si affida di lui'}<br>
+{link to: 'P162', label: 'Dabio non si affida di lui'}
+
+
+:: P152 {"position":"3950,525","size":"100,100"}
+Senza il libro, Angro non ha modo di prevedere il pericolo o di capire cosa sta realmente accadendo nel mondo. Viene ucciso, e il libro rimane abbandonato nella polvere, dimenticato.
+<br>{link to: 'P163', label: 'Dabio parte da solo'}
+
+
+:: P161 {"position":"4075,300","size":"100,100"}
+Dabio è scettico, ma quando Angro gli mostra le prove, i due decidono di unire le forze per viaggiare verso Milano, l'epicentro del caos. Secondo il libro, Milano è il luogo in cui tutto è iniziato, e potrebbe essere la chiave per salvare il mondo.
+<br>{link to: 'P17', label: 'next'}
+
+
+:: P162 {"position":"4075,450","size":"100,100"}
+Angro insiste, mostrandogli prove e dettagli precisi, ma Dabio è sempre più irritato. La tensione tra i due cresce, e Dabio inizia a sospettare che Angro stia nascondendo qualcosa o che sia diventato pericoloso.
+
+La situazione raggiunge il culmine quando Angro, disperato, cerca di costringere Dabio a leggere il libro. "Devi credermi, Dabio! Se non agiamo ora, sarà troppo tardi!" urla Angro. Dabio, però, interpreta questo comportamento come una minaccia. Preso dal panico e dalla rabbia, Dabio afferra un oggetto pesante e colpisce Angro, uccidendolo.
+<br>{link to: 'fine2', label: 'bad ending'}
+
+
+:: P163 {"position":"4225,550","size":"100,100"}
+Dabio decide di partire per Milano, convinto che lì possa trovare risposte e una soluzione al caos che sta distruggendo il mondo. Senza Angro al suo fianco e senza aver letto il libro, Dabio è completamente all'oscuro di ciò che lo aspetta.
+<br>{link to: 'P173', label: 'parte senza preparare'}
+
+
+:: P17 {"position":"4250,300","size":"100,100"}
+Durante il viaggio, Dabio e Angro affrontano numerosi ostacoli: bande armate, creature misteriose e una natura che sembra essersi rivoltata contro l'umanità. Ogni passo verso Milano è una lotta per la sopravvivenza. 
+<br>{link to: 'P19', label: 'next'}
+
+
+:: P173 {"position":"4400,700","size":"100,100"}
+Il viaggio è un incubo: le strade sono piene di cadaveri, le città sono desolate e le poche persone sopravvissute sono diventate predatori.
+<br>{link to: 'P181', label: 'next'}
+
+
+:: P181 {"position":"4600,825","size":"100,100"}
+Durante il viaggio, Dabio inizia a notare strani fenomeni: creature misteriose che si muovono nell'ombra, eventi inspiegabili che sembrano sfidare le leggi della natura. Senza il libro, non ha modo di capire che queste creature sono il risultato di un esperimento fallito che ha distorto la realtà.
+<br>{link to: 'P191', label: 'next'}
+
+
+:: P19 {"position":"4550,425","size":"100,100"}
+Dabio e Angro arrivano a Milano dopo un viaggio estenuante. La città è in rovina: edifici crollati, strade deserte e un silenzio innaturale che mette i brividi. Al centro della città, trovano una struttura enorme, un laboratorio abbandonato che sembra emanare un'energia sinistra. All'interno, scoprono prove di un esperimento chiamato "Progetto Nexus", che sembra essere la causa del caos globale. Ora devono <br>
+
+{link to: 'P201', label: 'continuare a esplorare il laboratorio'} <br>
+{link to: 'P202', label: 'uscire dal laboratorio'}
+
+
+:: P191 {"position":"4850,875","size":"100,100"}
+Quando Dabio arriva a Milano, trova una città in rovina. Gli edifici sono crollati, le strade sono deserte e un'atmosfera opprimente avvolge tutto. Al centro della città, Dabio scopre una struttura enorme, un laboratorio abbandonato. All'interno, trova prove di un esperimento chiamato "Progetto Nexus", che sembra essere la causa del caos globale.
+
+Senza il libro, Dabio non riesce a decifrare i documenti o a capire come fermare Nexus. Cerca di distruggere il laboratorio, ma è troppo tardi. Nexus, un'entità creata dall'esperimento, si materializza davanti a lui. È una forza oscura e potente, alimentata dalla disperazione e dalla paura umana.
+<br>{link to: 'P203', label: 'next'}
+
+
+:: P201 {"position":"4725,425","size":"100,100"}
+Dabio e Angro decidono di approfondire i segreti del laboratorio. Attraversano corridoi bui e stanze piene di attrezzature scientifiche abbandonate. Trovano documenti che rivelano dettagli inquietanti: Nexus non è solo un esperimento, ma un'entità creata per controllare la realtà stessa. Tuttavia, qualcosa è andato storto, e Nexus ha preso il controllo, distorcendo il mondo.
+<br>{link to: 'P204', label: 'continua a esplorare'}
+
+
+:: P202 {"position":"4725,550","size":"100,100"}
+Dabio e Angro, spaventati da ciò che hanno visto, decidono di non rischiare e di uscire dal laboratorio. Credono che ci debba essere un altro modo per fermare il caos senza affrontare direttamente Nexus.
+<br>{link to: 'P213', label: 'next'}
+
+
+:: P203 {"position":"5025,925","size":"100,100"}
+Dabio cerca di combattere Nexus, ma Nexus lo sopraffà facilmente, riducendolo a un semplice spettatore della propria sconfitta. 
+
+Nexus, trionfante, assorbe l'energia residua del mondo, distruggendo tutto ciò che resta. Il caos diventa permanente, e l'umanità sprofonda nell'oscurità.
+<br>{link to: 'fine1', label: 'worst ending'}
+
+
+:: P204 {"position":"5000,325","size":"100,100"}
+Mentre esplorano, Dabio e Angro attivano involontariamente un sistema di sicurezza. Le luci si accendono, e una voce robotica annuncia: "Attivazione di Nexus in corso". I due cercano di fermare il processo, ma è troppo tardi. Nexus si risveglia, materializzandosi come un'ombra gigantesca e minacciosa.
+<br>{link to: 'P211', label: 'scontro'}
+
+
+:: P21 {"position":"925,75","size":"100,100"}
+ancora scosso, accende la radio a batterie, l'unico dispositivo funzionante nella sua casa. La voce del giornalista era grave mentre spiegava la situazione: una crisi economica senza precedenti aveva colpito il paese, causando il crollo dei mercati finanziari e l'indisponibilità di tutti i dispositivi elettrici. Dabio sente un brivido lungo la schiena mentre realizza l'entità del disastro. Senza elettricità, la vita quotidiana sarebbe cambiata radicalmente: doveva trovare un modo per adattarsi a questa nuova realtà.
+<br>{link to: 'P31', label: 'resta a casa'}<br>
+{link to: 'P6', label: 'esce di casa per procurare il cibo'}
+
+
+:: P211 {"position":"5300,275","size":"100,100"}
+Dabio e Angro devono affrontare Nexus. Usando le informazioni trovate nel laboratorio, scoprono che Nexus è vulnerabile a una frequenza sonora specifica. Trovano un dispositivo in grado di emettere quella frequenza e lo attivano, indebolendo Nexus. Tuttavia, l'entità reagisce violentemente, distruggendo parte del laboratorio.
+
+Ma non basta questo. Per distruggere definitivamente Nexus,devono dare una dolorossa decisione o forse no.
+<br>{link to: 'fine4', label: 'best ending'}<br>
+{link to: 'fine5', label: 'good ending'}<br>
+{link to: 'fine6', label: 'not bad ending'}
+
+
+:: P213 {"position":"4925,675","size":"100,100"}
+I due iniziano a cercare altri sopravvissuti a Milano, sperando di trovare qualcuno che possa aiutarli. Trovano un gruppo di ribelli che sta combattendo contro le creature generate da Nexus. I ribelli raccontano di un'antica leggenda che parla di un artefatto in grado di sigillare Nexus.
+
+Dabio e Angro si uniscono ai ribelli e partono alla ricerca dell'artefatto, che si trova in un tempio abbandonato fuori città. Durante il viaggio, affrontano numerosi pericoli, tra cui creature misteriose e trappole mortali. Alla fine, trovano l'artefatto: un cristallo luminoso che emana un'energia pura.
+<br>{link to: 'P220', label: 'next'}
+
+
+:: P22 {"position":"975,400","size":"100,100"}
+Dabio sospirò mentre osservava il caos fuori dalla finestra. Vedendo la confusione e ascoltando le urla della folla, pensò che fosse solo un'altra delle numerose rivolte contro lo Stato che sembravano sempre più frequenti. Rassegnato e stanco, chiuse la finestra e si sdraiò di nuovo nel letto, sperando di riaddormentarsi nonostante il frastuono. Poco a poco, il rumore esterno svanì nella distanza e Lorenzo ritrovò la quiete del sonno, deciso a ignorare l'agitazione del mondo esterno.
+<br>{link to: 'P41', label: 'il giorno dopo'}
+
+
+:: P220 {"position":"5125,700","size":"100,100"}
+Tornati a Milano, Dabio e Angro usano l'artefatto per affrontare Nexus. Il cristallo indebolisce l'entità, ma non è abbastanza per distruggerla completamente. Nexus li attacca, e i due devono decidere se rischiare tutto per un ultimo colpo.
+<br>{link to: 'fine3', label: 'not bad ending'}
+
+
+:: P31 {"position":"1100,175","size":"100,100"}
+Le strade sono un caos. Vetrine distrutte, negozi saccheggiati, corpi che si scontrano. Urla e pianti riempiono l'aria. Gruppi di persone lottano per un barattolo di cibo o una bottiglia d'acqua. Non ci sono più regole: è la legge del più forte.
+
+In un angolo, un uomo anziano viene derubato e lasciato a terra. Poco più lontano, una donna cerca di proteggere i suoi figli, ma le sue provviste vengono strappate via. Nei vicoli, un mercato nero improvvisato: cibo scambiato per oggetti di valore, mentre i più deboli vengono abbandonati al loro destino.
+
+L'aria è pesante di fumo e puzza di morte. Il sole splende su un mondo che ha perso ogni traccia di umanità. La lotta per il cibo è una guerra senza fine, dove l'istinto di sopravvivenza annulla ogni empatia.
+<br>{link to: 'P6', label: 'esce per procurare cibo'}<br>
+{link to: 'P41', label: 'non rischia la vita e resta a casa per aspettare i soccorsi dello stato'}
+
+
+:: P41 {"position":"1250,350","size":"100,100"}
+Dabio decidendo di aspettare i soccorsi. Passano i giorni, ma i soccorsi non arrivano. Dabio si rende conto che il caos non è un evento temporaneo, ma una nuova realtà.
+<br>{link to: 'P6', label: 'esce per procurare cibo'}<br>
+{link to: 'P52', label: 'pensando che ha ancora scorta di cibo e resta a casa'}
+
+
+:: P52 {"position":"1425,425","size":"100,100"}
+Mentre Dabio cerca di sopravvivere a casa, il suo vicino, disperato e convinto che Dabio abbia scorte di cibo, lo attacca. Dabio cerca di difendersi, ma viene sopraffatto e ucciso. Prima di morire, realizza quanto il mondo sia diventato crudele.
+<br>{link to: 'P7', label: 'accetta la morte'}
+
+
+:: P6 {"position":"1675,250","size":"100,100"}
+Dabio, sapendo che le scorte di cibo stanno per finire, decide di rischiare uscendo di casa. Tuttavia, appena mette piede fuori, si rende conto della gravità della situazione: le strade sono un campo di battaglia, con persone che combattono per cibo e oggetti di valore.
+<br>{link to: 'P7', label: 'next'}
+
+
+:: P7 {"position":"2025,325","size":"100,100"}
+Dabio viene uccisso. Tuttavia, invece di morire, si ritrova improvvisamente nella sua stanza, come se tutto fosse stato un incubo.
+<br>{link to: 'P8', label: 'next'}
+
+
+:: P8 {"position":"2250,325","size":"100,100"}
+Ma quando guarda fuori dalla finestra, vede lo stesso caos di prima. Dabio è intrappolato in un loop temporale.
+<br>{link to: 'P9', label: 'next'}
+
+
+:: P9 {"position":"2450,325","size":"100,100"}
+Si rese conto di essere tornato al punto di partenza del disastro, ma questa volta con i suoi ricordi passati.
+<br>{link to: 'P10', label: 'next'}
+
+
+:: fine1 {"position":"5225,975","size":"100,100"}
+Il libro, ancora chiuso e intatto, giace tra le macerie di Milano. Senza qualcuno che lo legga, il suo potere rimane inutilizzato. Nexus regna sovrano, e il mondo è ridotto a un deserto desolato. La storia di Dabio e Angro diventa una leggenda dimenticata, un monito su ciò che accade quando si ignora il passato e si rifiuta di comprendere il futuro.
+
+
+:: fine2 {"position":"4050,675","size":"100,100"}
+Dabio, ossessionato dal suo potere di tornare indietro nel tempo, inizia a usarlo per scopi egoistici. credendo di poter risolvere tutto da solo. Alla fine, Dabio perde il controllo del suo potere e viene intrappola in un loop temporale infinito,  rivivendo la stessa tragedia per l'eternità.
+
+
+:: fine3 {"position":"5300,700","size":"100,100"}
+Dabio e Angro usano l'artefatto per creare un'esplosione di energia che distrugge Nexus, ma l'artefatto si rompe nel processo. Il mondo inizia a guarire, ma i due scoprono che l'artefatto era l'unica cosa che teneva insieme la realtà. Senza di esso, il mondo inizia a sgretolarsi. Dabio e Angro si guardano negli occhi, consapevoli di aver salvato il mondo ma condannato se stessi. la loro storia diventa una leggenda.
+
+
+:: fine4 {"position":"5475,50","size":"100,100"}
+Dabio e Angro lavorano insieme per sconfiggere Nexus senza sacrificarsi. Scoprono che il potere di Nexus si nutre della paura e della disperazione umana. Usando il libro, Angro trova un modo per invertire il processo, mentre Dabio usa il suo potere per creare un loop temporale che indebolisce Nexus. Alla fine, Nexus viene sconfitto, ma entrambi perdono i loro poteri. Il mondo è salvo, e Dabio e Angro decidono di ricostruire la società.
+
+
+:: fine5 {"position":"5525,225","size":"100,100"}
+Durante lo scontro finale con Nexus, Dabio e Angro capiscono che per distruggere l'entità, uno di loro deve sacrificarsi. Dabio decide di farlo, usando il suo potere per tornare indietro nel tempo e creare un'esplosione di energia che distrugge Nexus. Angro sopravvive, ma perde i suoi poteri e il libro scompare. Il mondo viene salvato, ma Dabio è morto.
+
+
+:: fine6 {"position":"5575,375","size":"100,100"}
+Nexus è troppo potente per essere sconfitto. Dabio e Angro usano tutti i loro poteri, ma alla fine vengono sopraffatti. Tuttavia, il loro sacrificio indebolisce Nexus abbastanza da permettere al mondo di riprendersi. Il libro scompare, e la loro storia diventa una leggenda.

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizzatore Progetto Twine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/vote-modal.css?v=20250429">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #project-container {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #error-message {
+            display: none;
+            padding: 20px;
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="error-message"></div>
+    <div id="content-container"></div>
+    
+    <script>
+        // Ottieni il parametro 'path' dall'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectPath = urlParams.get('path');
+        
+        // Funzione per mostrare un errore
+        function showError(message) {
+            const errorElement = document.getElementById('error-message');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+        
+        // Carica il contenuto del progetto direttamente
+        if (projectPath) {
+            document.title = 'Progetto Twine: ' + projectPath.split('/').pop().replace('.html', '');
+            
+            // Carica il contenuto del progetto tramite fetch
+            fetch(projectPath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Errore nel caricamento del progetto: ${response.status} ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    // Crea un parser DOM
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    
+                    // Aggiungi meta tag per consentire risorse esterne
+                    const meta = document.createElement('meta');
+                    meta.setAttribute('http-equiv', 'Content-Security-Policy');
+                    meta.setAttribute('content', "default-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: blob:;");
+                    document.head.appendChild(meta);
+                    
+                    // Aggiungi il contenuto della head (stili, script, ecc.)
+                    Array.from(doc.head.children).forEach(node => {
+                        if (node.tagName !== 'TITLE') { // Mantieni il titolo originale
+                            document.head.appendChild(node.cloneNode(true));
+                        }
+                    });
+                    
+                    // Inserisci il contenuto del body nella pagina
+                    const container = document.getElementById('content-container');
+                    container.innerHTML = doc.body.innerHTML;
+                    
+                    // Esegui gli script nel contenuto
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        
+                        // Copia tutti gli attributi
+                        Array.from(oldScript.attributes).forEach(attr => {
+                            newScript.setAttribute(attr.name, attr.value);
+                        });
+                        
+                        // Copia il contenuto dello script
+                        newScript.textContent = oldScript.textContent;
+                        
+                        // Sostituisci il vecchio script con quello nuovo
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                })
+                .catch(error => {
+                    showError(`Errore: ${error.message}`);
+                    console.error('Errore nel caricamento del progetto:', error);
+                });
+                
+            // Inizializza il sistema di voto
+            // Estrai l'ID del progetto dal percorso
+            const projectId = projectPath.split('/').pop().replace('.html', '');
+            const projectName = projectId;
+            const schoolClass = projectPath.split('/').slice(-3, -1);
+            
+            // Crea un oggetto progetto per il sistema di voto
+            const project = {
+                id: projectId,
+                name: projectName,
+                school: schoolClass[0],
+                class: schoolClass[1]
+            };
+            
+            // Carica lo script del sistema di voto
+            const voteScript = document.createElement('script');
+            voteScript.src = '/js/vote-system.js?v=20250429';
+            voteScript.onload = function() {
+                // Mostra il pulsante di voto quando lo script è caricato
+                setTimeout(() => {
+                    if (window.showVoteButton) {
+                        window.showVoteButton(project);
+                    }
+                }, 1000);
+            };
+            document.head.appendChild(voteScript);
+        } else {
+            showError('Errore: Nessun progetto specificato');
+        }
+    </script>
+</body>
+</html>
