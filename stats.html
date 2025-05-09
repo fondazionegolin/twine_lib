@@ -11,6 +11,7 @@
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
+            overflow-x: auto;
         }
         
         .stats-card {
@@ -36,6 +37,7 @@
         .stats-table {
             width: 100%;
             border-collapse: collapse;
+            table-layout: fixed;
         }
         
         .stats-table th,
@@ -60,6 +62,73 @@
             color: var(--text-color);
             opacity: 0.7;
             font-size: 0.9em;
+        }
+        
+        /* Stili per i badge degli utenti votanti */
+        .voters-inline-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            max-width: 100%;
+        }
+        
+        .voter-badge {
+            display: flex;
+            align-items: center;
+            background-color: rgba(52, 152, 219, 0.1);
+            border-radius: 20px;
+            padding: 4px 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .voter-badge:hover {
+            transform: translateY(-2px);
+            background-color: rgba(52, 152, 219, 0.2);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .voter-name {
+            margin-right: 6px;
+            font-weight: 500;
+        }
+        
+        .voter-badge-rating {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        
+        .voters-cell {
+            max-width: 300px;
+            overflow-x: auto;
+            padding: 8px 12px;
+        }
+        
+        /* Stili per rendere la tabella scrollabile */
+        .stats-table th,
+        .stats-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--shadow-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .stats-table th:nth-child(4),
+        .stats-table td:nth-child(4) {
+            white-space: normal;
+            width: 300px;
         }
     </style>
 </head>
@@ -93,9 +162,9 @@
                             <th>Scuola</th>
                             <th>Classe</th>
                             <th>Progetto</th>
-                            <th>Utente</th>
-                            <th>Voto</th>
-                            <th>Data</th>
+                            <th>Utenti Votanti</th>
+                            <th>Voto Medio</th>
+                            <th>Num. Voti</th>
                         </tr>
                     </thead>
                     <tbody id="stats-body">
@@ -110,35 +179,150 @@
         // Funzione per caricare i voti
         async function loadVotes() {
             try {
-                const response = await fetch('/server/votes.json');
-                const votes = await response.json();
+                // Carica i dati dei voti
+                const votesResponse = await fetch('../server/votes.json');
+                const votesData = await votesResponse.json();
+                
+                // Carica i dati dei progetti
+                const projectsResponse = await fetch('../server/projects.json');
+                const projectsData = await projectsResponse.json();
                 
                 const statsBody = document.getElementById('stats-body');
                 statsBody.innerHTML = '';
                 
-                // Converti l'oggetto voti in un array e ordinalo per timestamp decrescente
-                const votesArray = Object.values(votes).sort((a, b) => b.timestamp - a.timestamp);
+                // Organizza i voti per progetto
+                const projectVotes = {};
                 
-                votesArray.forEach(vote => {
+                // Itera su tutti gli utenti e i loro voti
+                for (const [username, userVotes] of Object.entries(votesData)) {
+                    for (const [projectId, voteValue] of Object.entries(userVotes)) {
+                        // Salta se non è un voto valido (potrebbe essere un timestamp o altro)
+                        if (typeof voteValue !== 'number') continue;
+                        
+                        if (!projectVotes[projectId]) {
+                            projectVotes[projectId] = {
+                                id: projectId,
+                                voters: []
+                            };
+                        }
+                        
+                        projectVotes[projectId].voters.push({
+                            username: username,
+                            vote: voteValue
+                        });
+                    }
+                }
+                
+                // Trova i dettagli dei progetti
+                for (const projectId in projectVotes) {
+                    const project = findProjectById(projectsData, projectId);
+                    if (project) {
+                        projectVotes[projectId].name = project.name;
+                        projectVotes[projectId].school = project.school;
+                        projectVotes[projectId].class = project.class;
+                    }
+                }
+                
+                // Converti in array e ordina per numero di voti (decrescente)
+                const projectsArray = Object.values(projectVotes)
+                    .filter(p => p.name) // Filtra solo i progetti con un nome valido
+                    .sort((a, b) => b.voters.length - a.voters.length);
+                
+                // Popola la tabella
+                projectsArray.forEach(project => {
                     const row = document.createElement('tr');
-                    const date = new Date(vote.timestamp * 1000);
                     
+                    // Calcola il voto medio
+                    const totalVotes = project.voters.length;
+                    const avgVote = totalVotes > 0 
+                        ? (project.voters.reduce((sum, voter) => sum + voter.vote, 0) / totalVotes).toFixed(1)
+                        : '0.0';
+                    
+                    // Crea una lista di utenti votanti
+                    const votersList = document.createElement('div');
+                    votersList.className = 'voters-inline-list';
+                    
+                    project.voters.forEach(voter => {
+                        const voterBadge = document.createElement('div');
+                        voterBadge.className = 'voter-badge';
+                        voterBadge.innerHTML = `
+                            <span class="voter-name">${voter.username}</span>
+                            <span class="voter-badge-rating">${voter.vote}</span>
+                        `;
+                        votersList.appendChild(voterBadge);
+                    });
+                    
+                    // Popola la riga
                     row.innerHTML = `
-                        <td>${vote.scuola}</td>
-                        <td>${vote.classe}</td>
-                        <td>${vote.nome_progetto}</td>
-                        <td>${vote.nome_utente}</td>
-                        <td class="vote-value">${vote.voto}</td>
-                        <td class="timestamp">${date.toLocaleString()}</td>
+                        <td>${formatSchoolName(project.school)}</td>
+                        <td>${project.class}</td>
+                        <td>${project.name}</td>
+                        <td class="voters-cell"></td>
+                        <td class="vote-value">${avgVote}</td>
+                        <td>${totalVotes}</td>
                     `;
                     
+                    // Aggiungi la lista di utenti votanti alla cella
+                    const votersCell = row.querySelector('.voters-cell');
+                    votersCell.appendChild(votersList);
+                    
+                    // Aggiungi la riga alla tabella
                     statsBody.appendChild(row);
                 });
+                
+                // Nessun event listener necessario, ora i votanti sono visualizzati direttamente nella tabella
+                
             } catch (error) {
                 console.error('Error loading votes:', error);
                 document.getElementById('stats-content').innerHTML = 
                     '<p>Errore nel caricamento delle statistiche. Riprova più tardi.</p>';
             }
+        }
+        
+        // Funzione per trovare un progetto per ID
+        function findProjectById(projectsData, projectId) {
+            for (const schoolName in projectsData) {
+                for (const className in projectsData[schoolName]) {
+                    const projects = projectsData[schoolName][className];
+                    const project = projects.find(p => p.id === projectId);
+                    if (project) {
+                        return {
+                            ...project,
+                            school: schoolName,
+                            class: className
+                        };
+                    }
+                }
+            }
+            return null;
+        }
+        
+        // Funzione per formattare il nome della scuola
+        function formatSchoolName(schoolName) {
+            return schoolName.replace(/_/g, ' ')
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        }
+        
+        // Funzione per ordinare i progetti
+        function sortProjects(projects, sortBy = 'votes') {
+            return [...projects].sort((a, b) => {
+                if (sortBy === 'votes') {
+                    return b.voters.length - a.voters.length;
+                } else if (sortBy === 'rating') {
+                    const aAvg = a.voters.length > 0 
+                        ? a.voters.reduce((sum, voter) => sum + voter.vote, 0) / a.voters.length
+                        : 0;
+                    const bAvg = b.voters.length > 0 
+                        ? b.voters.reduce((sum, voter) => sum + voter.vote, 0) / b.voters.length
+                        : 0;
+                    return bAvg - aAvg;
+                } else if (sortBy === 'name') {
+                    return a.name.localeCompare(b.name);
+                }
+                return 0;
+            });
         }
 
         // Gestione dark mode

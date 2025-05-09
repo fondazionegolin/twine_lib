@@ -106,16 +106,57 @@
             align-items: center;
         }
         
-        .star {
-            color: #f1c40f;
+        .rating .star {
+            color: #f39c12;
             margin-right: 2px;
         }
         
         .filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             margin-bottom: 20px;
+        }
+        
+        /* Stili per la lista degli utenti votanti */
+        .voters-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+        }
+        
+        .voters-list li {
+            padding: 5px 8px;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            border-left: 3px solid #3498db;
+        }
+        
+        .voters-list li:hover {
+            background-color: #e9f5fe;
+            transform: translateX(3px);
+        }
+        
+        .voters-list li i {
+            color: #3498db;
+            margin-right: 8px;
+        }
+        
+        .voter-rating {
+            margin-left: auto;
+            background-color: #3498db;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
         
         .filter-group {
@@ -170,6 +211,32 @@
         canvas {
             max-width: 100%;
             height: auto;
+        }
+        
+        /* Stili per la lista degli utenti votanti */
+        .voters-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .voters-list li {
+            margin-bottom: 5px;
+            padding: 3px 0;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .voters-list li i {
+            margin-right: 5px;
+            color: #3498db;
+        }
+        
+        .voter-rating {
+            margin-left: 5px;
+            font-weight: bold;
+            color: #e74c3c;
         }
     </style>
 </head>
@@ -240,6 +307,7 @@
                         <th>Classe</th>
                         <th>Voto Medio</th>
                         <th>Voti Totali</th>
+                        <th>Utenti Votanti</th>
                     </tr>
                 </thead>
                 <tbody id="projects-tbody">
@@ -283,6 +351,7 @@
         
         async function loadStats() {
             try {
+                // Carica i dati delle statistiche dal server
                 const response = await fetch('/api/vote', {
                     method: 'POST',
                     headers: {
@@ -297,7 +366,35 @@
                     throw new Error('Errore nel caricamento delle statistiche');
                 }
                 
-                return await response.json();
+                // Carica anche i voti direttamente dal file votes.json per ottenere gli utenti votanti
+                const votesResponse = await fetch('/server/votes.json');
+                if (!votesResponse.ok) {
+                    throw new Error('Errore nel caricamento dei voti');
+                }
+                
+                const votesData = await votesResponse.json();
+                const statsData = await response.json();
+                
+                // Aggiungi gli utenti votanti a ciascun progetto
+                if (statsData.projects && statsData.projects.length > 0) {
+                    statsData.projects.forEach(project => {
+                        // Inizializza l'array dei votanti
+                        project.voters = [];
+                        
+                        // Cerca i voti per questo progetto
+                        for (const username in votesData) {
+                            const userVotes = votesData[username];
+                            if (userVotes && project.id in userVotes) {
+                                project.voters.push({
+                                    username: username,
+                                    vote: userVotes[project.id]
+                                });
+                            }
+                        }
+                    });
+                }
+                
+                return statsData;
             } catch (error) {
                 console.error('Errore nel caricamento delle statistiche:', error);
                 return null;
@@ -389,12 +486,31 @@
                 const votesCell = document.createElement('td');
                 votesCell.textContent = project.total_votes || 0;
                 
+                // Crea la cella per gli utenti votanti
+                const usersCell = document.createElement('td');
+                if (project.voters && project.voters.length > 0) {
+                    // Crea un elenco di utenti votanti
+                    const usersList = document.createElement('ul');
+                    usersList.className = 'voters-list';
+                    
+                    project.voters.forEach(voter => {
+                        const userItem = document.createElement('li');
+                        userItem.innerHTML = `<i class="fas fa-user"></i> ${voter.username} <span class="voter-rating">(${voter.vote})</span>`;
+                        usersList.appendChild(userItem);
+                    });
+                    
+                    usersCell.appendChild(usersList);
+                } else {
+                    usersCell.textContent = 'Nessun utente';
+                }
+                
                 // Aggiungi le celle alla riga
                 row.appendChild(nameCell);
                 row.appendChild(schoolCell);
                 row.appendChild(classCell);
                 row.appendChild(ratingCell);
                 row.appendChild(votesCell);
+                row.appendChild(usersCell);
                 
                 // Aggiungi la riga alla tabella
                 tbody.appendChild(row);

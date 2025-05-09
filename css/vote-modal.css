@@ -1,18 +1,19 @@
-/* Stili per il modale di voto */
+/* Stili per il modale di voto - Versione migliorata */
 .vote-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    backdrop-filter: blur(5px);
 }
 
 .vote-modal-overlay.active {
@@ -22,34 +23,50 @@
 
 .vote-modal-container {
     background-color: white;
-    border-radius: 8px;
-    width: 400px;
-    height: 400px; /* Modale quadrato */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    width: 450px;
+    max-width: 90vw;
+    height: auto;
+    min-height: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .vote-modal-overlay.active .vote-modal-container {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
 }
 
 .vote-modal-header {
-    background-color: #e74c3c; /* Rosso come i cuoricini */
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
     color: white;
-    padding: 15px 20px;
+    padding: 20px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.vote-modal-header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
 }
 
 .vote-modal-header h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .vote-modal-close {
@@ -58,42 +75,58 @@
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
-    padding: 0;
+    padding: 8px;
     line-height: 1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.vote-modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
 }
 
 .vote-modal-body {
-    padding: 30px;
+    padding: 35px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
 }
 
 .vote-modal-body p {
     margin-top: 0;
-    margin-bottom: 30px;
-    font-size: 1.3rem;
+    margin-bottom: 35px;
+    font-size: 1.5rem;
     color: #333;
     text-align: center;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .vote-hearts {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    perspective: 1000px;
 }
 
 .vote-heart {
-    font-size: 3rem;
-    margin: 0 10px;
+    font-size: 3.5rem;
+    margin: 0 12px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
 }
 
 .vote-heart svg {
@@ -105,69 +138,126 @@
 }
 
 .vote-heart .heart-outline {
-    stroke: #000;
+    stroke: #555;
     stroke-width: 2px;
     fill: transparent;
+    transition: stroke 0.3s ease;
 }
 
 .vote-heart .heart-fill {
     fill: #e74c3c; /* Rosso per i cuori riempiti */
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center;
+    transform: scale(0.8);
 }
 
 .vote-heart:hover {
-    transform: scale(1.15);
+    transform: scale(1.15) translateY(-5px);
+    filter: drop-shadow(0 6px 8px rgba(231, 76, 60, 0.3));
+}
+
+.vote-heart:hover .heart-outline {
+    stroke: #e74c3c;
 }
 
 .vote-heart.selected .heart-fill {
     opacity: 1;
+    transform: scale(1);
+}
+
+/* Effetto pulsazione per i cuori selezionati */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.08); }
+    60% { transform: scale(1); }
+}
+
+.vote-heart.selected {
+    animation: heartbeat 1.5s ease-in-out;
 }
 
 .vote-feedback {
     text-align: center;
-    margin-bottom: 20px;
-    min-height: 24px;
+    margin-bottom: 25px;
+    min-height: 30px;
     font-weight: 500;
     color: #e74c3c;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.vote-feedback.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .vote-buttons {
     display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .vote-button {
-    padding: 10px 20px;
+    padding: 12px 28px;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.vote-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.vote-button:hover:before {
+    left: 100%;
 }
 
 .vote-cancel {
-    background-color: #e0e0e0;
+    background-color: #f2f2f2;
     color: #555;
 }
 
 .vote-cancel:hover {
-    background-color: #d0d0d0;
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .vote-submit {
-    background-color: #3498db;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: white;
 }
 
 .vote-submit:hover {
-    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
 .vote-submit:disabled {
-    background-color: #95a5a6;
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
     cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Pulsante di voto fluttuante */
@@ -175,40 +265,87 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #e74c3c;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
     color: white;
     border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
     z-index: 100;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
 }
 
 .floating-vote-btn:hover {
-    transform: scale(1.1);
-    background-color: #c0392b;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.5);
 }
 
-.floating-vote-btn i {
-    font-size: 1.5rem;
+.floating-vote-btn:active {
+    transform: scale(0.95);
 }
 
-/* Animazione per il feedback */
+.floating-vote-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.floating-vote-btn:hover::before {
+    opacity: 1;
+}
+
+/* Animazioni per il feedback */
 @keyframes fadeInOut {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
 }
 
 .vote-feedback.show {
     animation: fadeInOut 3s forwards;
+}
+
+/* Animazione di successo */
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.vote-success {
+    color: #2ecc71;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.vote-success.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vote-success i {
+    animation: successPulse 1s ease-in-out;
 }
 
 /* Responsive */

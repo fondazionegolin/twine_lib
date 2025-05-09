@@ -494,6 +494,104 @@ body {
     font-size: 1.2rem;
 }
 
+/* Stili per la sezione CLASSIFICATI */
+.featured-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.featured-project {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid var(--card-border);
+}
+
+.featured-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-hover);
+}
+
+.featured-project-header {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured-project-header i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.featured-project-body {
+    padding: 15px;
+    flex: 1;
+}
+
+.featured-project-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.featured-project-class {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.featured-project-description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+/* Stile per il margine superiore */
+.mt-5 {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--card-border);
+}
+
+/* Stile per la lista delle scuole nella pagina classificati */
+.school-index-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.school-index-list li {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    border: 1px solid var(--card-border);
+}
+
+.school-index-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-hover);
+    background-color: var(--primary-color);
+    color: white;
+}
+
 .big-button {
     background-color: var(--secondary-color);
     color: white;

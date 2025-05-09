@@ -43,6 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
     let isRatingActive = false;
     let currentUser = null;
     
+    // Lista dei progetti classificati
+    const featuredProjects = [
+        { id: "lagrange_classe3C_storia", class: "3C - LAGRANGE" },
+        { id: "tenca_classe4A_INTRIGHI_NELLA_MILANO_DELLA_CONTRORIFORMA", class: "4A - TENCA" },
+        { id: "tenca_classe4E_Tutto___compiuto", class: "4E - TENCA" },
+        { id: "tenca_classe4E_ArchCity", class: "4E - TENCA" },
+        { id: "tenca_classe3F_l_ultima_sinfonia", class: "3F - TENCA" },
+        { id: "tenca_classe3E_La_città_senza_prezzo", class: "3E - TENCA" },
+        { id: "tenca_classe3B_3B-Team_4", class: "3B - TENCA" },
+        // I seguenti progetti non sono stati trovati con i nomi esatti, quindi sono commentati
+         { id: "lagrange_classe3D_Manfagiolo", class: "3D - LAGRANGE" },
+         { id: "tenca_classe3A_RITORNO_A_CASA_2096", class: "3A - TENCA" },
+         { id: "lagrange_classe3D_Milano_gratis", class: "3D - LAGRANGE" }
+    ];
+    
     // Inizializza l'utente
     function initializeUser() {
         const savedUser = localStorage.getItem('user');
@@ -126,6 +141,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Popola l'indice delle scuole
             populateSchoolList();
             
+            // Popola la sezione CLASSIFICATI
+            populateFeaturedProjects();
+            
             // Aggiorna la navigazione
             updateNavigation();
         } catch (error) {
@@ -144,10 +162,74 @@ document.addEventListener('DOMContentLoaded', function() {
             li.textContent = school.name;
             li.addEventListener('click', () => {
                 createSchoolPage(school, index);
-                goToPage(2); // Vai alla pagina della scuola (dopo copertina e indice)
+                goToPage(2); // Vai alla pagina della scuola (dopo copertina e pagina CLASSIFICATI+scuole)
                 updateBreadcrumb('Scuole', school.name);
             });
             classList.appendChild(li);
+        });
+    }
+    
+    // Popola la sezione CLASSIFICATI
+    function populateFeaturedProjects() {
+        const featuredProjectsContainer = document.getElementById('featured-projects');
+        featuredProjectsContainer.innerHTML = '';
+        
+        // Icone per i progetti classificati
+        const icons = [
+            'fa-trophy', 'fa-medal', 'fa-award', 'fa-star', 'fa-crown', 
+            'fa-certificate', 'fa-gem', 'fa-bookmark', 'fa-heart', 'fa-thumbs-up'
+        ];
+        
+        // Itera sui progetti classificati
+        featuredProjects.forEach((featuredProject, index) => {
+            // Cerca il progetto nei dati caricati
+            let projectData = null;
+            let schoolId = '';
+            let classId = '';
+            
+            // Estrai school_id e class_id dall'id del progetto
+            const idParts = featuredProject.id.split('_');
+            if (idParts.length >= 2) {
+                schoolId = idParts[0];
+                classId = idParts[1];
+            }
+            
+            // Cerca il progetto nei dati caricati
+            if (projects[schoolId] && projects[schoolId][classId]) {
+                const projectList = projects[schoolId][classId];
+                projectData = projectList.find(p => p.id === featuredProject.id);
+            }
+            
+            // Se il progetto è stato trovato, crea l'elemento
+            if (projectData) {
+                const projectElement = document.createElement('div');
+                projectElement.className = 'featured-project';
+                projectElement.dataset.projectId = projectData.id;
+                
+                // Icona casuale per il progetto (o usa quella del progetto se disponibile)
+                const iconClass = projectData.cover_image || icons[index % icons.length];
+                
+                projectElement.innerHTML = `
+                    <div class="featured-project-header">
+                        <i class="fas ${iconClass}"></i>
+                        <span>${index + 1}</span>
+                    </div>
+                    <div class="featured-project-body">
+                        <div class="featured-project-title">${projectData.name}</div>
+                        <div class="featured-project-class">${featuredProject.class}</div>
+                        <div class="featured-project-description">${projectData.description || ''}</div>
+                    </div>
+                `;
+                
+                // Aggiungi event listener per aprire il progetto
+                projectElement.addEventListener('click', () => {
+                    openProject(projectData);
+                });
+                
+                featuredProjectsContainer.appendChild(projectElement);
+            } else {
+                console.warn(`Progetto classificato non trovato: ${featuredProject.id}`);
+            }
         });
     }
     

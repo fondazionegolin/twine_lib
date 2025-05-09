@@ -24,15 +24,9 @@
     "type": "school",
     "classes": [
       {
-        "id": "tenca_classe4A",
-        "name": "Classe 4A",
-        "description": "Progetti della classe classe4A della scuola tenca",
-        "school": "tenca"
-      },
-      {
-        "id": "tenca_classe4E",
-        "name": "Classe 4E",
-        "description": "Progetti della classe classe4E della scuola tenca",
+        "id": "tenca_classe3A",
+        "name": "Classe 3A",
+        "description": "Progetti della classe classe3A della scuola tenca",
         "school": "tenca"
       },
       {
@@ -42,15 +36,27 @@
         "school": "tenca"
       },
       {
+        "id": "tenca_classe3E",
+        "name": "Classe 3E",
+        "description": "Progetti della classe classe3E della scuola tenca",
+        "school": "tenca"
+      },
+      {
         "id": "tenca_classe3F",
         "name": "Classe 3F",
         "description": "Progetti della classe classe3F della scuola tenca",
         "school": "tenca"
       },
       {
-        "id": "tenca_classe3E",
-        "name": "Classe 3E",
-        "description": "Progetti della classe classe3E della scuola tenca",
+        "id": "tenca_classe4A",
+        "name": "Classe 4A",
+        "description": "Progetti della classe classe4A della scuola tenca",
+        "school": "tenca"
+      },
+      {
+        "id": "tenca_classe4E",
+        "name": "Classe 4E",
+        "description": "Progetti della classe classe4E della scuola tenca",
         "school": "tenca"
       }
     ]

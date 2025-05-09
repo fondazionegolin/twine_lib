@@ -511,8 +511,8 @@ class TwineLibraryHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_error(500, str(e))
                 return
 
-        # Gestisci la route /stats.html per la pagina delle statistiche
-        if path == '/stats.html':
+        # Gestisci la route /stats.html o /admin/stats.html per la pagina delle statistiche
+        if path == '/stats.html' or path == '/admin/stats.html':
             if not self.authenticate():
                 self.send_auth_required()
                 return

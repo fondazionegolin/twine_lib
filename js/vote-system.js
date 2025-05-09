@@ -169,9 +169,18 @@ function resetVoteModal() {
     currentRating = 0;
     resetHeartsHighlight();
     
+    // Resetta il feedback
     const feedback = window.voteModal.querySelector('.vote-feedback');
     feedback.textContent = '';
     feedback.classList.remove('show');
+    feedback.classList.remove('visible');
+    
+    // Resetta anche l'elemento di successo se esiste
+    const successElement = window.voteModal.querySelector('.vote-success');
+    if (successElement) {
+        successElement.classList.remove('show');
+        successElement.innerHTML = '';
+    }
 }
 
 // Carica il voto esistente dell'utente
@@ -259,6 +268,7 @@ async function submitVote() {
         // Mostra feedback di caricamento
         const feedback = window.voteModal.querySelector('.vote-feedback');
         feedback.textContent = 'Invio in corso...';
+        feedback.classList.add('visible');
         
         // Invia il voto al server
         const response = await fetch('/api/vote', {
@@ -280,14 +290,30 @@ async function submitVote() {
         const data = await response.json();
         
         if (data.success) {
-            // Mostra feedback di successo
-            feedback.textContent = 'Voto registrato con successo!';
-            feedback.classList.add('show');
+            // Nascondi il feedback di caricamento
+            feedback.classList.remove('visible');
+            
+            // Crea o ottieni l'elemento di successo
+            let successElement = window.voteModal.querySelector('.vote-success');
+            if (!successElement) {
+                successElement = document.createElement('div');
+                successElement.className = 'vote-success';
+                const modalBody = window.voteModal.querySelector('.vote-modal-body');
+                modalBody.appendChild(successElement);
+            }
+            
+            // Mostra il messaggio di successo con icona
+            successElement.innerHTML = '<i class="fas fa-check-circle"></i> Voto registrato con successo!';
+            successElement.classList.add('show');
             
             // Chiudi il modale dopo un breve ritardo
             setTimeout(() => {
                 closeVoteModal();
-            }, 1500);
+                // Rimuovi la classe show dopo la chiusura
+                setTimeout(() => {
+                    successElement.classList.remove('show');
+                }, 500);
+            }, 2000);
             
             // Aggiorna anche il vecchio sistema per retrocompatibilità
             updateLegacyVoteSystem(currentProject.id, currentRating);
@@ -302,7 +328,7 @@ async function submitVote() {
         // Mostra errore
         const feedback = window.voteModal.querySelector('.vote-feedback');
         feedback.textContent = 'Si è verificato un errore. Riprova più tardi.';
-        feedback.classList.add('show');
+        feedback.classList.add('visible');
     }
 }
 
