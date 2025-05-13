@@ -259,10 +259,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if (avatarFileInput && avatarPreviewImg && avatarHiddenInput) {
         console.log('Avatar file input found');
         
+        // Imposta un'immagine di default se non c'è avatar
+        if (!avatarPreviewImg.src || avatarPreviewImg.src === window.location.href) {
+            avatarPreviewImg.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItdXNlciI+PHBhdGggZD0iTTIwIDIxdi0yYTQgNCAwIDAgMC00LTRINGE0IDQgMCAwIDAtNCA0djIiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiPjwvY2lyY2xlPjwvc3ZnPg==';
+        }
+        
         avatarFileInput.addEventListener('change', function(e) {
             const file = e.target.files[0];
             if (file) {
                 console.log('Avatar file selected:', file.name);
+                
+                // Verifica il tipo di file
+                if (!file.type.startsWith('image/')) {
+                    alert('Per favore seleziona un file immagine valido');
+                    return;
+                }
+                
+                // Verifica la dimensione del file (max 2MB)
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('L\'immagine è troppo grande. La dimensione massima è 2MB.');
+                    return;
+                }
                 
                 // Read the file as data URL
                 const reader = new FileReader();
@@ -271,12 +288,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Update the preview image
                     avatarPreviewImg.src = dataUrl;
-                    avatarPreviewImg.style.display = 'block';
                     
                     // Store the data URL in the hidden input
                     avatarHiddenInput.value = dataUrl;
                     
                     console.log('Avatar preview updated');
+                };
+                reader.onerror = function() {
+                    console.error('Errore nella lettura del file');
+                    alert('Si è verificato un errore durante la lettura del file');
                 };
                 reader.readAsDataURL(file);
             }
@@ -346,15 +366,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const userPopupName = document.querySelector('.user-popup-name');
         
         if (userName && userPopupName && currentUser) {
-            let displayName = currentUser.username;
+            // Per la navbar, mostra solo il nome
+            let navbarName = currentUser.nome || currentUser.username;
+            
+            // Per il popup, mostra nome e cognome completi
+            let fullName = currentUser.username;
             if (currentUser.nome && currentUser.cognome) {
-                displayName = `${currentUser.nome} ${currentUser.cognome}`;
+                fullName = `${currentUser.nome} ${currentUser.cognome}`;
             } else if (currentUser.nome) {
-                displayName = currentUser.nome;
+                fullName = currentUser.nome;
             }
             
-            userName.textContent = displayName;
-            userPopupName.textContent = displayName;
+            userName.textContent = navbarName;
+            userPopupName.textContent = fullName;
+            
+            // Aggiorna anche il titolo del pulsante per mostrare il nome completo
+            const userBtn = document.getElementById('user-btn');
+            if (userBtn) {
+                userBtn.setAttribute('title', fullName);
+            }
         }
     }
     

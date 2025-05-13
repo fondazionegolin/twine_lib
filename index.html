@@ -15,15 +15,20 @@
     <nav class="navbar" id="main-navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="#">Career connect 2025 </a>
-            </div>
-            <div class="navbar-breadcrumb" id="breadcrumb">
-                <span class="breadcrumb-item active">Home</span>
+                <div class="logo-container">
+                    <img src="static/logo_light.png" alt="Career Connect" class="theme-logo" data-dark-src="static/logo_dark.png" data-light-src="static/logo_light.png">
+                </div>
+                <div class="fg-logo-container">
+                    <img src="static/FG_logo_light.svg" alt="Fondazione Golinelli" class="fg-logo fg-theme-logo" data-dark-src="static/FG_logo_dark.svg" data-light-src="static/FG_logo_light.svg">
+                </div>
             </div>
             <div class="navbar-actions">
                 <button id="home-nav-btn" class="navbar-btn" title="Home">
                     <i class="fas fa-home"></i>
                 </button>
+                <div class="navbar-breadcrumb" id="breadcrumb">
+                    <span class="breadcrumb-item active">Home</span>
+                </div>
                 <button id="dark-mode-toggle" class="navbar-btn" title="Cambia tema">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -44,12 +49,6 @@
                             <button id="logout-btn" class="user-action-btn">
                                 <i class="fas fa-sign-out-alt"></i> Logout
                             </button>
-                            <button id="stats-btn" class="user-action-btn">
-                                <i class="fas fa-chart-bar"></i> Statistiche
-                            </button>
-                            <button id="vote-stats-btn" class="user-action-btn">
-                                <i class="fas fa-star"></i> Statistiche Voti
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -64,26 +63,26 @@
                 <h1>Progetti Twine</h1>
                 <p class="subtitle">Una raccolta di storie interattive</p>
                 <div class="cover-image">
-                    <img src="img/cover.jpg" alt="Copertina" onerror="this.src='img/default-cover.jpg'">
+                    <img src="img/default-cover.jpg" alt="Copertina">
                 </div>
                 <p class="instructions">Scorri per sfogliare</p>
                 <button class="big-button next-page-btn">Inizia <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
         
-        <!-- CLASSIFICATI e Scuole -->
+        <!-- Scuole e CLASSIFICATI -->
         <div class="page featured">
             <div class="content">
-                <h2>CLASSIFICATI</h2>
-                <p class="subtitle">I progetti più apprezzati</p>
+                <h2>Indice delle Scuole</h2>
+                <div id="class-list" class="school-grid">
+                    <!-- Le scuole verranno caricate dinamicamente -->
+                </div>
+                
+                <h2 class="mt-5">10 progetti finalisti</h2>
+                <p class="subtitle">Progetti da votare</p>
                 <div class="featured-projects" id="featured-projects">
                     <!-- I progetti classificati verranno caricati dinamicamente qui -->
                 </div>
-                
-                <h2 class="mt-5">Indice delle Scuole</h2>
-                <ul id="class-list" class="school-index-list">
-                    <!-- Le scuole verranno caricate dinamicamente -->
-                </ul>
             </div>
         </div>
 
@@ -102,10 +101,12 @@
         <nav class="navbar modal-navbar">
             <div class="navbar-container">
                 <div class="navbar-logo">
-                    <a href="#" id="close-modal-btn">Chiudi</a>
-                </div>
-                <div class="navbar-breadcrumb" id="modal-breadcrumb">
-                    <span class="breadcrumb-item active">Progetto</span>
+                    <div class="logo-container">
+                        <img src="static/logo_light.png" alt="Career Connect" class="theme-logo" data-dark-src="static/logo_dark.png" data-light-src="static/logo_light.png">
+                    </div>
+                    <div class="fg-logo-container">
+                        <img src="static/FG_logo_light.svg" alt="Fondazione Golinelli" class="fg-logo fg-theme-logo" data-dark-src="static/FG_logo_dark.svg" data-light-src="static/FG_logo_light.svg">
+                    </div>
                 </div>
                 <div class="navbar-actions">
                     <button id="back-to-class-btn" class="navbar-btn" title="Torna alla classe">
@@ -113,6 +114,12 @@
                     </button>
                     <button id="modal-home-btn" class="navbar-btn" title="Home">
                         <i class="fas fa-home"></i>
+                    </button>
+                    <div class="navbar-breadcrumb" id="modal-breadcrumb">
+                        <span class="breadcrumb-item active">Progetto</span>
+                    </div>
+                    <button id="close-modal-btn" class="navbar-btn" title="Chiudi">
+                        <i class="fas fa-times"></i>
                     </button>
                     <button id="modal-dark-mode-toggle" class="navbar-btn" title="Cambia tema">
                         <i class="fas fa-moon"></i>
@@ -133,6 +140,7 @@
                             <div class="rating-text">Clicca per valutare</div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </nav>

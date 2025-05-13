@@ -2,7 +2,10 @@
   "blackix": {
     "password_hash": "669e9e844bdbadd7cb3bed43ddf99f4e1adf4c7d4c5b2efa22c370ba3c6c2e38",
     "salt": "89BxTadFspsV8JBC",
-    "created_at": "2025-04-15 12:44:18"
+    "created_at": "2025-04-15 12:44:18",
+    "nome": "Alessandro",
+    "cognome": "Saracino",
+    "avatar": "images/avatars/blackix_20250513172549.jpg"
   },
   "admin": {
     "password_hash": "b439414a6a98da780781b4bfd98359ad82b5aae3d57b81dfe3724e7af7511a37",

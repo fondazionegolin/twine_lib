@@ -1,0 +1,11 @@
+# File di database da non sovrascrivere durante il deploy
+/server/votes.json
+
+# Altri file che potrebbero contenere dati utente
+/server/sessions.json
+/server/likes.json
+
+# File temporanei del sistema
+.DS_Store
+node_modules/
+.env

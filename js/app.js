@@ -81,98 +81,271 @@ document.addEventListener('DOMContentLoaded', function() {
         // Aggiorna le icone
         darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         modalDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        // Imposta i loghi alla versione per la dark mode
+        document.querySelectorAll('.jpmc-logo, .theme-logo').forEach(logo => {
+            logo.src = logo.getAttribute('data-dark-src');
+        });
+        document.querySelectorAll('.fg-theme-logo').forEach(logo => {
+            logo.src = logo.getAttribute('data-dark-src');
+        });
+    } else {
+        // Imposta i loghi alla versione per la light mode
+        document.querySelectorAll('.jpmc-logo, .theme-logo').forEach(logo => {
+            logo.src = logo.getAttribute('data-light-src');
+        });
+        document.querySelectorAll('.fg-theme-logo').forEach(logo => {
+            logo.src = logo.getAttribute('data-light-src');
+        });
     }
     
     // Carica i dati delle scuole, classi e progetti
     async function loadData() {
+        console.log('Inizializzazione del caricamento dati...');
+        
+        // Inizializza le strutture dati se non esistono
+        schools = schools || [];
+        projects = projects || {};
+        ratings = ratings || {};
+        votes = votes || {};
+        
         try {
             // Carica le scuole e le classi
-            const classesResponse = await fetch('/server/classes.json');
-            schools = await classesResponse.json();
+            try {
+                console.log('Caricamento scuole e classi...');
+                const classesResponse = await fetch('/server/classes.json');
+                if (classesResponse.ok) {
+                    schools = await classesResponse.json();
+                    console.log('Scuole e classi caricate con successo:', schools.length, 'scuole');
+                } else {
+                    console.error('Errore nel caricamento delle scuole:', classesResponse.status);
+                }
+            } catch (error) {
+                console.error('Eccezione nel caricamento delle scuole:', error);
+            }
             
             // Carica i progetti
-            const projectsResponse = await fetch('/server/projects.json');
-            projects = await projectsResponse.json();
+            try {
+                console.log('Caricamento progetti...');
+                const projectsResponse = await fetch('/server/projects.json');
+                if (projectsResponse.ok) {
+                    projects = await projectsResponse.json();
+                    console.log('Progetti caricati con successo:', Object.keys(projects).length, 'scuole con progetti');
+                } else {
+                    console.error('Errore nel caricamento dei progetti:', projectsResponse.status);
+                }
+            } catch (error) {
+                console.error('Eccezione nel caricamento dei progetti:', error);
+            }
             
             // Carica i like (ora ratings)
-            const likesResponse = await fetch('/server/likes.json');
-            ratings = await likesResponse.json();
+            try {
+                console.log('Caricamento ratings...');
+                const likesResponse = await fetch('/server/likes.json');
+                if (likesResponse.ok) {
+                    ratings = await likesResponse.json();
+                    console.log('Ratings caricati con successo');
+                } else {
+                    console.error('Errore nel caricamento dei ratings:', likesResponse.status);
+                }
+            } catch (error) {
+                console.error('Eccezione nel caricamento dei ratings:', error);
+            }
             
             // Carica i voti dell'utente
-            if (currentUser.isLoggedIn) {
+            if (currentUser && currentUser.isLoggedIn) {
                 try {
+                    console.log('Caricamento voti utente...');
                     const votesResponse = await fetch('/server/votes.json');
-                    const allVotes = await votesResponse.json();
-                    console.log('Voti caricati:', allVotes);
-                    
-                    // Inizializza i voti dell'utente se non esistono
-                    if (currentUser.username in allVotes) {
-                        votes = allVotes[currentUser.username] || {};
-                        console.log('Voti utente trovati:', votes);
-                    } else {
-                        // Se l'utente non ha voti, inizializza un oggetto vuoto
-                        votes = {};
-                        console.log('Nessun voto trovato per l\'utente, inizializzazione...');
+                    if (votesResponse.ok) {
+                        const allVotes = await votesResponse.json();
+                        console.log('Voti caricati:', allVotes);
                         
-                        // Invia una richiesta per inizializzare i voti dell'utente sul server
-                        try {
-                            await fetch('/api/vote', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify({
-                                    username: currentUser.username,
-                                    projectId: 'init',
-                                    vote: 0
-                                })
-                            });
-                            console.log('Voti utente inizializzati con successo');
-                        } catch (e) {
-                            console.error('Errore nell\'inizializzazione dei voti:', e);
+                        // Inizializza i voti dell'utente se non esistono
+                        if (currentUser.username in allVotes) {
+                            votes = allVotes[currentUser.username] || {};
+                            console.log('Voti utente trovati:', votes);
+                        } else {
+                            // Se l'utente non ha voti, inizializza un oggetto vuoto
+                            votes = {};
+                            console.log('Nessun voto trovato per l\'utente, inizializzazione...');
+                            
+                            // Invia una richiesta per inizializzare i voti dell'utente sul server
+                            try {
+                                await fetch('/api/vote', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        username: currentUser.username,
+                                        projectId: 'init',
+                                        vote: 0
+                                    })
+                                });
+                                console.log('Voti utente inizializzati con successo');
+                            } catch (e) {
+                                console.error('Errore nell\'inizializzazione dei voti:', e);
+                            }
                         }
+                    } else {
+                        console.error('Errore nel caricamento dei voti:', votesResponse.status);
+                        votes = {};
                     }
                 } catch (error) {
-                    console.error('Errore nel caricamento dei voti:', error);
+                    console.error('Eccezione nel caricamento dei voti:', error);
                     votes = {};
                 }
             }
             
-            // Popola l'indice delle scuole
-            populateSchoolList();
+            // Popola l'interfaccia utente con i dati caricati
+            console.log('Popolamento interfaccia utente...');
             
-            // Popola la sezione CLASSIFICATI
-            populateFeaturedProjects();
+            // Popola l'indice delle scuole se ci sono scuole caricate
+            if (schools && schools.length > 0) {
+                try {
+                    populateSchoolList();
+                    console.log('Indice scuole popolato con successo');
+                } catch (error) {
+                    console.error('Errore nel popolamento dell\'indice scuole:', error);
+                }
+            } else {
+                console.warn('Nessuna scuola da visualizzare');
+            }
+            
+            // Popola la sezione CLASSIFICATI se ci sono progetti caricati
+            if (projects && Object.keys(projects).length > 0) {
+                try {
+                    populateFeaturedProjects();
+                    console.log('Sezione CLASSIFICATI popolata con successo');
+                } catch (error) {
+                    console.error('Errore nel popolamento della sezione CLASSIFICATI:', error);
+                }
+            } else {
+                console.warn('Nessun progetto da visualizzare nella sezione CLASSIFICATI');
+            }
             
             // Aggiorna la navigazione
-            updateNavigation();
+            try {
+                updateNavigation();
+                console.log('Navigazione aggiornata con successo');
+            } catch (error) {
+                console.error('Errore nell\'aggiornamento della navigazione:', error);
+            }
+            
+            console.log('Caricamento dati completato con successo');
         } catch (error) {
-            console.error('Errore nel caricamento dei dati:', error);
+            console.error('Errore generale nel caricamento dei dati:', error);
         }
     }
     
     // Popola la lista delle scuole
     function populateSchoolList() {
         const classList = document.getElementById('class-list');
+        if (!classList) {
+            console.error('Elemento class-list non trovato');
+            return;
+        }
+        
         classList.innerHTML = '';
         
+        if (!schools || !Array.isArray(schools) || schools.length === 0) {
+            console.warn('Nessuna scuola disponibile da visualizzare');
+            const schoolItem = document.createElement('div');
+            schoolItem.className = 'school-item no-schools';
+            schoolItem.innerHTML = `
+                <div class="school-header">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="school-body">
+                    <div class="school-name">Nessuna scuola disponibile</div>
+                </div>
+            `;
+            classList.appendChild(schoolItem);
+            return;
+        }
+        
+        // Icone per le scuole
+        const icons = {
+            'tenca': 'fa-book', // Icona libro per il liceo
+            'lagrange': 'fa-laptop-code' // Icona computer per il tecnico informatico
+        };
+        
+        // Nomi completi delle scuole
+        const fullNames = {
+            'tenca': 'Liceo Statale "Carlo Tenca"',
+            'lagrange': 'IIS "Giuseppe Luigi Lagrange"'
+        };
+        
         schools.forEach((school, index) => {
-            const li = document.createElement('li');
-            li.className = 'school-item';
-            li.textContent = school.name;
-            li.addEventListener('click', () => {
-                createSchoolPage(school, index);
-                goToPage(2); // Vai alla pagina della scuola (dopo copertina e pagina CLASSIFICATI+scuole)
-                updateBreadcrumb('Scuole', school.name);
-            });
-            classList.appendChild(li);
+            if (!school || typeof school !== 'object') {
+                console.warn('Dati scuola non validi:', school);
+                return;
+            }
+            
+            try {
+                // Usa il nome completo se disponibile, altrimenti usa il nome originale
+                const schoolFullName = fullNames[school.id] || school.name || 'Scuola senza nome';
+                const iconClass = icons[school.id] || 'fa-school';
+                
+                const schoolItem = document.createElement('div');
+                schoolItem.className = 'school-item';
+                // Colori diversi per le diverse scuole
+                const headerColor = school.id === 'tenca' ? '#FF8C00' : '#9ACD32'; // Arancione per Tenca, Verde pisello per Lagrange
+                
+                // Creare la scheda con struttura identica ai featured projects
+                schoolItem.className = 'school-card';
+                
+                // Creare l'HTML della scheda direttamente
+                schoolItem.innerHTML = `
+                    <div class="school-card-header" style="background-color: ${headerColor};">
+                        <i class="fas ${iconClass}"></i>
+                    </div>
+                    <div class="school-card-body">
+                        <div class="school-card-title">${schoolFullName}</div>
+                    </div>
+                `;
+                
+                schoolItem.addEventListener('click', () => {
+                    try {
+                        createSchoolPage(school, index);
+                        goToPage(2); // Vai alla pagina della scuola (dopo copertina e pagina CLASSIFICATI+scuole)
+                        updateBreadcrumb('Scuole', schoolFullName);
+                    } catch (error) {
+                        console.error('Errore nel click su scuola:', error);
+                        alert('Si è verificato un errore nel caricamento della scuola. Riprova.');
+                    }
+                });
+                
+                classList.appendChild(schoolItem);
+            } catch (error) {
+                console.error('Errore nella creazione dell\'elemento scuola:', error);
+            }
         });
     }
     
     // Popola la sezione CLASSIFICATI
     function populateFeaturedProjects() {
         const featuredProjectsContainer = document.getElementById('featured-projects');
+        if (!featuredProjectsContainer) {
+            console.error('Elemento featured-projects non trovato');
+            return;
+        }
+        
         featuredProjectsContainer.innerHTML = '';
+        
+        // Verifica se ci sono progetti classificati
+        if (!featuredProjects || !Array.isArray(featuredProjects) || featuredProjects.length === 0) {
+            console.warn('Nessun progetto classificato disponibile');
+            featuredProjectsContainer.innerHTML = '<div class="no-featured-projects">Nessun progetto classificato disponibile</div>';
+            return;
+        }
+        
+        // Verifica se ci sono progetti caricati
+        if (!projects || Object.keys(projects).length === 0) {
+            console.warn('Nessun progetto caricato disponibile');
+            featuredProjectsContainer.innerHTML = '<div class="no-featured-projects">Caricamento progetti in corso...</div>';
+            return;
+        }
         
         // Icone per i progetti classificati
         const icons = [
@@ -180,57 +353,91 @@ document.addEventListener('DOMContentLoaded', function() {
             'fa-certificate', 'fa-gem', 'fa-bookmark', 'fa-heart', 'fa-thumbs-up'
         ];
         
+        let projectsFound = 0;
+        
         // Itera sui progetti classificati
         featuredProjects.forEach((featuredProject, index) => {
-            // Cerca il progetto nei dati caricati
-            let projectData = null;
-            let schoolId = '';
-            let classId = '';
-            
-            // Estrai school_id e class_id dall'id del progetto
-            const idParts = featuredProject.id.split('_');
-            if (idParts.length >= 2) {
-                schoolId = idParts[0];
-                classId = idParts[1];
+            if (!featuredProject || !featuredProject.id) {
+                console.warn('Dati progetto classificato non validi:', featuredProject);
+                return;
             }
             
-            // Cerca il progetto nei dati caricati
-            if (projects[schoolId] && projects[schoolId][classId]) {
-                const projectList = projects[schoolId][classId];
-                projectData = projectList.find(p => p.id === featuredProject.id);
-            }
-            
-            // Se il progetto è stato trovato, crea l'elemento
-            if (projectData) {
-                const projectElement = document.createElement('div');
-                projectElement.className = 'featured-project';
-                projectElement.dataset.projectId = projectData.id;
+            try {
+                // Cerca il progetto nei dati caricati
+                let projectData = null;
+                let schoolId = '';
+                let classId = '';
                 
-                // Icona casuale per il progetto (o usa quella del progetto se disponibile)
-                const iconClass = projectData.cover_image || icons[index % icons.length];
+                // Estrai school_id e class_id dall'id del progetto
+                const idParts = featuredProject.id.split('_');
+                if (idParts.length >= 2) {
+                    schoolId = idParts[0];
+                    classId = idParts[1];
+                } else {
+                    console.warn('ID progetto non valido:', featuredProject.id);
+                    return;
+                }
                 
-                projectElement.innerHTML = `
-                    <div class="featured-project-header">
-                        <i class="fas ${iconClass}"></i>
-                        <span>${index + 1}</span>
-                    </div>
-                    <div class="featured-project-body">
-                        <div class="featured-project-title">${projectData.name}</div>
-                        <div class="featured-project-class">${featuredProject.class}</div>
-                        <div class="featured-project-description">${projectData.description || ''}</div>
-                    </div>
-                `;
+                // Cerca il progetto nei dati caricati
+                if (projects[schoolId] && projects[schoolId][classId]) {
+                    const projectList = projects[schoolId][classId];
+                    if (Array.isArray(projectList)) {
+                        projectData = projectList.find(p => p && p.id === featuredProject.id);
+                    }
+                }
                 
-                // Aggiungi event listener per aprire il progetto
-                projectElement.addEventListener('click', () => {
-                    openProject(projectData);
-                });
-                
-                featuredProjectsContainer.appendChild(projectElement);
-            } else {
-                console.warn(`Progetto classificato non trovato: ${featuredProject.id}`);
+                // Se il progetto è stato trovato, crea l'elemento
+                if (projectData) {
+                    projectsFound++;
+                    
+                    const projectElement = document.createElement('div');
+                    projectElement.className = 'featured-project';
+                    projectElement.dataset.projectId = projectData.id;
+                    
+                    // Icona casuale per il progetto (o usa quella del progetto se disponibile)
+                    const iconClass = projectData.cover_image || icons[index % icons.length];
+                    
+                    const projectName = projectData.name || 'Progetto senza nome';
+                    const projectClass = featuredProject.class || 'Classe non specificata';
+                    const projectDescription = projectData.description || '';
+                    
+                    projectElement.innerHTML = `
+                        <div class="featured-project-header">
+                            <i class="fas ${iconClass}"></i>
+                            <span>${index + 1}</span>
+                        </div>
+                        <div class="featured-project-body">
+                            <div class="featured-project-title">${projectName}</div>
+                            <div class="featured-project-class">${projectClass}</div>
+                        </div>
+                    `;
+                    
+                    // Aggiungi event listener per aprire il progetto
+                    projectElement.addEventListener('click', () => {
+                        try {
+                            openProject(projectData);
+                        } catch (error) {
+                            console.error('Errore nell\'apertura del progetto:', error);
+                            alert('Si è verificato un errore nell\'apertura del progetto. Riprova.');
+                        }
+                    });
+                    
+                    featuredProjectsContainer.appendChild(projectElement);
+                } else {
+                    console.warn('Progetto non trovato:', featuredProject.id);
+                }
+            } catch (error) {
+                console.error('Errore nella creazione dell\'elemento progetto classificato:', error);
             }
         });
+        
+        // Se non sono stati trovati progetti, mostra un messaggio
+        if (projectsFound === 0) {
+            console.warn('Nessun progetto classificato trovato');
+            featuredProjectsContainer.innerHTML = '<div class="no-featured-projects">Nessun progetto classificato trovato</div>';
+        } else {
+            console.log('Progetti classificati trovati:', projectsFound);
+        }
     }
     
     // Crea una pagina per la scuola selezionata
@@ -442,6 +649,26 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Salva il progetto corrente
         currentProject = project;
+        
+        // Se currentClass non è impostato, prova a ricavarlo dall'ID del progetto
+        if (!currentClass && project.id) {
+            const idParts = project.id.split('_');
+            if (idParts.length >= 2) {
+                const schoolId = idParts[0];
+                const classIdPart = idParts[1];
+                
+                // Cerca la scuola e la classe corrispondenti
+                const school = schools.find(s => s.id === schoolId);
+                if (school && school.classes) {
+                    const classObj = school.classes.find(c => c.id.includes(classIdPart));
+                    if (classObj) {
+                        console.log('Setting currentClass from project ID:', classObj);
+                        currentClass = classObj;
+                        currentSchool = school;
+                    }
+                }
+            }
+        }
         
         // Aggiorna il breadcrumb della modale
         updateModalBreadcrumb(currentClass ? currentClass.name : '', project.name);
@@ -743,11 +970,28 @@ document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.classList.add('dark-mode');
             darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             modalDarkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            
+            // Cambia i loghi alla versione per la dark mode
+            document.querySelectorAll('.jpmc-logo').forEach(logo => {
+                logo.src = logo.getAttribute('data-dark-src');
+            });
+            document.querySelectorAll('.fg-theme-logo').forEach(logo => {
+                logo.src = logo.getAttribute('data-dark-src');
+            });
         } else {
             document.documentElement.classList.remove('dark-mode');
             document.documentElement.classList.add('light-mode');
             darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
             modalDarkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            
+            // Cambia i loghi alla versione per la light mode
+            document.querySelectorAll('.jpmc-logo').forEach(logo => {
+                logo.src = logo.getAttribute('data-light-src');
+            });
+            document.querySelectorAll('.fg-theme-logo').forEach(logo => {
+                logo.src = logo.getAttribute('data-light-src');
+            });
+            
         }
         
         // Salva la preferenza nel localStorage
@@ -849,15 +1093,17 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'login.html';
     });
     
-    // Gestione delle statistiche
-    statsBtn.addEventListener('click', () => {
-        // Verifica se l'utente è admin
-        if (currentUser && currentUser.is_admin) {
-            window.location.href = 'admin/stats.html';
-        } else {
-            alert('Accesso riservato all\'amministratore');
-        }
-    });
+    // Gestione delle statistiche - controllo se l'elemento esiste prima di aggiungere l'event listener
+    if (statsBtn) {
+        statsBtn.addEventListener('click', () => {
+            // Verifica se l'utente è admin
+            if (currentUser && currentUser.is_admin) {
+                window.location.href = 'admin/stats.html';
+            } else {
+                alert('Accesso riservato all\'amministratore');
+            }
+        });
+    }
     
     // Gestione delle statistiche dei voti
     const voteStatsBtn = document.getElementById('vote-stats-btn');
@@ -1187,9 +1433,51 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funzione per inviare il voto
     async function submitVote(vote) {
 
-        if (!currentProject || !currentClass) {
-            console.error('Missing project or class data:', { currentProject, currentClass });
-            alert('Errore: dati del progetto mancanti');
+        if (!currentProject) {
+            console.error('Missing project data:', { currentProject });
+            alert('Errore: dati del progetto mancanti. Impossibile registrare il voto.');
+            return;
+        }
+        
+        // Se currentClass non è disponibile, prova a ricavarlo dall'ID del progetto
+        if (!currentClass && currentProject.id) {
+            const idParts = currentProject.id.split('_');
+            if (idParts.length >= 2) {
+                const schoolId = idParts[0];
+                const classIdPart = idParts[1];
+                
+                // Cerca la scuola e la classe corrispondenti
+                const school = schools.find(s => s.id === schoolId);
+                if (school && school.classes) {
+                    const classObj = school.classes.find(c => c.id.includes(classIdPart));
+                    if (classObj) {
+                        console.log('Setting currentClass from project ID in submitVote:', classObj);
+                        currentClass = classObj;
+                        currentSchool = school;
+                    }
+                }
+            }
+        }
+        
+        // Se ancora non abbiamo currentClass, crea un oggetto fittizio con le informazioni minime
+        if (!currentClass && currentProject.id) {
+            const idParts = currentProject.id.split('_');
+            if (idParts.length >= 2) {
+                const schoolId = idParts[0];
+                const classIdPart = idParts[1];
+                console.log('Creating temporary class object from project ID parts:', { schoolId, classIdPart });
+                currentClass = {
+                    id: `${schoolId}_${classIdPart}`,
+                    name: `Classe ${classIdPart.replace('classe', '')}`,
+                    school: schoolId
+                };
+            }
+        }
+        
+        // Se ancora non abbiamo currentClass, non possiamo procedere
+        if (!currentClass) {
+            console.error('Could not determine class data for project:', currentProject);
+            alert('Errore: impossibile determinare la classe del progetto. Impossibile registrare il voto.');
             return;
         }
 

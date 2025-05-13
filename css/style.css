@@ -1,7 +1,7 @@
 :root {
     --primary-color: #031222;
-    --secondary-color: #e74c3c;
-    --secondary-color-hover: #c0392b;
+    --secondary-color: #f34993;
+    --secondary-color-hover: #157f9f;
     --background-color: #f0f2f5;
     --text-color: #222;
     --shadow-color: rgba(0, 0, 0, 0.15);
@@ -19,9 +19,9 @@
 }
 
 .light-mode {
-    --primary-color: #1e3a5f;
-    --secondary-color: #e74c3c;
-    --secondary-color-hover: #c0392b;
+    --primary-color: #343434;
+    --secondary-color: #f34993;
+    --secondary-color-hover: #157f9f;
     --background-color: #f0f2f5;
     --text-color: #222;
     --shadow-color: rgba(0, 0, 0, 0.15);
@@ -36,8 +36,8 @@
 
 .dark-mode {
     --primary-color: #f7f5ff;
-    --secondary-color: #e74c3c;
-    --secondary-color-hover: #ff6b5b;
+    --secondary-color: #f34993;
+    --secondary-color-hover: #157f9f;
     --background-color: #121212;
     --text-color: #f5f5f5;
     --shadow-color: rgba(0, 0, 0, 0.5);
@@ -57,7 +57,7 @@
 }
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Helvetica Neue', serif;
     background-color: var(--background-color);
     color: var(--text-color);
     overflow: hidden;
@@ -91,17 +91,61 @@ body {
     margin: 0 auto;
 }
 
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
 .navbar-logo a {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img, .theme-logo {
+    height: 40px;
+    max-width: 280px;
+    object-fit: contain;
+    display: block;
+}
+
+.sponsor-logo {
+    height: 24px;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.fg-logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.fg-logo {
+    height: 30px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.project-by {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    white-space: nowrap;
 }
 
 .navbar-breadcrumb {
-    flex: 1;
-    margin: 0 20px;
+    margin: 0 15px;
     font-size: 1rem;
     color: var(--text-color);
     white-space: nowrap;
@@ -128,12 +172,12 @@ body {
 .navbar-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .navbar-btn {
     background: none;
-    border: 1px solid var(--card-border);
+    border: 0px solid var(--card-border);
     padding: 8px 16px;
     border-radius: var(--border-radius);
     display: flex;
@@ -143,7 +187,7 @@ body {
     color: var(--primary-color);
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 6px var(--shadow-color);
+    /* box-shadow: 0 2px 6px var(--shadow-color); */
     margin: 0 4px;
 }
 
@@ -227,9 +271,8 @@ body {
     font-size: 0.7rem;
     font-weight: bold;
     margin-top: 2px;
-    max-width: 60px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: none;
+    overflow: visible;
     white-space: nowrap;
 }
 
@@ -266,7 +309,7 @@ body {
     border-radius: 5px;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Helvetica Neue, serif;
     font-size: 0.9rem;
     cursor: pointer;
     display: flex;
@@ -293,7 +336,7 @@ body {
     background-color: var(--card-background);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px var(--shadow-color);
+    /* box-shadow: 0 5px 15px var(--shadow-color); */
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     display: flex;
@@ -504,7 +547,7 @@ body {
 }
 
 .featured-project {
-    background-color: var(--card-background);
+    background-color: #341e54;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 8px var(--shadow-color);
     overflow: hidden;
@@ -512,7 +555,7 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    border: 1px solid var(--card-border);
+    border: 0px solid var(--card-border);
 }
 
 .featured-project:hover {
@@ -522,7 +565,7 @@ body {
 
 .featured-project-header {
     padding: 15px;
-    background-color: var(--primary-color);
+    background-color: #f34993;
     color: white;
     font-weight: bold;
     display: flex;
@@ -538,12 +581,18 @@ body {
 .featured-project-body {
     padding: 15px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
 }
 
 .featured-project-title {
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: bold;
+    color: white;
+
 }
 
 .featured-project-class {
@@ -556,6 +605,7 @@ body {
     font-size: 0.9rem;
     margin-bottom: 15px;
     opacity: 0.8;
+    color: rgb(155, 171, 210);
 }
 
 /* Stile per il margine superiore */
@@ -566,6 +616,65 @@ body {
 }
 
 /* Stile per la lista delle scuole nella pagina classificati */
+/* Stile per la griglia delle scuole */
+.school-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Stile esattamente come i featured projects */
+.school-card {
+    background-color: #341e54;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 0px solid var(--card-border);
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-hover);
+}
+
+.school-card-header {
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.school-card-header i {
+    font-size: 2rem;
+}
+
+.school-card-body {
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+.school-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1.4;
+}
+
+/* Manteniamo anche il vecchio stile per compatibilità */
 .school-index-list {
     list-style: none;
     display: grid;
@@ -599,7 +708,7 @@ body {
     border-radius: var(--border-radius);
     padding: 16px 32px;
     font-size: 1.3rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Helvetica Neue', serif;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 6px 16px rgba(231, 76, 60, 0.3);
@@ -615,7 +724,7 @@ body {
 
 .big-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     background-color: var(--secondary-color-hover);
 }
 
@@ -1025,16 +1134,23 @@ body {
 .avatar-preview {
     margin-top: 10px;
     text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 2px dashed var(--navbar-border);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
 }
 
 .avatar-preview img {
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 50%;
-    border: 2px solid var(--navbar-border);
-    background-color: var(--background-color);
-    padding: 2px;
-    display: none;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-grid {
@@ -1103,6 +1219,7 @@ body {
 .project-title {
     font-weight: 500;
     margin-bottom: 4px;
+    color: #000000c2;
 }
 
 /* Floating Vote Button */
