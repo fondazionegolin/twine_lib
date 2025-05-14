@@ -25,5 +25,15 @@
     "password_hash": "557a4fe44e2424c423e438fc997d100442d786123be2579a03ae3c608caf05e1",
     "salt": "fIVwdokHE8kHeXFN",
     "created_at": "2025-04-18 17:36:19"
+  },
+  "ciaccio": {
+    "password_hash": "20282a3336e1fece1c7257fe7272dd0382c4deeb0856db3c99262ac257c8d9f7",
+    "salt": "GqnpvjlQQUuVEYf4",
+    "created_at": "2025-05-14 17:05:50"
+  },
+  "davidecolombi": {
+    "password_hash": "a9a0f1ed4d701c9dc6eefbb3f94235526f23e41c19afdb86d06880b194792b21",
+    "salt": "NTWDi2DHTrR6SWdm",
+    "created_at": "2025-05-14 17:06:19"
   }
 }
